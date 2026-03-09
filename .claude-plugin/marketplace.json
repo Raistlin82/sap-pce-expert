@@ -1,0 +1,7 @@
+{
+  "name": "sap-pce-dev",
+  "plugins": [{
+    "name": "sap-pce-expert",
+    "source": "./"
+  }]
+}

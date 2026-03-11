@@ -1,7 +1,7 @@
 {
   "name": "sap-pce-expert",
   "description": "Comprehensive knowledge of SAP Private Cloud ERP (RISE with SAP) including architecture, migration, operations, security, extensibility, integration, and licensing. Use when working with RISE with SAP, S/4HANA Cloud Private Edition, PCE migrations, SAP-managed infrastructure, clean core, ABAP Cloud, hyperscaler deployments, or RISE contracts. Keywords: RISE with SAP, SAP Private Cloud ERP, S/4HANA Cloud Private Edition, PCE, brownfield, greenfield, bluefield, selective data transition, HUoM, SAPS, SAP-managed operations, clean core, ABAP Cloud, SAP Signavio, SAP Business Network",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "gabriele.rendina"
   },
@@ -12,6 +12,11 @@
     "s4hana",
     "s/4hana cloud private edition",
     "pce",
+    "2025 fps01",
+    "agentic ai",
+    "joule",
+    "success plans",
+    "foundational success plan",
     "private cloud",
     "erp",
     "migration",

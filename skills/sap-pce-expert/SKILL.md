@@ -1,13 +1,13 @@
 ---
 name: sap-pce-expert
 description: |
-  Comprehensive knowledge of SAP Private Cloud ERP (RISE with SAP) for architects, basis consultants, developers, and project managers. Use when working with RISE with SAP implementations, S/4HANA Cloud Private Edition, PCE migrations (brownfield/greenfield/bluefield/selective data transition), SAP-managed infrastructure on hyperscalers (AWS, Azure, GCP, Alibaba), clean core strategy, ABAP Cloud extensibility, SAP Integration Suite, SAP Signavio, SAP Business Network, or RISE licensing and contracts.
+  Comprehensive knowledge of SAP Private Cloud ERP (RISE with SAP) for architects, basis consultants, developers, and project managers. Use when working with RISE with SAP implementations, S/4HANA Cloud Private Edition (including 2025 FPS01 release with Agentic AI), PCE migrations (brownfield/greenfield/bluefield/selective data transition), SAP-managed infrastructure on hyperscalers (AWS, Azure, GCP, Alibaba), clean core strategy, ABAP Cloud extensibility, SAP Integration Suite, SAP Signavio, SAP Business Network, or RISE licensing and contracts.
 
-  Keywords: RISE with SAP, SAP Private Cloud ERP, S/4HANA Cloud Private Edition, PCE, brownfield, greenfield, bluefield, selective data transition, SUM, DMLT, HUoM, SAPS, SAP-managed operations, clean core, ABAP Cloud, key user extensibility, developer extensibility, BTP extensions, SAP Signavio, SAP Business Network, hyperscaler, AWS, Azure, GCP, Alibaba Cloud, SAP Integration Suite, RISE contract, SLA, patching cadence, backup restore, ISO 27001, SOC 2, GDPR
+  Keywords: RISE with SAP, SAP Private Cloud ERP, S/4HANA Cloud Private Edition, PCE, 2025 FPS01, Agentic AI, Joule, brownfield, greenfield, bluefield, selective data transition, SUM, DMLT, HUoM, SAPS, SAP-managed operations, clean core, ABAP Cloud, key user extensibility, developer extensibility, BTP extensions, SAP Signavio, SAP Business Network, hyperscaler, AWS, Azure, GCP, Alibaba Cloud, SAP Integration Suite, RISE contract, SLA, patching cadence, backup restore, ISO 27001, SOC 2, GDPR, Foundational Success Plan
 license: GPL-3.0
 metadata:
-  version: "1.0.0"
-  last_verified: "2026-03-09"
+  version: "1.1.0"
+  last_verified: "2026-03-11"
 ---
 
 # SAP Private Cloud ERP Expert (RISE with SAP)

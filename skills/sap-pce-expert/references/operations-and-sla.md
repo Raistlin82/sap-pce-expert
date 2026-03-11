@@ -17,6 +17,24 @@
 
 ---
 
+## SAP Success Plans (March 2026)
+
+SAP transitioned to a **cloud-first, AI-driven engagement model** for support in March 2026. The portfolio consists of three tiers:
+
+| Plan | Availability | Focus |
+|------|--------------|-------|
+| **Foundational Success Plan** | **Included** with all cloud subscriptions | Onboarding, technical cloud operations, and preventive support. |
+| **Advanced Success Plan** | Additional fee | Risk detection, optimization, and AI-powered activation sessions. |
+| **Max Success Plan** | Premium fee (evolved MaxAttention) | Dedicated Success Plan Manager, cross-solution process improvement, and AI scaling. |
+
+### Key Features of the Foundational Success Plan
+
+- **Operational Continuity**: Essential monitoring and basic cloud efficiency.
+- **AI-Enabled Support**: Preventive mission-critical support powered by AI (Joule).
+- **Application Lifecycle Management (ALM)**: Included via SAP Cloud ALM for structured transformation.
+
+---
+
 ## SAP-Managed Operations Model
 
 SAP Enterprise Cloud Services (ECS) operates the full technology stack under one end-to-end SLA:

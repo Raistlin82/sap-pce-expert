@@ -99,6 +99,18 @@ SAP Activate is the project methodology for all S/4HANA implementations. It prov
 
 ---
 
+## Migration Tools Update (2025 FPS01)
+
+The **2025 FPS01** release (March 2026) introduced several key tools and services for migration:
+
+| Tool | Enhancement |
+|------|-------------|
+| **Explore Migration Objects** | New app providing interactive graphs to visualize predecessor migration objects (mandatory/optional) before project start. |
+| **Release Navigator for SAP Cloud ERP Private** | Updated February 2026 to include all 2025 FPS01 documentation, webinars, and workshops. |
+| **Currency Changeover (CA-LCC)** | New guided service for conversion projects (e.g., Euro conversions). Technical execution handled by SAP with three mandatory test cycles. |
+
+---
+
 ## Key Migration Tools
 
 ### SAP Readiness Check

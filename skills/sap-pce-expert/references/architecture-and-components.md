@@ -100,6 +100,22 @@ Bundled Cloud Services are **additional BTP and SAP services** included in the S
 
 ---
 
+## S/4HANA Cloud Private Edition 2025 FPS01 (March 2026)
+
+The **2025 FPS01** release introduces **Agentic AI**—a shift from assistive AI to autonomous agents that can analyze data and propose actions.
+
+### Agentic AI & Joule Enhancements
+
+| Feature | Description |
+|---------|-------------|
+| **Cash Management Agent** | Autonomously checks bank statement completeness, validates opening balances, and prepares cash-flow forecasts. |
+| **Change Record Management Agent** | Analyzes the impact of engineering changes (R&D) and proposes next steps for faster change cycles. |
+| **Joule Conversational Shortcuts** | Use natural language (voice/text) to search for service contracts, extend sales prices, or retrieve batch master data. |
+| **Warehouse Management (Joule)** | Confirm warehouse tasks and search for outbound delivery orders via Joule. |
+| **Multistage Intercompany Sales** | Automated orchestration of sales and stock transfers across multiple legal entities (covers two-entity transfers). |
+
+---
+
 ## SAP S/4HANA Cloud Private Edition vs Public Edition
 
 | Dimension | Private Edition (PCE) | Public Edition |

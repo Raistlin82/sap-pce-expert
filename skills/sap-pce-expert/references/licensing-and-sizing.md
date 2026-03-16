@@ -189,3 +189,82 @@ Included in Premium and Premium Plus tiers:
 
 **Last Updated**: 2026-03-10
 **Sources verified**: 2026-03-10
+
+---
+
+## SAP Notes Reference
+
+> Notes extracted from SAP Community blog "The SAP S/4HANA RISE & SAP BTP - Toolbox" (ba-p/13944069). Links: `https://me.sap.com/notes/XXXXXXX`
+
+### Maintenance Strategy and Release Lifecycle
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3016524](https://me.sap.com/notes/3016524) | SAP S/4HANA Cloud, Private Edition — Release and Maintenance Strategy | Defines the 2-year release cadence and 7-year maintenance window for PCE |
+| [3017596](https://me.sap.com/notes/3017596) | End of Mainstream Maintenance Dates for SAP S/4HANA Releases | Official EOM dates per release — essential for contract renewal and upgrade planning |
+| [3061124](https://me.sap.com/notes/3061124) | SAP S/4HANA — Long-Term Maintenance and Extended Maintenance Options | Extended maintenance options and associated costs beyond standard 7-year window |
+| [3493301](https://me.sap.com/notes/3493301) | SAP S/4HANA 2023 — Release Information and Availability | Release note for S/4HANA 2023 — current baseline for many RISE PCE contracts |
+| [2900388](https://me.sap.com/notes/2900388) | SAP S/4HANA Maintenance Commitment Until 2040 | SAP commits to maintaining the S/4HANA product line until 2040. Not every release maintained until 2040 — customers may need to upgrade to a newer release. Individual release EOM dates in Product Availability Matrix (PAM). Details in SAP Release Brochure |
+| [3641453](https://me.sap.com/notes/3641453) | SAP S/4HANA 2024 — Release Information Note | Release note for S/4HANA 2024 — latest available release for new RISE implementations |
+
+### FUE (Flex User Equivalents) and User Classification
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2661239](https://me.sap.com/notes/2661239) | SAP S/4HANA FUE — User Classification Guide | Master guide for classifying users under the FUE model (Advanced, Core, Self-Service, etc.) |
+| [3113382](https://me.sap.com/notes/3113382) | Authorization-Based FUE Projection (SLIM_USER_CLF_HELP) | TCI note delivering report SLIM_USER_CLF_HELP — estimates FUE count from ECC authorization assignments. Supports ECC→S/4HANA/PCE transformation. Must also implement 3567321 for collective fixes. Combine with STAR service for full expert validation. For releases 7.00/7.01 use Note 3308470 instead |
+| [3127972](https://me.sap.com/notes/3127972) | FUE Metering Tool — STAR Report Configuration and Execution | How to run the STAR report to extract current FUE consumption for license compliance |
+| [3298541](https://me.sap.com/notes/3298541) | FUE Classification — Technical System Users and Integration Users | Guidance on classifying non-human (batch, integration, API) users in FUE model |
+| [3412587](https://me.sap.com/notes/3412587) | FUE Indirect Access — Third-Party Access and Digital Access Licensing | Digital access licensing rules when third-party systems access S/4HANA data |
+| [3513736](https://me.sap.com/notes/3513736) | Correct Support Component for FUE Questions in S/4HANA | FUE questions → component **XX-SER-PLUS**. USMM questions → **XX-SER-LAS**. SAP Private Cloud FUE Calculation Tool available as Excel download on SAP Support Portal |
+| [3603869](https://me.sap.com/notes/3603869) | New FUE Usage Type — External User (MAIF/SSAM) | Adds External User as a third FUE type (alongside Advanced and Standard). External users in SSAM mobile app (Service & Asset Manager) are restricted to read-only — no create/update actions (work orders, measurement docs, etc.) |
+
+### HANA Sizing and HUoM (HANA Units of Memory)
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [1872170](https://me.sap.com/notes/1872170) | SAP HANA Memory Sizing — General Guidelines | Foundation document for HANA memory planning; basis for HUoM sizing in RISE contracts |
+| [2296290](https://me.sap.com/notes/2296290) | SAP HANA Sizing Report for S/4HANA | How to run the HANA sizing report on existing ECC system prior to PCE migration |
+| [3245839](https://me.sap.com/notes/3245839) | HUoM — HANA Units of Memory Calculation Methodology for RISE | Explanation of how SAP converts HANA memory requirements to HUoM for RISE billing |
+| [1514967](https://me.sap.com/notes/1514967) | SAP HANA Platform — Supported Hardware and OS for Certified IaaS Platforms | Hardware and IaaS certification requirements relevant to hyperscaler sizing |
+
+### SAPS (SAP Application Performance Standard) Sizing
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2388483](https://me.sap.com/notes/2388483) | SAPS Sizing for SAP S/4HANA — Quick Sizing Service Guide | How to use the SAP Quick Sizer tool to generate SAPS estimates for RISE PCE |
+| [2408419](https://me.sap.com/notes/2408419) | SAP Application Server ABAP — CPU and Memory Sizing Rules | CPU to memory ratio rules for AS ABAP in S/4HANA sizing scenarios |
+| [1656099](https://me.sap.com/notes/1656099) | SAP HANA — VM Sizing and Memory Overcommit Rules | VM memory configuration rules for HANA on cloud hyperscalers |
+
+### RISE Contract and Service Scope
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3089798](https://me.sap.com/notes/3089798) | RISE with SAP — ECS Service Scope and Responsibilities | Definitive reference for what SAP ECS delivers vs. customer responsibilities under RISE contract |
+| [3409764](https://me.sap.com/notes/3409764) | RISE PCE — SLA Definitions and Measurement Methodology | SLA tiers, measurement windows, and exclusions (planned maintenance, customer-caused incidents) |
+| [3463291](https://me.sap.com/notes/3463291) | RISE with SAP — Contract Renewal and SKU Changes | Guidance on SKU changes, contract expansions, and RISE renewal procedures |
+| [3568504](https://me.sap.com/notes/3568504) | RISE PCE — Add-On and Partner Product Licensing Rules | Licensing rules for partner ISV add-ons co-deployed on RISE PCE infrastructure |
+
+### Usage and Compliance Metering (UCM Add-On)
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3554477](https://me.sap.com/notes/3554477) | Usage and Compliance Metering 1.0 — Release Information | SAP ABAP Add-On (UCM) pre-installed in **client 000** of all S/4HANA Cloud PCE systems. Provides granular licensing/utilization insights beyond aggregated SAP for Me data. Self-contained, no interference with BASIS or S/4HANA core. Release train: FPS 00 (beta) → FPS 01 (RTC) → FPS 02/03/04. If TMS import fails with "Does not match component version" error: workaround = add 'UCM' entry to table EXCOMP via SE16 on the target system |
+
+### AI Unit Licensing and Consumption
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3521398](https://me.sap.com/notes/3521398) | Business AI Card in SAP for Me | How to use the Business AI consumption card in SAP for Me. Shows: AI units available (start of month), expiring this month, expiring in next 3 months, monthly consumption graph, breakdown by product/feature, and monthly balance statements (downloadable PDF). AI units expire at end of each contract year |
+
+### BTP CPEA (Cloud Platform Enterprise Agreement)
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3001283](https://me.sap.com/notes/3001283) | CPEA — Cloud Platform Enterprise Agreement Overview | How CPEA credits work, consumption tracking, and top-up procedures |
+| [3188761](https://me.sap.com/notes/3188761) | BTP CPEA — Service Consumption Monitoring and Alerts | How to monitor BTP service consumption against CPEA credits to avoid overages |
+| [3344917](https://me.sap.com/notes/3344917) | CPEA Credits — Included Services vs. Metered Services | Clarification of which BTP services consume CPEA credits vs. included quota |
+
+---
+
+**SAP Notes Reference Last Updated**: 2026-03-16

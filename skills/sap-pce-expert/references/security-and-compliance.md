@@ -337,3 +337,121 @@ SOC attestation reports available on request via Trust Center (subject to NDA).
 
 **Last Updated**: 2026-03-09
 **Sources verified**: 2026-03-09
+
+---
+
+## SAP Notes Reference
+
+> Key SAP Notes for Security and Compliance. Full master list: see `sap-notes-master-list.md` in workspace root.
+
+### Penetration Testing / VAPT
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3080379](https://me.sap.com/notes/3080379) | Customer Penetration Testing Request Process | 3-phase process: **Request** (SR via SAP for Me → template "Authorization for application testing" or "Authorization for ECS-application testing"; 5-15 business days approval) → **Test** (approved scope only; no DoS/DDoS/DDoS, non-load bearing) → **Validation/Remediation** (send findings to secure@sap.com encrypted with PGP; PSRT responds within 2 weeks for High, 4 weeks for Med/Low). Annual limit. For premium partner RISE/IBP/Concur/Fieldglass: use form at pentest@sap.com. DORA/TLPT engagements handled by central SAP team independently. Test results are confidential — must not be shared without SAP written authorization. |
+| [3554013](https://me.sap.com/notes/3554013) | Requests for Infrastructure and Data Security Process Information | How to request infrastructure/data security information from SAP ECS |
+| [3497943](https://me.sap.com/notes/3497943) | SAP Cloud ALM Penetration Test information | Penetration test scope and process specific to Cloud ALM |
+| [2871898](https://me.sap.com/notes/2871898) | Request for penetration test results | How to request pentest results from SAP |
+| [3588916](https://me.sap.com/notes/3588916) | Queries on Reports of Penetration testing | FAQ for pentest report queries |
+| [2249479](https://me.sap.com/notes/2249479) | Customer Vulnerability Assessment/Penetration Test request - SAP SuccessFactors | VAPT process for SuccessFactors (reference for cross-system scope) |
+| [3554013](https://me.sap.com/notes/3554013) | Requests for Infrastructure and Data Security Process Information | Process for requesting infrastructure security documents (SOC reports, ISO certs) |
+
+### Security Audit Log (SAL)
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [2676384](https://me.sap.com/notes/2676384) | Best Practice Configuration of Security Audit Log | Use **RSAU_CONFIG** (NW 7.50+). Exclude high-volume events from all-users filter: **AUW, AU5, AUK, CUV, DUI, DUR, EUE**. For SAP* and emergency users + client 066: log **ALL** events. Enable rsau/integrity=1 (see Note 2033317). Apply config via RSAU_TRANSFER upload or RSAU_SET_DFLT with profile 'SAP_SEC Best Practice Pattern (Note 2676384)'. Changes to static profile require system restart. Min 10 selection filters. |
+| [2191612](https://me.sap.com/notes/2191612) | FAQ \| Use of Security Audit Log as of SAP NetWeaver 7.50 | Comprehensive FAQ for SAL on NW 7.50+ (PCE and on-premise). Covers: SM19/SM20 vs new transactions RSAU_CONFIG/RSAU_READ_LOG/RSAU_ADMIN (both can coexist), parameterization (rsau/* profile params), dynamic vs static configuration, filter profiles, retention and archiving. For SAP_BASIS < 7.50 SP3: use Note 539404. For public cloud: use Note 2903873. |
+| [2033317](https://me.sap.com/notes/2033317) | Integrity protection format for Security Audit Log | SAL integrity protection — file format and cryptographic verification |
+| [2883981](https://me.sap.com/notes/2883981) | RSAU_READ* \| anonymized display of Security Audit Log data | Anonymized SAL data display for GDPR compliance |
+| [3053445](https://me.sap.com/notes/3053445) | RSAU_ADMIN \| File reorganization with active integrity protection | SAL file reorganization procedures |
+| [3090362](https://me.sap.com/notes/3090362) | RSAU_ADMIN \| Integrity protection format - data management | Data management for SAL with integrity protection active |
+| [3009171](https://me.sap.com/notes/3009171) | RSAU_ADMIN \| error when checking the integrity protection format | Troubleshooting SAL integrity check errors |
+| [3495228](https://me.sap.com/notes/3495228) | RSAU_ADMIN \| Integrity protection check for files without integrity protection format | Handling legacy SAL files without integrity protection |
+| [3508896](https://me.sap.com/notes/3508896) | RSAU_ADMIN \| Optimization of integrity protection check | Performance optimization for SAL integrity checks |
+| [3445458](https://me.sap.com/notes/3445458) | How to verify changes on the Recording Target (Database, File system) of the Security Audit Log | Verify SAL recording target configuration changes |
+| [3137004](https://me.sap.com/notes/3137004) | How to archive and delete audit log from DB | SAL archiving and deletion procedures |
+| [3407647](https://me.sap.com/notes/3407647) | RSAU_READ_LOG \| Optimization of reading audit log files | Performance optimization for reading SAL files |
+| [3629004](https://me.sap.com/notes/3629004) | How to retrieve audit log table size in SAP HANA database | Check SAL table size in HANA |
+
+### RFC and Gateway Security
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [2008727](https://me.sap.com/notes/2008727) | Securing Remote Function Calls (RFC) | Comprehensive RFC security whitepaper (also at support.sap.com/securitywp). Covers: **UCON** (Unified Connectivity — allowlist-based RFC access control), **S_RFC** authorization maintenance, Trusted System Security (Trusted RFC), **SNC** for encrypted RFC, RFC callback allowlists (Note 1686632), **Gateway ACL** (reginfo/secinfo files), blocking RFC proxy requests. Also covers RFC security monitoring. Required reading before any PCE RFC security hardening project. |
+| [1480644](https://me.sap.com/notes/1480644) | "gw/acl_mode" and "gw/reg_no_conn_info" | **gw/acl_mode=0** = no restriction on external programs (never use in PRD). **gw/acl_mode=1** = only internal hosts (same system's AS, DB, MS, enqueue) allowed — all others rejected unless in reginfo/secinfo. If gw/reg_info + gw/sec_info files exist, their entries take full precedence over gw/acl_mode. As of kernel 74x: gw/acl_mode is independent from gw/reg_no_conn_info. Use keyword **"internal"** in reginfo/secinfo files for simplified host-group definition (covers all system-internal IPs). |
+| [1444282](https://me.sap.com/notes/1444282) | gw/reg_no_conn_info settings | Gateway registration security parameter reference |
+| [1408081](https://me.sap.com/notes/1408081) | Basic settings for reg_info and sec_info | Gateway security files (reginfo/secinfo) basic configuration |
+| [1686632](https://me.sap.com/notes/1686632) | Positive lists for RFC callback | RFC callback security positive lists |
+| [2941068](https://me.sap.com/notes/2941068) | sm59/Callback allowlist input validation missing | SM59 callback allowlist security fix |
+
+### SNC and Network Encryption
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [1848999](https://me.sap.com/notes/1848999) | Central Note for CommonCryptoLib 8 (SAPCRYPTOLIB) | **Current version: 8.6.2** (shipped with ABAP kernels from 2026). Key features: Post-Quantum Cryptography (NIST FIPS 203/204), TLS 1.3 with hybrid quantum-safe key exchange (**X25519MLKEM768**), FIPS 140-3 certified crypto kernel (8.6.1). CCL 8.4 and older = NOT supported. No extra license for server-to-server SNC, Kerberos server auth, system-internal security. License for **SAP Secure Login Service** required for user-based SSO (X.509/Kerberos); product EOL 31.12.2027. Distributed via **DW_UTILS*.SAR** package. Verify version: `sapgenpse cryptinfo`. Only latest version receives security patches — no hotfixes for old versions. |
+| [1684886](https://me.sap.com/notes/1684886) | License conditions of SNC Client Encryption | SNC client encryption licensing terms |
+| [1867829](https://me.sap.com/notes/1867829) | List of SNC Error Codes | SNC error code reference for troubleshooting |
+| [2653733](https://me.sap.com/notes/2653733) | Enabling SNC on RFCs between AS ABAP | Step-by-step SNC enablement for RFC connections |
+| [2573413](https://me.sap.com/notes/2573413) | How to configure SNC from 7.1x onwards AS Java to AS ABAP | SNC configuration from Java AS to ABAP AS |
+| [2425634](https://me.sap.com/notes/2425634) | SNC Error Code A2200223 - Peer certificate verification failed | SNC peer certificate verification error resolution |
+| [2497505](https://me.sap.com/notes/2497505) | SNC Error Code A2200210 Peer certificate verification failed - Kerberos configuration | Kerberos-specific SNC certificate verification error |
+| [2680913](https://me.sap.com/notes/2680913) | SNC Error Code A2200210:Peer certificate verification failed - Certificate X.509 configuration | X.509 certificate SNC error resolution |
+
+### Certificate Management (STRUST)
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3142481](https://me.sap.com/notes/3142481) | STRUST: How to extract required certificate response from provided file by CA vendor | Extract CA certificate response in STRUST |
+| [3238733](https://me.sap.com/notes/3238733) | How to Import a Certificate Into a STRUST PSE's Certificate List | Import certificates into STRUST PSE |
+| [3545535](https://me.sap.com/notes/3545535) | How to export a certificate from a STRUST PSE | Export certificates from STRUST |
+| [2801396](https://me.sap.com/notes/2801396) | SAP Global Trust List | SAP-maintained list of trusted CAs |
+| [3472211](https://me.sap.com/notes/3472211) | BTP Trust Store: Collection of TLS Server Root CA certificates used by SAP BTP | SAP BTP uses Root CAs from DigiCert, Let's Encrypt, and SAP Cloud Root CA. Customers must import these into ABAP STRUST (SSL Client PSE) to ensure disruption-free TLS with BTP services. Official repo: **https://github.com/sap-software/btp-trust-store** — regularly updated by SAP with sufficient lead time before CA changes. Critical for PCE systems connecting to BTP via Cloud Connector or HTTPS destinations. |
+| [3410386](https://me.sap.com/notes/3410386) | How to manage SSL certificates in Enterprise Cloud Services - Guided Answer | Guided Answer decision tree for ECS SSL certificate management: (1) monitor/check certificate details, (2) import a customer domain SSL certificate, (3) request a new certificate. Entry point via Guided Answers portal. **In PCE, customers cannot directly manage system SSL certs** — all operations go through ECS via Service Request or this Guided Answer flow. |
+| [3563155](https://me.sap.com/notes/3563155) | HTTPS certificate expiration issue for CN=*....hana.ondemand.com | HANA Cloud certificate expiration handling |
+| [3544856](https://me.sap.com/notes/3544856) | Multi-Bank Connectivity Server Certificate Is Expiring in STRUST | MBC certificate renewal in STRUST |
+| [3411144](https://me.sap.com/notes/3411144) | Action required for notification email "ACTION REQUIRED: Expiring certificate in Identity Authentication" | Handling expiring IAS certificates |
+| [2475246](https://me.sap.com/notes/2475246) | How to Secure Connections from NetWeaver ABAP instances to HANA Database | Error "only secure connections are allowed" = HANA has sslenforce=TRUE (global.ini). Fix: export HANA cert from sapsrv.pse via `sapgenpse export_own_cert` → import into ABAP STRUST (SSL Client PSE SAPSSLC.pse). Test via DBCO with CONNECT string `ENCRYPT=TRUE,sslCryptoProvider=commoncrypto,sslKeyStore=SAPSSLC.pse`. Enable system-wide via DEFAULT.PFL parameter `dbs/hdb/connect_property=ENCRYPT=TRUE` (requires restart). For tp/R3trans: set env var `dbs_hdb_connect_property=ENCRYPT=TRUE,...`. From HANA 2.0 SPS06: use ClientPKI — see Note 3346006. |
+
+### Virus Scan Interface (VSI)
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3052386](https://me.sap.com/notes/3052386) | FAQ \| Virus Scan Interface (VSI) | **VSI is NOT provided by default in RISE** — customer must install a 3rd-party antivirus adapter (ICC certification discontinued Dec 2023; check Note 1494278 for vendor list). Setup: VSCANPROFILE + VSCANGROUP + VSCANTEST + /n/IWFND/VIRUS_SCAN. Dummy adapter "vssap" = test use only, not for production. SAL logs virus infections via events **BU8** (virus found) and **BU9** (scan error). CCMS monitoring: RZ20 → "SAP CCMS Monitors for Optional Components" → Virus Scan Servers. Deactivation: requires clearing VSCAN + VSCANGROUP + VSCANPROFILE. |
+| [2437892](https://me.sap.com/notes/2437892) | Error: "No default virus profile active or found. Please check the official guide" | VSI profile configuration error |
+| [3197408](https://me.sap.com/notes/3197408) | Configuring the Virus Scanner for MIME Upload | VSI configuration for MIME upload scanning |
+| [1636724](https://me.sap.com/notes/1636724) | Virus scan information missing in BDC Browser IMG document | VSI information in BDC context |
+
+### Web Application Firewall (WAF) and Network Security
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3219363](https://me.sap.com/notes/3219363) | No Web Application Firewall (WAF) in front of custom application running in BTP CF | WAF not available by default for BTP CF custom apps — security consideration |
+| [3770579](https://me.sap.com/notes/3570779) | BTP Security Recommendations/Penetration Testing Request/Security Vulnerabilities | BTP security recommendations and pentest process |
+
+### Identity Authentication (IAS) and SSO
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3080900](https://me.sap.com/notes/3080900) | Using 3rd party/Corporate IdP with SAP Cloud Identity Services - Identity Authentication for Enterprise | Configuring corporate IdP (Azure AD, Okta) with SAP IAS |
+| [2945035](https://me.sap.com/notes/2945035) | How to connect Microsoft Entra ID (Azure Active Directory) to Identity Authentication Service | Step-by-step: Azure AD → SAP IAS federation |
+| [3507340](https://me.sap.com/notes/3507340) | Test this application in Microsoft Entra ID to trigger IdP-Initiated SSO for Application using IAS | Test IdP-initiated SSO with Entra ID and IAS |
+| [3508345](https://me.sap.com/notes/3508345) | How to renew expiring Microsoft Entra ID certificate in IAS administration console | Renew Entra ID signing certificate in IAS |
+| [3432984](https://me.sap.com/notes/3432984) | How to Update Signing Certificates on IAS | Update signing certificates in IAS |
+| [2300234](https://me.sap.com/notes/2300234) | SAP Single Sign-On 3.0: Central Note | Central note for SAP SSO 3.0 — X.509 certificates, SNC, Kerberos |
+| [2461862](https://me.sap.com/notes/2461862) | Collecting SAML traces with Chrome, Edge or Firefox | SAML trace collection for SSO debugging |
+
+### Authorization and Role Management
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [1631929](https://me.sap.com/notes/1631929) | Using trace evaluation to maintain menus and authorizations | Authorization trace evaluation with SUIM |
+| [1861370](https://me.sap.com/notes/1861370) | PFCG: Menu maintenance via authorization trace | Role menu maintenance using authorization traces |
+| [1405975](https://me.sap.com/notes/1405975) | Minimum Authorization Profile for Remote Service Delivery | Minimum authorizations needed for SAP ECS remote access |
+| [2219873](https://me.sap.com/notes/2219873) | Troubleshooting authorization errors | General authorization error troubleshooting guide |
+| [2927665](https://me.sap.com/notes/2927665) | Task list suspended: First call Transaction SU25 and fill Profile Generator tables | SU25 required before role transport — Profile Generator initialization |
+
+---
+
+**Last Updated**: 2026-03-16
+**Sources verified**: 2026-03-16 (note titles from RISE BTP Toolbox community blog)

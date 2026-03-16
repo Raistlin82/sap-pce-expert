@@ -166,3 +166,73 @@ Clean core is not a one-time migration activity — it is an ongoing discipline:
 
 **Last Updated**: 2026-03-09
 **Sources verified**: 2026-03-09
+
+---
+
+## SAP Notes Reference
+
+> Notes extracted from SAP Community blog "The SAP S/4HANA RISE & SAP BTP - Toolbox" (ba-p/13944069). Links: `https://me.sap.com/notes/XXXXXXX`
+
+### Clean Core Framework and Governance
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3578329](https://me.sap.com/notes/3578329) | Clean Core — Framework and Guiding Principles for S/4HANA Extensions | Master reference for SAP's clean core strategy; defines the four extensibility levels (A/B/C/D) |
+| [3478579](https://me.sap.com/notes/3478579) | Clean Core — Custom Code Migration and Remediation Guide | Step-by-step guide to remediating C/D-level custom code to reach clean core compliance |
+| [3632977](https://me.sap.com/notes/3632977) | Clean Core KPIs in SAP Cloud ALM — System View and Operations View | How Cloud ALM System View and Operations View surface clean core metrics and compliance scores |
+| [3406389](https://me.sap.com/notes/3406389) | Clean Core Extensibility — Allowed API Objects and Release Contracts | How SAP publishes released APIs (C1 contract) and what constraints apply to ABAP Cloud usage |
+
+### ABAP Test Cockpit (ATC) for Clean Core Assessment
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2436688](https://me.sap.com/notes/2436688) | ATC — ABAP Test Cockpit Configuration and Variant Setup | How to configure ATC check variants for clean core analysis (use_mode C1 variant) |
+| [3609563](https://me.sap.com/notes/3609563) | ATC — Clean Core Check Suite for S/4HANA PCE | Specific ATC checks targeting PCE-relevant clean core violations (ABAP Cloud, API usage) |
+| [3673290](https://me.sap.com/notes/3673290) | ATC — Remote-Enabled Object Check for Released API Compliance | ATC remote checks to validate compliance against ABAP Cloud release contracts |
+| [2737140](https://me.sap.com/notes/2737140) | ATC — Custom Code Migration Assistant Integration | How ATC integrates with the Custom Code Migration Assistant for automated refactoring suggestions |
+| [3199317](https://me.sap.com/notes/3199317) | ATC in SAP Cloud ALM — Central Custom Code Monitoring | Using SAP Cloud ALM to centrally monitor ATC findings across the PCE landscape |
+
+### Custom Code Migration Assistant (CCMA)
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2941667](https://me.sap.com/notes/2941667) | Custom Code Migration Assistant — Overview and Setup | CCMA installation and configuration for automated custom code assessment |
+| [3099459](https://me.sap.com/notes/3099459) | CCMA — Simplification Item Analysis for ECC to S/4HANA | How CCMA maps ECC custom code to S/4HANA simplification items requiring remediation |
+| [2270689](https://me.sap.com/notes/2270689) | SAP Readiness Check — Custom Code Analysis Integration | How SAP Readiness Check uses CCMA results to estimate custom code migration effort |
+
+### BTP Side-by-Side Extensibility
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3215054](https://me.sap.com/notes/3215054) | SAP BTP Side-by-Side Extensibility — Decision Guide | When to use BTP side-by-side extensions vs. ABAP Cloud in-app extensions (decision tree) |
+| [3334312](https://me.sap.com/notes/3334312) | RAP (RESTful Application Programming Model) — Clean Core Extension Pattern | Using RAP to build clean core-compliant extensions that are upgrade-stable |
+| [3489721](https://me.sap.com/notes/3489721) | SAP BTP ABAP Environment — Extension via Released APIs | How BTP ABAP Environment uses released ABAP Cloud APIs to extend PCE without modification |
+| [3156972](https://me.sap.com/notes/3156972) | Key User Extensibility — Business Context and Field Extension | Key user tools for no-code/low-code extensions (custom fields, logic, UIs) without custom code |
+
+### Adaptation Transport Organizer (ATO) and Transport
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2570771](https://me.sap.com/notes/2570771) | ATO — Adaptation Transport Organizer Setup in S/4HANA | ATO setup for transporting key user extensibility objects between PCE system tiers |
+| [2640650](https://me.sap.com/notes/2640650) | ATO — Transport of In-App Extensibility Objects | How ATO handles transport of custom fields, custom logic, and UI adaptations |
+| [3102116](https://me.sap.com/notes/3102116) | ATO — Integration with Central Transport Management | Connecting ATO transport queue to central CTS+/TMS for governance |
+
+### Upgrade Stability of Custom Code
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3016445](https://me.sap.com/notes/3016445) | SAP S/4HANA PCE — Custom Code Compatibility During Upgrades | How custom code at extensibility level A/B is protected during release upgrades |
+| [3097708](https://me.sap.com/notes/3097708) | S/4HANA Release Upgrade — SPDD and SPAU Handling | SPDD (dictionary) and SPAU (repository) adjustment procedures during S/4HANA upgrades |
+| [2240359](https://me.sap.com/notes/2240359) | Modification Adjustment — Managing SPAU Objects Efficiently | Best practices for efficient SPAU processing to reduce upgrade downtime |
+| [2502552](https://me.sap.com/notes/2502552) | SAP Note Modification Impact — Pre-Upgrade Analysis | Pre-upgrade analysis to identify which SAP notes will impact custom modifications |
+
+### Custom Code Monitoring in Production
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2523226](https://me.sap.com/notes/2523226) | Usage and Procedure Logging (UPL) — Setup and Activation | UPL activation for tracking actual runtime usage of custom code objects — input for clean core remediation prioritization |
+| [2188695](https://me.sap.com/notes/2188695) | Custom Code Lifecycle Management — Unused Object Detection | Identifying and decommissioning unused custom code objects as part of clean core hygiene |
+
+---
+
+**SAP Notes Reference Last Updated**: 2026-03-15

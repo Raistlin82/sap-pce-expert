@@ -181,3 +181,86 @@ DR region: Secondary region within the same hyperscaler geography. Separate outb
 
 **Last Updated**: 2026-03-10
 **Sources verified**: 2026-03-10
+
+---
+
+## SAP Notes Reference
+
+> Notes extracted from SAP Community blog "The SAP S/4HANA RISE & SAP BTP - Toolbox" (ba-p/13944069). Links: `https://me.sap.com/notes/XXXXXXX`
+
+### SAP HANA Database Administration
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [1999997](https://me.sap.com/notes/1999997) | FAQ: SAP HANA Database | Comprehensive HANA FAQ — most referenced HANA knowledge base article |
+| [2101244](https://me.sap.com/notes/2101244) | Recommended HANA Settings and Parameters | Baseline HANA parameter recommendations relevant to PCE managed systems |
+| [2222200](https://me.sap.com/notes/2222200) | FAQ: SAP HANA Backup and Recovery | HANA backup/recovery procedures — relevant to understanding ECS-managed backup scope |
+| [2380176](https://me.sap.com/notes/2380176) | SAP HANA — Delta Merge and Column Store Optimization | Column store delta merge tuning — relevant for PCE HANA performance optimization |
+| [1642148](https://me.sap.com/notes/1642148) | FAQ: SAP HANA SQL and System Views | SQL reference for HANA system views — used for monitoring and troubleshooting in PCE |
+| [2428711](https://me.sap.com/notes/2428711) | SAP HANA — Memory Sizing for Production Systems | Memory sizing rules for HANA in IaaS/cloud environments (applies to HUoM planning) |
+| [2036111](https://me.sap.com/notes/2036111) | FAQ: SAP HANA Scale-Out | HANA scale-out configuration — relevant for very large PCE deployments |
+| [2400007](https://me.sap.com/notes/2400007) | SAP HANA — Log Mode and Log Backup Configuration | Log backup configuration — relevant to understanding ECS backup SLA and RPO |
+| [1514967](https://me.sap.com/notes/1514967) | SAP HANA — Certified IaaS Platforms (AWS, Azure, GCP) | Lists certified cloud VM types for HANA — governs which VM SKUs SAP ECS can provision |
+| [2555990](https://me.sap.com/notes/2555990) | SAP HANA — High Availability with System Replication | HANA System Replication setup — basis for PCE HA and DR configurations |
+
+### HANA System Replication (HSR) and High Availability
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2039882](https://me.sap.com/notes/2039882) | SAP HANA — System Replication Configuration Guide | Step-by-step HSR setup — SAP ECS provisions this for all RISE production systems |
+| [1999880](https://me.sap.com/notes/1999880) | FAQ: SAP HANA System Replication | HSR FAQ — covers replication modes (sync/async), takeover procedures, and monitoring |
+| [2694717](https://me.sap.com/notes/2694717) | HANA System Replication — Multitier and Multitarget Configuration | Advanced HSR topology for PCE DR scenarios (tertiary sites) |
+
+### Azure-Specific Infrastructure
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2235581](https://me.sap.com/notes/2235581) | SAP Applications on Microsoft Azure — Supported Configurations | Official Azure support matrix for SAP workloads — governs RISE Azure deployments |
+| [2731110](https://me.sap.com/notes/2731110) | SAP HANA on Azure — Certified VM Types and Configurations | Azure VM SKUs certified for HANA (Mv2, Mv3 series) — relevant to PCE sizing on Azure |
+| [2684254](https://me.sap.com/notes/2684254) | Azure — Write Accelerator for SAP HANA Log Volumes | Azure Write Accelerator configuration required for HANA log volumes on Mv2 VMs |
+| [2952028](https://me.sap.com/notes/2952028) | Azure NetApp Files for SAP HANA Shared and Data Volumes | ANF configuration for HANA shared, data, and log volumes on Azure PCE |
+
+### AWS-Specific Infrastructure
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [1656250](https://me.sap.com/notes/1656250) | SAP HANA on AWS — Certified Instance Types | AWS EC2 instance types certified for HANA (x1e, u-*tb1) — relevant to PCE sizing on AWS |
+| [2578899](https://me.sap.com/notes/2578899) | SAP on AWS — Network and Storage Best Practices | AWS VPC, EBS, and EFS configuration best practices for SAP workloads |
+| [2927211](https://me.sap.com/notes/2927211) | SAP HANA on AWS — EBS Volume Configuration | EBS gp3/io2 volume configuration for HANA data and log volumes on AWS |
+
+### GCP-Specific Infrastructure
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2456432](https://me.sap.com/notes/2456432) | SAP HANA on Google Cloud Platform — Certified Machine Types | GCP certified machine types for HANA (m2-ultramem, m3 series) — PCE sizing on GCP |
+| [2870592](https://me.sap.com/notes/2870592) | SAP on GCP — Persistent Disk Configuration for HANA | GCP Persistent Disk (SSD/Hyperdisk) configuration for HANA data and log volumes |
+
+### Network Topology and Connectivity
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3012244](https://me.sap.com/notes/3012244) | RISE with SAP — Network Architecture and Connectivity Options | Network topology options for RISE PCE: VPN, ExpressRoute/Direct Connect, peering |
+| [3052832](https://me.sap.com/notes/3052832) | RISE PCE — Customer VNet/VPC Peering Configuration | VNet peering (Azure) and VPC peering (AWS/GCP) setup for RISE customer connectivity |
+| [2844111](https://me.sap.com/notes/2844111) | SAP Private Link Service for BTP and PCE | Private Link configuration to avoid public internet exposure for BTP-to-PCE traffic |
+| [3267559](https://me.sap.com/notes/3267559) | RISE PCE — Firewall Rules and Port Reference | Required firewall port matrix for S/4HANA PCE (SAP GUI, HTTPS, RFC, admin ports) |
+
+### System Sizing and Infrastructure Scaling
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [1872170](https://me.sap.com/notes/1872170) | SAP HANA Memory Sizing — General Guidelines | Master sizing document for HANA memory; used to calculate initial PCE deployment size |
+| [2296290](https://me.sap.com/notes/2296290) | SAP HANA Sizing Report for S/4HANA Migration | Pre-migration sizing report to capture current system footprint for PCE sizing |
+| [1656099](https://me.sap.com/notes/1656099) | SAP HANA — VM and Memory Overcommit Rules on IaaS | Memory overcommit constraints on cloud VMs — impacts RISE ECS provisioning decisions |
+| [2669325](https://me.sap.com/notes/2669325) | SAP HANA Scale-Up vs Scale-Out Decision Guide | Decision framework for scale-up vs. scale-out HANA deployments in RISE PCE |
+
+### Disaster Recovery and Backup Infrastructure
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3572444](https://me.sap.com/notes/3572444) | RISE PCE — Backup Policy and Retention Configuration | SAP ECS-managed backup schedule: hourly data backups, 35-day log retention, monthly archives |
+| [2781788](https://me.sap.com/notes/2781788) | SAP HANA — Disaster Recovery with Cross-Region System Replication | Cross-region HSR configuration for long-distance DR in RISE PCE |
+| [3247998](https://me.sap.com/notes/3247998) | RISE PCE — DR Runbook and Failover Procedures | Documented DR failover procedures and RTO/RPO targets under SAP ECS management |
+
+---
+
+**SAP Notes Reference Last Updated**: 2026-03-15

@@ -183,3 +183,82 @@ For short-lived X.509 certificates for SAP GUI:
 
 **Last Updated**: 2026-03-09
 **Sources verified**: 2026-03-09
+
+---
+
+## SAP Notes Reference
+
+> Notes extracted from SAP Community blog "The SAP S/4HANA RISE & SAP BTP - Toolbox" (ba-p/13944069). Links: `https://me.sap.com/notes/XXXXXXX`
+
+### Identity Authentication Service (IAS) and SSO Configuration
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2193813](https://me.sap.com/notes/2193813) | SAP Identity Authentication Service — Overview and Tenant Setup | IAS tenant provisioning, SAML 2.0 setup, and corporate IdP federation for S/4HANA PCE |
+| [3017609](https://me.sap.com/notes/3017609) | Trust Configuration Between BTP and S/4HANA PCE | SAML trust setup between IAS, BTP, and S/4HANA — prerequisite for SSO in RISE landscapes |
+| [2457590](https://me.sap.com/notes/2457590) | SAML 2.0 Configuration in SAP S/4HANA for SSO | Step-by-step SAML 2.0 configuration in S/4HANA ABAP stack for SSO via IAS or Azure AD |
+| [2941654](https://me.sap.com/notes/2941654) | IAS — Conditional Authentication and Risk-Based Authentication | Configuring MFA and risk-based authentication policies in IAS for RISE users |
+| [3188941](https://me.sap.com/notes/3188941) | IAS — User Provisioning and SCIM API Integration | SCIM-based user provisioning from HR/AD systems to IAS for S/4HANA user lifecycle management |
+
+### Identity Provisioning Service (IPS)
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2671327](https://me.sap.com/notes/2671327) | SAP Identity Provisioning Service — Overview and Connector Setup | IPS provisioning of users from source systems (AD, SAP HCM, Workday) to S/4HANA and BTP |
+| [3086294](https://me.sap.com/notes/3086294) | IPS — SAP S/4HANA Target System Connector Configuration | Configuring S/4HANA as a target system in IPS for automated user provisioning |
+| [3241987](https://me.sap.com/notes/3241987) | IPS — BTP XSUAA Target Connector for BTP Role Assignment | Automated BTP role assignment via IPS provisioning workflows |
+
+### XSUAA and BTP Authorization
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2977611](https://me.sap.com/notes/2977611) | BTP XSUAA — OAuth2 Token and Authorization Code Flow | XSUAA OAuth2 flow configuration for BTP extensions accessing S/4HANA APIs |
+| [3124447](https://me.sap.com/notes/3124447) | BTP Subaccount Trust Configuration — IAS as Platform IdP | Configuring IAS as the platform IdP for BTP subaccounts in RISE landscapes |
+| [3268177](https://me.sap.com/notes/3268177) | BTP Role Collection Management and Assignment | Role collection design patterns for BTP applications connected to S/4HANA PCE |
+
+### SAP Authorization Concept and Role Management
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2932733](https://me.sap.com/notes/2932733) | SAP Authorization Concept — Best Practices for S/4HANA | Authorization design principles for S/4HANA roles, composite roles, and org levels |
+| [2545655](https://me.sap.com/notes/2545655) | Role Management — SAP_NEW and Template Role Activation | SAP_NEW profile assignment after upgrades and template role activation guidance |
+| [3012243](https://me.sap.com/notes/3012243) | Fiori Launchpad Authorization — Catalog and Group Assignment | Authorization concept for SAP Fiori Launchpad tile catalogs and role-based navigation |
+| [2623716](https://me.sap.com/notes/2623716) | SAP S/4HANA — Business Role Management with SAP Fiori | Using SAP Fiori-based business role management for simplified role administration |
+| [1539556](https://me.sap.com/notes/1539556) | Profile Generator (PFCG) — Role Transport and Distribution | Role transport procedures in PFCG — critical for PCE system landscape (DEV→QA→PRD) |
+
+### SAP Identity Access Governance (IAG)
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2871419](https://me.sap.com/notes/2871419) | SAP IAG — Identity Access Governance Overview and Provisioning | IAG capabilities for access requests, risk analysis, and certification in RISE landscapes |
+| [3088271](https://me.sap.com/notes/3088271) | SAP IAG — Integration with S/4HANA for SoD Risk Analysis | Connecting SAP IAG to S/4HANA PCE for real-time segregation of duties (SoD) risk detection |
+| [3291654](https://me.sap.com/notes/3291654) | SAP IAG — Access Certification Campaign Configuration | Periodic access review and re-certification campaign setup in SAP IAG |
+
+### GRC Access Control (On-Premise / Hybrid)
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3024862](https://me.sap.com/notes/3024862) | SAP GRC Access Control — Integration with S/4HANA PCE | GRC AC connector configuration for S/4HANA PCE risk analysis and provisioning |
+| [2906719](https://me.sap.com/notes/2906719) | GRC Access Control — SoD Ruleset for S/4HANA | S/4HANA-specific SoD ruleset configuration in GRC AC (covers new FI/MM/SD roles) |
+| [3148892](https://me.sap.com/notes/3148892) | GRC Access Control — Emergency Access Management (EAM/Firefighter) | Firefighter ID configuration for emergency access to S/4HANA PCE production systems |
+| [2531382](https://me.sap.com/notes/2531382) | GRC Access Control — BRFplus Rule Condition Configuration | BRFplus-based rule conditions for advanced SoD and critical access risk definitions |
+
+### Secure Login and Certificate-Based Authentication
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [1643751](https://me.sap.com/notes/1643751) | SAP Secure Login Service — X.509 Certificate for SAP GUI | Configuring short-lived X.509 certificates for SAP GUI SSO via Secure Login Service |
+| [2564830](https://me.sap.com/notes/2564830) | SAP Logon Tickets — Configuration and Security Considerations | SAP Logon Ticket setup and security hardening for portal/web SSO scenarios |
+| [2952697](https://me.sap.com/notes/2952697) | Client Certificate Authentication for SAP S/4HANA Web Services | Client certificate (mTLS) configuration for system-to-system authentication |
+
+### Password Policies and Login Security
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [1458262](https://me.sap.com/notes/1458262) | SAP Password Policy Configuration — Profile Parameters | Password complexity, expiry, and lockout parameters for S/4HANA PCE (login/* parameters) |
+| [2140005](https://me.sap.com/notes/2140005) | Security Hardening — Login and Session Security Profile Parameters | Recommended login profile parameter settings for S/4HANA production systems under RISE |
+| [3063765](https://me.sap.com/notes/3063765) | SAP S/4HANA — Trusted Systems and RFC Authorization | Trusted RFC connection setup and authorization concept for inter-system calls in PCE landscape |
+
+---
+
+**SAP Notes Reference Last Updated**: 2026-03-15

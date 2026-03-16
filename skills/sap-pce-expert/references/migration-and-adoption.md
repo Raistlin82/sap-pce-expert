@@ -257,3 +257,128 @@ From experienced RISE practitioners:
 
 **Last Updated**: 2026-03-09
 **Sources verified**: 2026-03-09
+
+---
+
+## SAP Notes Reference
+
+> Key SAP Notes for Migration and Adoption. Full master list: see `sap-notes-master-list.md` in workspace root.
+
+### SAP Readiness Check
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [2913617](https://me.sap.com/notes/2913617) | SAP Readiness Check for SAP S/4HANA | Central note for Readiness Check — lists all prerequisite notes and setup steps |
+| [3059197](https://me.sap.com/notes/3059197) | SAP Readiness Check for SAP S/4HANA upgrades | Readiness Check variant for upgrade projects (PCE_UPG) |
+| [3548791](https://me.sap.com/notes/3548791) | SAP PCE Readiness Check - Umbrella Note | PCE-specific readiness check umbrella note |
+
+### Transition Paths and Engagement
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3018442](https://me.sap.com/notes/3018442) | Selective Data Transition and Selective Data Transition Engagement | SDT methodology and how to engage SAP for SDT projects |
+| [3035880](https://me.sap.com/notes/3035880) | Recommendations for greenfield implementations of RISE with SAP S/4HANA Cloud, private edition following a cloud mindset | Official SAP greenfield best practices for PCE with cloud mindset principles |
+| [3393071](https://me.sap.com/notes/3393071) | Technical Preparation Services for SAP S/4HANA Movement for Private Cloud | Technical preparation service scope for moving to PCE |
+| [3462243](https://me.sap.com/notes/3462243) | RISE with SAP System Transition Workbench | System Transition Workbench tooling for RISE migration |
+| [3591251](https://me.sap.com/notes/3591251) | Navigating Your RISE with SAP Journey – SAP ERP, Private Edition, Transition Option | ERP PCE transition option guidance |
+
+### ECS Brownfield and Guided Transition Preparation
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3089798](https://me.sap.com/notes/3089798) | ECS Brownfield setup pro-active checks | Pro-active checklist for brownfield PCE setup — run before ECS provisioning |
+| [3409764](https://me.sap.com/notes/3409764) | Guided Transition to SAP Enterprise Cloud Services Preparation (GTP) Checks – Central SAP Note | Central note for GTP checks — mandatory pre-migration checklist |
+| [3425775](https://me.sap.com/notes/3425775) | FAQ for the Guided Transition to SAP Enterprise Cloud Services Preparation | FAQ for GTP process |
+| [3539699](https://me.sap.com/notes/3539699) | Phase three Delivery of Guided Transition Preparation | Phase 3 GTP delivery specifics |
+
+### Release Upgrade (PCE Landscape)
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3097708](https://me.sap.com/notes/3097708) | Release upgrade for RISE with SAP S/4HANA Cloud 2-System and 3-System Landscape | How to perform release upgrades in 2- and 3-system PCE landscapes |
+
+### SPDD/SPAU Handling During Upgrades
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [1970888](https://me.sap.com/notes/1970888) | How To: SPDD/SPAU handling during the Update/Upgrade | SPDD covers: domains, data elements, tables, DDLS (basis 755+), DB views (basis 756+). **CRITICAL: Never skip SPDD** — missing DDIC adjustments cause data loss. SPAM: create separate WB requests for SPDD and SPAU; assign to SAP_ADJUST CTS project via "Assign Transport". SUM phases: SPDD in ACT_TRANS/ACT_UPG, SPAU in SPAUINFO. S/4HANA 2021+ target: SUM handles TR release. 14-day SSCR-free window applies only to SPAU. S/4HANA with NW 7.51+: no SSCR key required at all. SPAM/SUM support only ONE SPDD TR and ONE SPAU TR per run. |
+| [2276187](https://me.sap.com/notes/2276187) | New version of transaction SPDD | SPDD transaction enhancements |
+| [2286852](https://me.sap.com/notes/2286852) | SPAU/SPDD: Display report for reset candidates | Identify SPAU/SPDD reset candidates before upgrade |
+| [2969181](https://me.sap.com/notes/2969181) | SPDD Transport Request is not released after the SUM Upgrade is finished | Post-SUM SPDD transport issue resolution |
+| [3590234](https://me.sap.com/notes/3590234) | SPDD objects appear after upgrade | Handling residual SPDD objects post-upgrade |
+| [3611052](https://me.sap.com/notes/3611052) | Manual Adjustment Process with Standard Structures During System Upgrade in SPDD | Manual SPDD adjustment process for standard structure modifications |
+
+### SAP Maintenance Planner
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [2921927](https://me.sap.com/notes/2921927) | Enhanced Maintenance Planner Onboarding | Onboarding to the enhanced Maintenance Planner features |
+| [2973010](https://me.sap.com/notes/2973010) | Frequently asked questions for maintenance planner new innovations onboarding | FAQ for Maintenance Planner innovations |
+| [2287046](https://me.sap.com/notes/2287046) | How to Generate the System Info XML and upload to Maintenance Planner | Required for system registration in Maintenance Planner |
+| [2838895](https://me.sap.com/notes/2838895) | How to find the Active Business Functions in Maintenance Planner | Identify active BFs when uploading to Maintenance Planner |
+| [1978965](https://me.sap.com/notes/1978965) | How to find the equivalent support package for your release | SP lookup for target release planning |
+
+### SAP S/4HANA Migration Cockpit
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [2538700](https://me.sap.com/notes/2538700) | Collective SAP Note and FAQ for SAP S/4HANA Migration Cockpit - File/Staging (Cloud/SAPSCORE) | File/Staging approach only; SAPSCORE-based S/4HANA Cloud (verify from template header: "SAPSCORE + 3 digits"; if "S4CORE" see Note 2537549). Role required: SAP_BR_CONFIG_EXPERT_DATA_MIG. Cockpit NOT for mass changes or interfaces (see Note 2684818). Object not visible? → scope item not activated. G/L Account migration NOT allowed in Cloud. Migration blocked during Blue-Green Deployment weekends. Objects without parallel job support: see Note 3294684. Key migration object notes: Material (2811788), Fixed Asset (2827574), Business Partner (2848224), G/L Balance/AP/AR (2853964), Purchase Order (3532254). Tool issues: CA-LT-MC; content issues: CA-GTF-MIG. |
+| [2470789](https://me.sap.com/notes/2470789) | SAP S/4HANA Migration Cockpit (Cloud) - Sample data migration templates | Sample templates for cloud-based migration cockpit |
+| [2596400](https://me.sap.com/notes/2596400) | Migration objects available in the Migration Cockpit | Complete list of supported migration objects |
+| [2663579](https://me.sap.com/notes/2663579) | Migration Cockpit: Validation of data after migration | Post-migration data validation steps |
+| [3066336](https://me.sap.com/notes/3066336) | Modifying Data Transfer Jobs to improve the data transfer performance of the SAP S/4HANA Migration Cockpit | Performance tuning for migration cockpit data transfer |
+| [2517820](https://me.sap.com/notes/2517820) | Get latest error information / logs from SAP S/4HANA Migration Cockpit (LTMC) | Log analysis for LTMC migration cockpit |
+| [3209755](https://me.sap.com/notes/3209755) | SAP S/4HANA Migration Cockpit (Direct Transfer) – System Compatibility Information | Compatibility matrix for "Transfer Data Directly from SAP System" approach (requires DMIS 2011 in source). **DMIS 2011 SP23+**: compatible with S/4HANA 2022 FPS0+ ONLY (NOT 2021/2020/1909). **DMIS 2011 SP22-**: compatible with S/4HANA 2021/2020/1909 ONLY (NOT 2022+). Incompatible combinations: contact SAP on CA-LT-PE. Source: SAP ECC migrating to S/4HANA. |
+| [2973957](https://me.sap.com/notes/2973957) | SAP S/4HANA Migration Cockpit: Composite Note for Transfer Data Directly from SAP System | Direct-transfer composite note |
+| [2684818](https://me.sap.com/notes/2684818) | SAP S/4HANA Migration Cockpit usage for mass processing data or as interface or deletion | Mass processing use cases for Migration Cockpit |
+| [3428275](https://me.sap.com/notes/3428275) | SAP S/4HANA Migration Cockpit: Migration tasks are stuck (long runtimes) | Troubleshooting stuck migration tasks |
+
+### SAP Best Practices Activation
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3039705](https://me.sap.com/notes/3039705) | SAP Best Practices Activation process and questionnaire for RISE with SAP S/4HANA Cloud, private edition and SAP HANA Enterprise Cloud, advanced edition | Official activation process and questionnaire for PCE Best Practices |
+| [3140618](https://me.sap.com/notes/3140618) | SAP Best Practice Activation FAQ | BP activation always in CLEAN client (never in existing/configured). Latest BP content needed in DEV only — transported to QAS/PRD via TRs. Additional scope items can be added post-activation ONLY if: no FPS/release upgrade done AND existing BP config not modified. **Currency must be set BEFORE activation** (cannot change after). Recommended logon language: English. Deactivation of scope items: see Note 2906656. After a system upgrade: use NEW client for BP + Fit/Gap analysis. BP transport NOT to existing/running PRD client. **BP transport requires same release and SP level** on source and target. Demo data NOT transported (full client copy only). |
+| [1301301](https://me.sap.com/notes/1301301) | Release Strategy for SAP Best Practices Package ABAP Add-ons | Release strategy for BP add-ons |
+| [2870129](https://me.sap.com/notes/2870129) | Best Practice activation on already existing client | BP activation on already-configured client is NOT supported — except for 4 scope items: **1SG** (Group Reporting - Financial Consolidation, from 1809), **40Y** (Intercompany Reconciliation, from 1909), **28B** (Group Reporting - Plan Consolidation), **3LX** (Group Reporting - Matrix Consolidation). Even for these: follow specific prerequisite notes (2659672, 2815304); do NOT activate any other scope item in an existing client. Each scope item creates org structures — partial/mixed activation disrupts configuration. |
+| [2936334](https://me.sap.com/notes/2936334) | Best Practice activation - move to production | **Greenfield only** (DEV/QAS/PRD start from clean client 000 copy). Before moving to QAS: first transport prerequisite notes, merged client activities, and scope item activities. QAS/PRD: set client currency manually (same as DEV). Transport sequence: workbench first, then customizing (in creation order). "Manual rework required" steps: confirm each step manually in QAS and PRD. **BP transport NOT to existing/running PRD client** (can overwrite business processes). **NOT possible between different release or SP levels.** |
+| [3577937](https://me.sap.com/notes/3577937) | Concerns Regarding Activation of SAP Best Practices and Additional Licenses Requirement | License implications of Best Practices activation |
+| [3631601](https://me.sap.com/notes/3631601) | Scope selection of the activation of SAP standard content (SSC) for a RISE contract entitlement | SSC scope selection for RISE contracts |
+
+### Business Functions Activation
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [1641394](https://me.sap.com/notes/1641394) | SFW5: How-to activate Business Function | Business Function activation via SFW5 |
+| [2515814](https://me.sap.com/notes/2515814) | Deactivate Business Functions in SFW5 | Business Function deactivation (restricted in PCE) |
+| [2517797](https://me.sap.com/notes/2517797) | How to transport Business Functions from development system to next systems | Transport of activated BFs |
+| [2883695](https://me.sap.com/notes/2883695) | Required Enterprise Business Functions activation in Q and PROD system | BF activation requirements for Q and Production |
+| [3192490](https://me.sap.com/notes/3192490) | How to find the activated BC Sets in the system | Check which BC Sets are active |
+| [3608883](https://me.sap.com/notes/3608883) | Irreversible Activation of Business Function /SHCM/EE_BP_1 in S/4HANA and Options for Reverting | Specific BF that cannot be reversed — important warning |
+
+### Silent Data Migration (SDMI)
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [2907976](https://me.sap.com/notes/2907976) | Silent Data Migration (SDMI) - FAQ | SDMI available from S/4HANA 1909 (first upgrade 1809→1909). Key transactions: SDM_MON (monitor/config), SDM_USER (technical user), SJOBREPO (job). **SDMI MUST complete before next upgrade** (blocks via Simplification Item SI22/DO_SDMI_CHECK). Jump upgrades (skipped releases): skipped-release SDMIs run in SUM downtime phases PARRUN_SILENT_DATA_MIGR. Technical SDMI user required in every client (SAP_ALL or per note 2850918). SDMI starts after BTCTRNS2 runs; job SAP_SDM_EXECUTOR_ONLINE_MIGR runs every 30 min. DTV (Data Transition Validation) must finish before SDMI starts. Per-release SDMI class reference: 3258388 (2020), 3258425 (2021), 3239704 (2022), 3382097 (2023), 3635357 (2025). |
+
+### Release Upgrade Management (RUM) Application
+
+> **Key tool for PCE upgrade planning**: Free application in SAP for Me that automates upgrade project planning for ECS-managed systems.
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3372118](https://me.sap.com/notes/3372118) | Introduction to the Release Upgrade Management (RUM) Application | Free planning tool at me.sap.com/privcloudrum. RUM 2.0 released July 25, 2025 (supersedes 1.0 from Sept 2023). Key capabilities: define upgrade path, auto-determine OS/DB versions, recommend connected agents for upgrade, generate high-level timeline, create required Service Request list, track execution tasks with TDO statistics integration. **Planning tool only** — customer creates actual SRs manually. Requires S-user with "Display Service Requests" authorization (Note 2669783). Systems below S/4HANA 2023 FPS02 show under product "SAP S/4HANA" (not "Cloud Private Edition"). Available to all ECS customers. |
+
+### SUM Upgrade Common Errors
+
+> **Reference for troubleshooting SUM upgrade failures**: Collective note with practical corrections for the most frequent SUM/upgrade errors across SAP ECC and S/4HANA (On-Premise and PCE).
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3310175](https://me.sap.com/notes/3310175) | FAQ - SAP ECC, SAP S/4HANA Upgrade Best Practices / Common Errors Collective Note | Collective KBA with upgrade error corrections by component. Key error categories: (1) BC-DB-HDB-PFW: SHDB Parallelization Framework timeout (DELTA_MERGE_CONTROL=NO_CONTROL) → Note 3059463; (2) BC-UPG-NA: SPDD data loss during exchange upgrade (new DDIC objects) → Note 2535651; (3) BC-UPG-NZ-DT: NZDT Mass Transfer ID issues → Notes 3305842, 3271693; (4) BC-UPG-OCS-SPA: UNRESOLVED_CONFLICTS_FOUND in CONFLICT_CHECK → Note 2944943; (5) BC-UPG-TLS-TLA: ACT_UPG GLO_S_ASSET_KEY activation error → Note 2938948; shadow import EOF errors → Note 3018699; SHADOW_IMPORT EU_CLONE_MIG_VIEW_CREATE → Note 2742444. Guide: "Upgrading SAP S/4HANA" PDF (sap.com/documents/2020/06/94ca0995). |
+
+---
+
+**Last Updated**: 2026-03-16
+**Sources verified**: 2026-03-16 (enriched with real SAP Note content via sap_note_get)

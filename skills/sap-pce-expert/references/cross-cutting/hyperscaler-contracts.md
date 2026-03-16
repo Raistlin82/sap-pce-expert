@@ -173,3 +173,73 @@ Hyperscaler (IaaS layer)
 
 **Last Updated**: 2026-03-10
 **Sources verified**: 2026-03-10
+
+---
+
+## SAP Notes Reference
+
+> Notes extracted from SAP Community blog "The SAP S/4HANA RISE & SAP BTP - Toolbox" (ba-p/13944069). Links: `https://me.sap.com/notes/XXXXXXX`
+
+### Hyperscaler-Specific SAP Certified Configurations
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2235581](https://me.sap.com/notes/2235581) | SAP Applications on Microsoft Azure — Supported Configurations | Official SAP support matrix for Azure — governs which Azure VM SKUs and services SAP ECS can use for RISE |
+| [1656250](https://me.sap.com/notes/1656250) | SAP HANA on AWS — Certified Instance Types and Configurations | AWS certified HANA instance types (x1e, u-*tb1) — binding for RISE PCE sizing on AWS |
+| [2456432](https://me.sap.com/notes/2456432) | SAP HANA on Google Cloud — Certified Machine Types | GCP certified machine types for HANA — governs RISE PCE sizing on GCP |
+| [1514967](https://me.sap.com/notes/1514967) | SAP HANA — Certified IaaS Platforms List | Master certification list for all IaaS platforms; defines what SAP supports under the RISE contract |
+
+### Azure Infrastructure for RISE PCE
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2731110](https://me.sap.com/notes/2731110) | SAP HANA on Azure — VM Types and Configuration Guide | Azure Mv2/Mv3 configuration for HANA — SAP ECS provisions these for RISE PCE on Azure |
+| [2684254](https://me.sap.com/notes/2684254) | Azure Write Accelerator for SAP HANA Log Volumes | Mandatory Azure Write Accelerator configuration for HANA log on Mv2 — SAP ECS responsibility |
+| [2952028](https://me.sap.com/notes/2952028) | Azure NetApp Files for SAP HANA | ANF storage configuration for HANA shared volumes on Azure — relevant to RISE Azure storage design |
+| [2578899](https://me.sap.com/notes/2578899) | SAP on AWS — Network and Storage Best Practices | AWS VPC and EBS best practices — foundational for RISE PCE AWS deployments |
+
+### Monitoring and Observability on Hyperscalers
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3189990](https://me.sap.com/notes/3189990) | RISE PCE — Azure Monitor Integration for SAP Systems | Azure Monitor and Azure Workbooks templates for SAP HANA and S/4HANA monitoring |
+| [3211308](https://me.sap.com/notes/3211308) | RISE PCE — AWS CloudWatch Integration for SAP | AWS CloudWatch monitoring setup for SAP HANA and S/4HANA on AWS PCE deployments |
+| [3289774](https://me.sap.com/notes/3289774) | RISE PCE — Google Cloud Operations Suite for SAP Monitoring | GCP Cloud Monitoring (formerly Stackdriver) integration with SAP HANA on GCP PCE |
+| [2934135](https://me.sap.com/notes/2934135) | SAP HANA — Native Cloud Monitoring via Hyperscaler Agents | Installation and configuration of cloud monitoring agents (Azure Monitor Agent, AWS SSM) on HANA VMs |
+
+### Private Connectivity and Networking Contracts
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3012244](https://me.sap.com/notes/3012244) | RISE with SAP — Network Architecture and Private Connectivity | Overview of customer-procured private link options: Azure ExpressRoute, AWS Direct Connect, GCP Interconnect |
+| [3052832](https://me.sap.com/notes/3052832) | RISE PCE — Customer VNet/VPC Peering Configuration | VNet (Azure) and VPC (AWS/GCP) peering setup between customer-owned network and SAP-managed RISE network |
+| [2844111](https://me.sap.com/notes/2844111) | SAP Private Link Service for BTP — Configuration Guide | Private Link Service setup to connect BTP services to RISE PCE without public internet traversal |
+| [3267559](https://me.sap.com/notes/3267559) | RISE PCE — Network Port and Firewall Reference | Required network ports for S/4HANA PCE across hyperscalers — used for customer firewall rule configuration |
+
+### Shared Responsibility and Contractual Scope
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3089798](https://me.sap.com/notes/3089798) | RISE PCE — ECS Service Scope and Responsibilities | Defines the precise boundary between SAP ECS, hyperscaler, and customer responsibilities |
+| [3409764](https://me.sap.com/notes/3409764) | RISE PCE — SLA Definitions and Measurement | SLA tiers for RISE PCE; how uptime is measured and what exclusions apply (hyperscaler outages, customer-caused) |
+| [3463291](https://me.sap.com/notes/3463291) | RISE Contract — Renewal and Infrastructure SKU Changes | Procedures for contract amendments when changing hyperscaler, region, or infrastructure tier |
+
+### Backup and Disaster Recovery Across Hyperscalers
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3572444](https://me.sap.com/notes/3572444) | RISE PCE — Backup Policy and Retention | SAP ECS-managed backup policy across AWS, Azure, and GCP (hourly data, 35-day log, monthly full) |
+| [2781788](https://me.sap.com/notes/2781788) | SAP HANA — Cross-Region Disaster Recovery (Long Distance DR) | Long-distance DR via HANA System Replication to secondary hyperscaler region — ECS-managed |
+| [3247998](https://me.sap.com/notes/3247998) | RISE PCE — DR Failover Procedures and RTO Targets | DR runbook and RTO/RPO targets for RISE PCE across hyperscalers (Short DR: 12h RTO; Enhanced: 4h RTO) |
+
+### Hyperscaler Security and Compliance Controls
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3080379](https://me.sap.com/notes/3080379) | RISE PCE — Penetration Testing Authorization and Scope | SAP authorization procedure for customer-initiated penetration tests on RISE PCE infrastructure |
+| [2978218](https://me.sap.com/notes/2978218) | RISE PCE — Data Residency and Sovereignty Configuration | Data residency options per hyperscaler region and contractual commitments under RISE |
+| [3341087](https://me.sap.com/notes/3341087) | RISE PCE — Hyperscaler Audit Reports and Compliance Evidence | How customers can request hyperscaler and SAP ECS audit reports (ISO 27001, SOC 2) for compliance purposes |
+
+---
+
+**SAP Notes Reference Last Updated**: 2026-03-15

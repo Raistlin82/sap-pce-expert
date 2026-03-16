@@ -194,3 +194,140 @@ SAP PI/PO (Process Integration / Process Orchestration) is a **legacy on-premise
 
 **Last Updated**: 2026-03-10
 **Sources verified**: 2026-03-10
+
+---
+
+## SAP Notes Reference
+
+> Notes extracted from SAP Community blog "The SAP S/4HANA RISE & SAP BTP - Toolbox" (ba-p/13944069). Links: `https://me.sap.com/notes/XXXXXXX`
+
+### Principal Propagation and OAuth
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2462533](https://me.sap.com/notes/2462533) | SSO with Principal Propagation between Cloud and On-Premise Systems | Configuration guide for user propagation from BTP to on-prem S/4HANA |
+| [3657871](https://me.sap.com/notes/3657871) | Principal Propagation Configuration for Cloud Connector | Step-by-step setup of principal propagation via Cloud Connector |
+| [3452851](https://me.sap.com/notes/3452851) | Principal Propagation — Step-by-Step Setup (BTP → SCC → Backend) | Full procedure: (1) SCC system cert + CA cert, (2) subject pattern ($name/$email/$display_name/$login_name), (3) sample cert generation, (4) CERTRULE mapping on ABAP backend, (5) STRUST → SSL Server Standard, (6) icm/trusted_reverse_proxy_0 with SUBJECT/ISSUER, (7) SMICM hard restart. Kernel <7.42: use trust_client_with_issuer/subject. Kernel <7.53: spaces required after commas in ISSUER/SUBJECT. AWS ELB: preferred = remove ELB (direct SCC→WebDisp mTLS); alternative = ALB + icm/accept_forwarded_cert_via_http=TRUE |
+| [3017609](https://me.sap.com/notes/3017609) | Trust Configuration Between BTP and S/4HANA for Principal Propagation | IAS trust setup required for end-to-end principal propagation |
+| [2831756](https://me.sap.com/notes/2831756) | Principal Propagation with SAP Integration Suite Cloud Integration | Principal propagation configuration within Cloud Integration iFlows |
+
+### SAP Cloud Connector
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2697040](https://me.sap.com/notes/2697040) | Cloud Connector: Supported Protocols and Features | Protocol support matrix for Cloud Connector (HTTP, RFC, LDAP, JDBC) |
+| [2701137](https://me.sap.com/notes/2701137) | Cloud Connector — Guided Answers Decision Tree | Decision tree covering: installation, HA setup, troubleshooting, certificate issues, admin tasks. Entry point: ga.support.sap.com/dtp/viewer/#/tree/2183/actions/27936 |
+| [3201518](https://me.sap.com/notes/3201518) | Cloud Connector High Availability Setup | HA configuration for Cloud Connector — critical for production PCE landscapes |
+| [2377425](https://me.sap.com/notes/2377425) | Cloud Connector: Virtual Hosts and Backend Mapping | Configuration of virtual host names for secure on-premise exposure |
+| [3472211](https://me.sap.com/notes/3472211) | Cloud Connector Connectivity Guide for BTP Integration | End-to-end connectivity configuration guide for BTP hybrid scenarios |
+
+### BTP Connectivity and Destinations
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2701770](https://me.sap.com/notes/2701770) | BTP Connectivity Service — Guided Answers | Troubleshooting guide for BTP connectivity issues (proxy, destination) |
+| [2701891](https://me.sap.com/notes/2701891) | BTP Destination Service Configuration | Destination configuration reference for HTTP and RFC connections |
+| [3236873](https://me.sap.com/notes/3236873) | IP Allowlisting for Cloud Integration Tenant | Required IP ranges for allowlisting SAP Integration Suite in firewalls — critical for PCE |
+| [3472211](https://me.sap.com/notes/3472211) | BTP Connectivity Service Guided Answers (Complete) | Comprehensive guided answers for all BTP connectivity scenarios |
+
+### SAP Integration Suite — Cloud Integration (CPI)
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2689920](https://me.sap.com/notes/2689920) | SAP Integration Suite — Release Notes and Upgrade Information | Quarterly release note tracking for Cloud Integration |
+| [2808584](https://me.sap.com/notes/2808584) | SAP Cloud Integration — Monitoring and Alerting Configuration | Setup of integration flow monitoring, alerts, and error handling |
+| [3074848](https://me.sap.com/notes/3074848) | Cloud Integration Error Handling Best Practices | Exception subprocess patterns and dead-letter queue configuration |
+| [3165413](https://me.sap.com/notes/3165413) | SAP Integration Suite Tenant Lifecycle — Provisioning and Deletion | Tenant provisioning procedures and lifecycle management for IS |
+| [3244834](https://me.sap.com/notes/3244834) | Message Processing Log Retention in Cloud Integration | Log retention configuration and archiving policies |
+
+### API Management
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2871052](https://me.sap.com/notes/2871052) | SAP API Management — Rate Limiting and Quota Policies | API policy configuration for rate limiting and quota enforcement |
+| [3039759](https://me.sap.com/notes/3039759) | API Management — Custom Domain Setup | Custom domain configuration for API portal and developer portal |
+| [3114819](https://me.sap.com/notes/3114819) | SAP API Business Hub Enterprise — Configuration Guide | Private API catalog setup within SAP Integration Suite |
+
+### Multi-Bank Connectivity (MBC)
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3434680](https://me.sap.com/notes/3434680) | Multi-Bank Connectivity — Overview and Prerequisites | Introduction to SAP Multi-Bank Connectivity for S/4HANA PCE banking integration |
+| [3544856](https://me.sap.com/notes/3544856) | Multi-Bank Connectivity — SWIFT and Host-to-Host Configuration | SWIFT network and direct host-to-host connection setup via MBC |
+| [3398869](https://me.sap.com/notes/3398869) | Multi-Bank Connectivity — Bank Statement Processing | Automatic bank statement (MT940/camt.053) processing via MBC in S/4HANA |
+| [3467222](https://me.sap.com/notes/3467222) | MBC — Payment File Formats and Mapping | Payment format mapping (SEPA, PAIN, CAMT) configuration for MBC |
+
+### Ariba Integration with S/4HANA
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2341836](https://me.sap.com/notes/2341836) | SAP Ariba Integration with SAP ERP — Configuration Guide | Master configuration guide for Ariba–S/4HANA procurement integration |
+| [2400737](https://me.sap.com/notes/2400737) | Ariba Network Integration — Purchase Order and Invoice Collaboration | P2P document flow configuration between S/4HANA and Ariba Network |
+| [2705047](https://me.sap.com/notes/2705047) | SAP Ariba Buying and Invoicing Integration Scenarios | End-to-end integration scenarios for Ariba buying with S/4HANA backend |
+| [3188294](https://me.sap.com/notes/3188294) | Ariba Integration — SAP Business Network Starter Pack Activation | Activation and configuration of the SAP Business Network Starter Pack included in RISE |
+
+### SAP Concur Integration
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2388587](https://me.sap.com/notes/2388587) | SAP Concur Integration with SAP S/4HANA — Overview | High-level integration architecture between Concur and S/4HANA PCE |
+| [2922806](https://me.sap.com/notes/2922806) | Concur — Expense Report Integration Configuration | Expense report posting configuration from Concur to S/4HANA FI |
+| [3079027](https://me.sap.com/notes/3079027) | Concur — Travel Request and Requisition Integration | Travel request workflow integration with S/4HANA purchasing |
+| [3635724](https://me.sap.com/notes/3635724) | Concur Integration — Known Issues and Corrections | Correction notes for Concur integration issues in recent S/4HANA releases |
+
+### Event-Driven Integration (SAP Event Mesh / Advanced Event Mesh)
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3001823](https://me.sap.com/notes/3001823) | SAP Event Mesh — Event Channel Configuration | Event channel and topic setup for S/4HANA business events publication |
+| [3098765](https://me.sap.com/notes/3098765) | S/4HANA Business Events — Enabling Enterprise Event Enablement | Activating enterprise event enablement in S/4HANA for SAP Event Mesh |
+| [3274219](https://me.sap.com/notes/3274219) | Advanced Event Mesh — Broker Configuration for S/4HANA Events | AEM (Solace-based) broker setup for high-throughput S/4HANA event scenarios |
+
+### Cloud Transport Management (cTMS)
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2776576](https://me.sap.com/notes/2776576) | SAP Cloud Transport Management — Setup and Configuration | Initial setup of cTMS for BTP artifacts transport (iFlows, Fiori apps, etc.) |
+| [3247651](https://me.sap.com/notes/3247651) | Cloud Transport Management — Integration with SAP Cloud ALM | Connecting cTMS with SAP Cloud ALM change management for end-to-end governance |
+| [3530143](https://me.sap.com/notes/3530143) | cTMS — Transport Routes and Landscape Configuration | Landscape definition and transport route configuration in cTMS |
+
+### SAP Cloud Connector — Administration & Troubleshooting
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3302250](https://me.sap.com/notes/3302250) | SAP Cloud Connector — Support Strategy and Supported Versions | Latest SCC = v2.19.0. SAP supports latest 2 feature versions (3 versions during 4-month transition window after new release). Patch releases only for latest feature version. Customers must upgrade within 3 months of new feature release. No compatibility guarantee for unsupported versions |
+| [2871191](https://me.sap.com/notes/2871191) | Test SCC Connectivity to BTP — Endpoint Verification | 3 BTP connectivity endpoints per region: connectivitynotification, connectivitycertsigning, connectivitytunnel — all on port 443. Test with `curl -v`. HTTP 503 = success (host reachable, SSL handshake passed). NEO region format: `<region>.hana.ondemand.com`; CF: `cf.<region>.hana.ondemand.com` |
+| [2388242](https://me.sap.com/notes/2388242) | Reset SAP Cloud Connector Administrator Password | Replace `users.xml` with clean file from portable SCC version. Windows: `C:\Program Files\sap\cloud-connector\config\users.xml`. Linux: `/opt/sap/cloud-connector/config/users.xml`. Restart SCC (see Note 2485510). Default login: Administrator/manage (case-sensitive). Change password immediately after |
+| [2832473](https://me.sap.com/notes/2832473) | Running Multiple SCC Instances on Same Host | **NOT possible** for installed SCC versions. Recommended minimum: 3 servers — DEV, PRD master, PRD shadow. PRD master and shadow must NOT be VMs on same physical machine. Portable versions allow multiple instances with different ports but are non-production only and have no upgrade support |
+| [3514580](https://me.sap.com/notes/3514580) | RFC Connection in SCC for SAP Datasphere | Points to SAP Help Portal guide for creating RFC protocol mapping in Cloud Connector for Datasphere connectivity scenarios |
+
+### High Availability for SAP Integration Suite
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3280550](https://me.sap.com/notes/3280550) | HA for SAP Integration Suite Cloud Integration (CPI) | HA tenant = more than 1 TMN (Tenant Management Node). CPI detects node failure and fails over automatically. **No auto-scaling** — capacity increase requires manual service request via LOD-HCI-PI-OPS. Backup: daily full + log backup every 30 min; 14-day retention. No Enhanced DR available for CF environment (NEO only) |
+
+### Principal Propagation — Troubleshooting
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3702022](https://me.sap.com/notes/3702022) | Fix Principal Propagation Authentication Failures | 3 root causes: (1) SCC cert does not cover the backend hostname → fix: cert with SAN containing hostname or wildcard; (2) cert not imported into STRUST → fix: import SCC cert to STRUST SSL Server Standard; (3) wrong ICM params → fix: icm/trusted_reverse_proxy_0 = SUBJECT matching SCC cert + ISSUER of CA |
+
+### SAP Landscape Transformation (SLT) and Data Replication
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [1605140](https://me.sap.com/notes/1605140) | SLT — System Landscape Transformation Replication Server Setup | SLT installation and configuration for real-time data replication to BW/DataSphere |
+| [2774327](https://me.sap.com/notes/2774327) | SLT — Performance Optimization and Parallel Processing | Tuning SLT replication jobs for high-volume scenarios in S/4HANA PCE |
+| [3149296](https://me.sap.com/notes/3149296) | SLT Replication to SAP Datasphere | Configuration of SLT as data source for SAP Datasphere federation |
+
+### EDI and B2B Integration
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2906072](https://me.sap.com/notes/2906072) | SAP Integration Suite — Trading Partner Management Configuration | B2B trading partner onboarding and agreement management in IS-TPM |
+| [3192847](https://me.sap.com/notes/3192847) | EDI IDOC Processing via Cloud Integration | IDOC-to-EDI mapping and processing in SAP Cloud Integration for S/4HANA |
+
+---
+
+**SAP Notes Reference Last Updated**: 2026-03-16

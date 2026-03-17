@@ -1,2 +1,6 @@
 .DS_Store
 **/.DS_Store
+docs/plans/
+token-cache.json
+debug-auth-page.png
+sap-notes-master-list.md

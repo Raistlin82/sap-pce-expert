@@ -181,8 +181,8 @@ For short-lived X.509 certificates for SAP GUI:
 
 ---
 
-**Last Updated**: 2026-03-09
-**Sources verified**: 2026-03-09
+**Last Updated**: 2026-03-16
+**Sources verified**: 2026-03-16
 
 ---
 
@@ -199,6 +199,11 @@ For short-lived X.509 certificates for SAP GUI:
 | [2457590](https://me.sap.com/notes/2457590) | SAML 2.0 Configuration in SAP S/4HANA for SSO | Step-by-step SAML 2.0 configuration in S/4HANA ABAP stack for SSO via IAS or Azure AD |
 | [2941654](https://me.sap.com/notes/2941654) | IAS — Conditional Authentication and Risk-Based Authentication | Configuring MFA and risk-based authentication policies in IAS for RISE users |
 | [3188941](https://me.sap.com/notes/3188941) | IAS — User Provisioning and SCIM API Integration | SCIM-based user provisioning from HR/AD systems to IAS for S/4HANA user lifecycle management |
+| [2701851](https://me.sap.com/notes/2701851) | IAS — Troubleshooting Guide | Points to the SAP Help Portal IAS troubleshooting guide; covers IAS with SAP ID Service and custom IAS tenants; entry point for all IAS login problems |
+| [2945035](https://me.sap.com/notes/2945035) | Connect Microsoft Entra ID (Azure AD) to SAP IAS | 9-step federation procedure: create enterprise app in Entra ID → exchange SAML metadata with IAS → configure conditional authentication in IAS. IAS acts as the SAML proxy/federation hub between Entra ID and SAP applications |
+| [3080900](https://me.sap.com/notes/3080900) | Configure Corporate / 3rd-Party IdP Federation with IAS | 5-step procedure: (1) add corporate IdP in IAS + upload IdP metadata, (2) download IAS SP metadata → upload to corporate IdP, (3) add trust config in BTP subaccount + upload IAS metadata, (4) download BTP SP metadata, (5) add application in IAS + upload SP metadata |
+| [3452320](https://me.sap.com/notes/3452320) | IAS — Collect Traces for Login Issue Analysis | Trace collection procedures for IAS SSO failures: SAML trace via Note 2461862 (preferred), HTTP trace via Note 1990706 (alternative), IAS troubleshooting log from IAS Admin Console via Note 2942816 |
+| [2923465](https://me.sap.com/notes/2923465) | IAS — "Identity Provider Could Not Process Authentication Request" | Cause: no trusted SP (application) configured in IAS with the Issuer name sent in the AuthnRequest. Fix: in IAS Admin Console → Applications → verify application exists and its Issuer name exactly matches the SP Issuer (case-sensitive) |
 
 ### Identity Provisioning Service (IPS)
 
@@ -207,6 +212,7 @@ For short-lived X.509 certificates for SAP GUI:
 | [2671327](https://me.sap.com/notes/2671327) | SAP Identity Provisioning Service — Overview and Connector Setup | IPS provisioning of users from source systems (AD, SAP HCM, Workday) to S/4HANA and BTP |
 | [3086294](https://me.sap.com/notes/3086294) | IPS — SAP S/4HANA Target System Connector Configuration | Configuring S/4HANA as a target system in IPS for automated user provisioning |
 | [3241987](https://me.sap.com/notes/3241987) | IPS — BTP XSUAA Target Connector for BTP Role Assignment | Automated BTP role assignment via IPS provisioning workflows |
+| [2701901](https://me.sap.com/notes/2701901) | IPS — Troubleshooting Guide | Points to SAP Help Portal IPS provisioning troubleshooting guide; entry point for all IPS provisioning failures |
 
 ### XSUAA and BTP Authorization
 
@@ -259,6 +265,25 @@ For short-lived X.509 certificates for SAP GUI:
 | [2140005](https://me.sap.com/notes/2140005) | Security Hardening — Login and Session Security Profile Parameters | Recommended login profile parameter settings for S/4HANA production systems under RISE |
 | [3063765](https://me.sap.com/notes/3063765) | SAP S/4HANA — Trusted Systems and RFC Authorization | Trusted RFC connection setup and authorization concept for inter-system calls in PCE landscape |
 
+### SAML2 Security Hardening
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3280746](https://me.sap.com/notes/3280746) | Enforce SAML2 Authentication for All S/4HANA Web Logins | Two options to prevent users from bypassing SAML2 by appending `saml2=disabled` to URLs: **Option 1** — ICM rewrite rule that strips `saml2=disabled` from inbound requests; **Option 2** — remove Basic Authentication from SICF service logon procedures. Recommended hardening for PCE production systems |
+
+### BTP Platform Administration
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3041304](https://me.sap.com/notes/3041304) | BTP Subaccount Region Migration — Manual Process | No automatic migration process exists. Full manual procedure: create new subaccount in target region → move apps → enable services → transfer entitlements → migrate HANA DB → reconnect SAP Cloud Connector → redo trust configuration → re-add members → export/import destinations |
+
+### BTP ABAP Environment — Regional Restrictions and AI Mapping
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3560160](https://me.sap.com/notes/3560160) | BTP ABAP Environment 2502 — Release Restrictions and Data Residency | EU Only Access (AWS EU11 / Azure CH20): Landscape Portal data stored in AWS EU10. Azure/GCP: SAP-managed gCTS repositories stored in AWS EU Frankfurt. Use **Bring-your-own-Git** to mitigate gCTS cross-region storage. Joule AI Core region mapping → see Note 3566760 |
+| [3566760](https://me.sap.com/notes/3566760) | BTP ABAP Environment — SAP AI Core Region Mapping for Joule | Full region mapping table for BTP ABAP Environment ↔ SAP AI Core (required for Joule capabilities). Regions ap12, il30, sa30 have **no AI Core mapping** (Joule not available). All other regions mapped to nearest AI Core region |
+
 ---
 
-**SAP Notes Reference Last Updated**: 2026-03-15
+**SAP Notes Reference Last Updated**: 2026-03-16

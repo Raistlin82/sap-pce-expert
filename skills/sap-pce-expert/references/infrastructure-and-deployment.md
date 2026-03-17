@@ -279,6 +279,21 @@ DR region: Secondary region within the same hyperscaler geography. Separate outb
 | [3421606](https://me.sap.com/notes/3421606) | FAQ: SAP HANA Auditing Activity | FAQ for HANA database audit policy configuration: what can be audited, audit trail targets (CSV/SYSLOG/table), and performance impact. Customer is responsible for defining audit scope; ECS manages HANA system configuration. |
 | [3582156](https://me.sap.com/notes/3582156) | Archiving / Archive Strategies for table(s) from the perspective of SAP HANA | HANA-level archiving and data tiering strategies for managing table growth (ILM archiving, dynamic tiering, near-line storage). Relevant for PCE customers approaching storage limits defined in FUE-based contracts. |
 
+### S/4HANA Release Notes & Compatibility Reference
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3493301](https://me.sap.com/notes/3493301) | SAP S/4HANA 2025: Release Information Note | Central release note for S/4HANA 2025 on-premise and PCE — lists new features, restrictions, mandatory prerequisites, and component version matrix. First reference for any S/4HANA 2025 upgrade planning |
+| [3658070](https://me.sap.com/notes/3658070) | SAP S/4HANA Cloud Private Edition 2025: Release Information Note | PCE-specific release information for 2025 — covers ECS-managed upgrade procedures, PCE-specific restrictions, and delta from on-premise 2025. Mandatory reading before any PCE 2025 upgrade |
+| [3568504](https://me.sap.com/notes/3568504) | SAP S/4HANA FOUNDATION 2025: Release Information Note | Release note for the S/4HANA Foundation component (BASIS layer) in the 2025 release — covers kernel, ABAP platform, and ICM updates relevant to ECS-managed systems |
+| [3061124](https://me.sap.com/notes/3061124) | SAP S/4HANA Cloud Private Edition — General Release Information | Umbrella release information note for S/4HANA Cloud PCE product line — covers support package delivery, maintenance windows, and PCE-specific release cadence notes |
+| [3354958](https://me.sap.com/notes/3354958) | S/4HANA Cloud Private Edition and On-Premise — General Information on Support Packages | General SP/SPS release strategy for both S/4HANA flavors — maintenance windows, SP stacking rules, and alignment with ECS patching cadence under RISE |
+| [2269324](https://me.sap.com/notes/2269324) | Compatibility Scope Matrix for SAP S/4HANA | Definitive compatibility matrix for S/4HANA components, add-ons, and partner products — use to verify compatibility of ISV add-ons and SAP solution extensions before PCE upgrades |
+| [3641453](https://me.sap.com/notes/3641453) | SAP S/4HANA 2023: Support Package Stack — Additional Release Information | Supplemental release information for S/4HANA 2023 SP stacks — important for PCE customers on the 2023 release receiving quarterly SP updates via ECS |
+| [3634338](https://me.sap.com/notes/3634338) | Pre-Requisite Notes for Compatibility with SAP S/4HANA 2025 | Collective list of prerequisite correction notes that must be implemented before or during upgrade to S/4HANA 2025 — review prior to any 2025 upgrade project kickoff |
+| [3558794](https://me.sap.com/notes/3558794) | AI Functionality in S/4HANA Cloud Private Edition | Overview of all AI-powered features available in S/4HANA Cloud PCE — activation prerequisites, SAP AI Core region requirements, and list of business use cases per release |
+| [3523238](https://me.sap.com/notes/3523238) | Navigational and Transactional Capabilities with Joule in S/4HANA PCE | Describes Joule's embedded navigation and transactional use cases in PCE (e.g., guided task navigation, transaction shortcut, context-aware help) — scope of Joule capabilities that require AI Core connectivity |
+
 ---
 
 **SAP Notes Reference Last Updated**: 2026-03-17

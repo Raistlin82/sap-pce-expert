@@ -470,7 +470,18 @@ SOC attestation reports available on request via Trust Center (subject to NDA).
 | [2913548](https://me.sap.com/notes/2913548) | IAG Privileged Access Management Launch for ABAP | Configuration guide for launching IAG Privileged Access Management (PAM/Firefighter) for ABAP backend systems. Covers IAG PAM setup for S/4HANA PCE: ABAP connector, EAM owner/controller roles, and firefighter log retrieval. |
 | [3081715](https://me.sap.com/notes/3081715) | IAG Bridge — Multiple issues with provisioning | Collective note for IAG Bridge provisioning failures: roles not provisioned, user sync errors, repository sync issues, workflow stuck. Organized by error symptom with resolution steps. Essential troubleshooting reference for IAG Bridge in PCE landscapes. |
 
+### HTTP Security, Certificates & Emergency Access
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2223891](https://me.sap.com/notes/2223891) | Configuring the HTTP_WHITELIST Table for Public ICF Services | How to configure the `HTTP_WHITELIST` table (transaction SE16 on table `HTTP_WHITELIST`) to allow specific external URLs to be accessed from AS ABAP — required for SAML2 metadata downloads, IAS metadata, and external OAuth endpoints in PCE |
+| [2478552](https://me.sap.com/notes/2478552) | List of Certificate Authorities (CAs) Supported by SAP Cloud Integration | Reference list of trusted CA root certificates pre-loaded in SAP Cloud Integration — use when setting up mTLS or certificate-based authentication between CPI and on-premise S/4HANA PCE endpoints |
+| [2300234](https://me.sap.com/notes/2300234) | SAP Single Sign-On 3.0: Central Note | Central reference for SAP SSO 3.0 (Secure Login Server / Secure Login Client) — covers X.509 certificate-based SSO for SAP GUI, prerequisites for PCE deployment, and compatibility with IAS |
+| [2333305](https://me.sap.com/notes/2333305) | Tutorial: Restore Emergency User SAP* [VIDEO] | Procedure for recovering emergency access to an S/4HANA system when all admin users are locked — requires setting profile parameter `login/no_automatic_user_sapstar=0` and restarting the instance. Critical break-glass procedure for PCE; coordinate with ECS for parameter change in managed systems |
+| [1928533](https://me.sap.com/notes/1928533) | SAP Applications on Microsoft Azure: Supported Products and Azure VM Types | Supported SAP product/VM type combinations on Azure — reference for verifying PCE infrastructure compatibility when Microsoft Azure is the chosen hyperscaler. Also used for sizing validation and ISV add-on support scoping |
+| [2219598](https://me.sap.com/notes/2219598) | SAP Business Technology Platform Forms Service by Adobe | Activation and configuration of Adobe Document Services (ADS) on BTP — covers certificate-based RFC connection from S/4HANA PCE to BTP ADS, trust configuration, and output management integration |
+
 ---
 
 **Last Updated**: 2026-03-17
-**Sources verified**: 2026-03-16 (note titles from RISE BTP Toolbox community blog)
+**Sources verified**: 2026-03-17

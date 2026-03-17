@@ -284,6 +284,21 @@ For short-lived X.509 certificates for SAP GUI:
 | [3560160](https://me.sap.com/notes/3560160) | BTP ABAP Environment 2502 — Release Restrictions and Data Residency | EU Only Access (AWS EU11 / Azure CH20): Landscape Portal data stored in AWS EU10. Azure/GCP: SAP-managed gCTS repositories stored in AWS EU Frankfurt. Use **Bring-your-own-Git** to mitigate gCTS cross-region storage. Joule AI Core region mapping → see Note 3566760 |
 | [3566760](https://me.sap.com/notes/3566760) | BTP ABAP Environment — SAP AI Core Region Mapping for Joule | Full region mapping table for BTP ABAP Environment ↔ SAP AI Core (required for Joule capabilities). Regions ap12, il30, sa30 have **no AI Core mapping** (Joule not available). All other regions mapped to nearest AI Core region |
 
+### IAS & BTP SSO: Diagnostics and Troubleshooting
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [2701851](https://me.sap.com/notes/2701851) | Identity Authentication — Guided Answers | Entry point KBA pointing to the official IAS Guided Answers portal — start here for any IAS login or configuration issue before raising a support ticket |
+| [2461862](https://me.sap.com/notes/2461862) | Collecting SAML Traces with Chrome, Edge or Firefox | Step-by-step procedure for capturing SAML assertions and responses via browser developer tools — essential for diagnosing SSO failures between IAS, S/4HANA, and corporate IdPs |
+| [2332686](https://me.sap.com/notes/2332686) | SAML2.0 — No RelayState Mapping Found for RelayState Value | Explains why SAML2 login fails with "No RelayState mapping found" error; caused by missing or mismatched RelayState configuration in SAML2 service provider settings |
+| [2577263](https://me.sap.com/notes/2577263) | Disable SAML2.0 Authentication for a Specific ICF Service | How to exclude individual ICF services from SAML2 authentication in AS ABAP — useful when specific services (e.g., system integrations) require basic auth while the rest of the system uses SAML/SSO |
+| [3256721](https://me.sap.com/notes/3256721) | Resolving 'SAML2 Service Not Accessible' Error After SSO Configuration | Troubleshooting guide for the "SAML2 service not accessible" error that appears after activating SAML2 SSO in NW ABAP — typically caused by the SAML2 ICF node not being activated |
+| [3452320](https://me.sap.com/notes/3452320) | Collecting Traces for Analyzing IAS-Involved Login Issues | How to enable and collect detailed trace information from IAS for login failures — includes steps for IAS admin trace, browser SAML trace, and AS ABAP ICM trace correlation |
+| [3543459](https://me.sap.com/notes/3543459) | SAML2 Metadata Download Error Due to HTTP Whitelist Exception | Fix for metadata download failure in SAML2 configuration when the `HTTP_WHITELIST` table blocks the metadata URL; requires adding the IAS metadata endpoint to the ICM HTTP allowlist |
+| [3080900](https://me.sap.com/notes/3080900) | Using a 3rd-Party / Corporate IdP with IAS for Enterprise SSO | Configuration guide for IAS in proxy mode: setting up a corporate IdP (ADFS, Okta, PingFederate) as the upstream identity provider while IAS acts as proxy SP — standard pattern for RISE PCE customers with existing corporate SSO |
+| [2945035](https://me.sap.com/notes/2945035) | Connect Microsoft Entra ID (Azure Active Directory) to IAS | Step-by-step configuration of Microsoft Entra ID as a corporate IdP in IAS proxy mode — covers app registration in Entra, SAML federation trust with IAS, and attribute mapping for S/4HANA and BTP applications |
+| [3507340](https://me.sap.com/notes/3507340) | Test Entra ID → IAS Proxy for IdP-Initiated SSO | Testing procedure for IdP-initiated SSO via Microsoft Entra ID using IAS as a SAML2 proxy — validates the full trust chain before production go-live |
+
 ---
 
-**SAP Notes Reference Last Updated**: 2026-03-16
+**SAP Notes Reference Last Updated**: 2026-03-17

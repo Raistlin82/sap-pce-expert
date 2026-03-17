@@ -10,7 +10,7 @@
       "source": "url",
       "url": "https://github.com/Raistlin82/sap-pce-expert.git"
     },
-    "version": "1.3.0",
+    "version": "1.4.0",
     "description": "Comprehensive knowledge of SAP Private Cloud ERP (RISE with SAP) including architecture, migration, operations, security, extensibility, integration, and licensing."
   }]
 }

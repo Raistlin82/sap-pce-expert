@@ -417,5 +417,23 @@ The Customer Dashboard is the primary self-service portal for RISE with SAP cust
 
 ---
 
-**Last Updated**: 2026-03-16
+### Basis Administration — ICF and RFC
+
+> Notes for managing ICF services (SICF) and RFC connectivity in S/4HANA PCE. ICF hardening and RFC callback controls are customer responsibility; ECS handles OS/network layer.
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [1455095](https://me.sap.com/notes/1455095) | ICF verification services | Lists ICF verification/test services that should be **deactivated in production**. Activate temporarily in DEV/QA for diagnostics; disable immediately after. Standard hardening step recommended by ECS upon system delivery and flagged in EarlyWatch Alert. |
+| [1498575](https://me.sap.com/notes/1498575) | Mass processing of ICF services | Report `RS_ICF_SERV_ADMIN_TASKS` for bulk ICF service activation/deactivation. Supports CSV-based mass operations. Used in combination with EWA report to deactivate unused services (see Note 2989913 for EWA-driven workflow). |
+| [2330899](https://me.sap.com/notes/2330899) | ICF Ping Service | The ICF Ping service (`/sap/bc/ping`) — lightweight availability check endpoint. Use to verify ICF stack reachability from Web Dispatcher or monitoring tools. Should be activated but access-controlled in production. |
+| [2661761](https://me.sap.com/notes/2661761) | ICF Services — what is mandatory and what can be deactivated? | Decision guide for ICF service hardening: which services are mandatory for S/4HANA operation vs. which are optional and can be safely deactivated. Essential reference for security hardening in PCE after system delivery. |
+| [2573379](https://me.sap.com/notes/2573379) | How to adjust the logon procedure list of an ICF service | Configure the authentication/logon procedures (basic auth, SAML2, SPNEGO, X.509 certificate) accepted per ICF service node. Relevant for tightening authentication on Fiori and OData endpoints in PCE. |
+| [3317801](https://me.sap.com/notes/3317801) | Connecting to Message Server of ASCS instance for HTTP load balancing | Configure HTTP load balancing via the Message Server (ASCS instance). Relevant for Web Dispatcher setup in PCE — ECS manages the ASCS; customer configures Web Dispatcher routing rules via Service Request. |
+| [3372505](https://me.sap.com/notes/3372505) | ICF — How to transport SICF services | Procedure to transport ICF service configurations (activation status, logon procedures, handlers) across landscapes using change request transport. Critical for propagating ICF hardening from DEV → QAS → PRD in PCE. |
+| [2941068](https://me.sap.com/notes/2941068) | SM59/Callback allowlist input validation missing | Security note: SM59 RFC callback allowlist (positive list) input validation fix. In PCE, configure RFC callback positive lists in SM59 to restrict which systems can register RFC server programs — relevant for RFC server security hardening. |
+| [2203325](https://me.sap.com/notes/2203325) | Configuration of e-mail using SMTP (inbound) | Step-by-step configuration for SMTP inbound mail processing in AS ABAP (SAPconnect, SCOT). In PCE, outbound SMTP relay is ECS-managed; inbound SMTP configuration (SAPconnect routing, SOST) is customer responsibility. |
+
+---
+
+**Last Updated**: 2026-03-17
 **Sources verified**: 2026-03-16 (note titles from RISE BTP Toolbox community blog)

@@ -453,5 +453,24 @@ SOC attestation reports available on request via Trust Center (subject to NDA).
 
 ---
 
-**Last Updated**: 2026-03-16
+### GRC & Access Control
+
+> Notes for SAP GRC Access Control (on-premise 12.0) and SAP Cloud Identity Access Governance (IAG), including the IAG Bridge scenario that integrates both systems. See also `cross-cutting/identity-and-access.md` for IAS/IPS and role management.
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [2638578](https://me.sap.com/notes/2638578) | What's new in GRC Access Control 12.0 | Feature overview of GRC Access Control 12.0: new UX (Fiori-based), enhanced role management, emergency access management (EAM) improvements, connector framework updates. Reference for customers upgrading from GRC 10.x on PCE. |
+| [2646456](https://me.sap.com/notes/2646456) | FAQ: SAP Cloud Identity Access Governance (IAG) | Central FAQ for SAP Cloud Identity Access Governance (IAG) — the cloud-based successor to GRC Access Control. Covers provisioning, access request, risk analysis, and IAG Bridge integration. Entry point for all IAG support questions. |
+| [3344437](https://me.sap.com/notes/3344437) | Roadmap for GRC products | Strategic roadmap for GRC product portfolio: GRC Access Control, Process Control, Risk Management, and their cloud evolution paths. Critical for PCE customers planning GRC long-term direction alongside RISE with SAP adoption. |
+| [3326989](https://me.sap.com/notes/3326989) | Announcement of the Upcoming Release of SAP Access Control, Process Control and Risk Management | Announcement of next-generation GRC platform (SAP GRC edition for SAP HANA). Details the transition from current on-premise GRC 12.0 to the new platform, planned Q1 2026. PCE customers on GRC 12.0 should assess migration timeline. |
+| [3376776](https://me.sap.com/notes/3376776) | SAP Access Control 12.0 SP23 Release Information Note | Release information for GRC AC 12.0 SP23: new features, bug fixes, and known restrictions. Includes HANA compatibility matrix and prerequisite notes. Check SP-specific release notes before applying each GRC support package in PCE. |
+| [3258752](https://me.sap.com/notes/3258752) | SAP Cloud IAG — How-To's and Guides | Central collection of IAG how-to guides: access request workflow, role certification, risk analysis, emergency access, IAG Bridge setup, connector configuration. Essential reference for IAG administrators supporting PCE. |
+| [3602657](https://me.sap.com/notes/3602657) | Central KBA for IAG Bridge Note collection | Master index of IAG Bridge notes organized by Support Package. The IAG Bridge enables IAG to provision roles directly to S/4HANA PCE (replacing GRC-based provisioning for bridge-enabled scenarios). Navigate by SP to find relevant bridge fixes and setup notes. |
+| [3437714](https://me.sap.com/notes/3437714) | IAG — Best Practice for maintaining rulesets for IAG Bridge Scenario | Best practices for managing SoD rulesets in the IAG Bridge scenario: ruleset synchronization between IAG and GRC AC, conflict resolution procedures, and recommended maintenance cadence. Prevents authorization drift in PCE GRC landscape. |
+| [2913548](https://me.sap.com/notes/2913548) | IAG Privileged Access Management Launch for ABAP | Configuration guide for launching IAG Privileged Access Management (PAM/Firefighter) for ABAP backend systems. Covers IAG PAM setup for S/4HANA PCE: ABAP connector, EAM owner/controller roles, and firefighter log retrieval. |
+| [3081715](https://me.sap.com/notes/3081715) | IAG Bridge — Multiple issues with provisioning | Collective note for IAG Bridge provisioning failures: roles not provisioned, user sync errors, repository sync issues, workflow stuck. Organized by error symptom with resolution steps. Essential troubleshooting reference for IAG Bridge in PCE landscapes. |
+
+---
+
+**Last Updated**: 2026-03-17
 **Sources verified**: 2026-03-16 (note titles from RISE BTP Toolbox community blog)

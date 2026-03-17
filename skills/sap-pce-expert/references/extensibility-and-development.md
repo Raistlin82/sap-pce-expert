@@ -319,5 +319,40 @@ Describes the classification of frameworks, technologies, and development patter
 
 ---
 
-**Last Updated**: 2026-03-16
+### Fiori & UI Configuration
+
+> Core task lists and setup notes for SAP Fiori activation in S/4HANA PCE. Task lists executed via transaction STC01.
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [2712785](https://me.sap.com/notes/2712785) | Fiori Setup: Initial Setup for Fiori Applications S/4 (SAP_FIORI_FOUNDATION_S4) | Changelog and updates for task list SAP_FIORI_FOUNDATION_S4. Covers: system alias setup, ICF service activation for WEBGUI/NWBC/WCF, FLP configuration (Easy Access Menu, Notifications, Spaces & Pages, App Support), foundation OData/V4 service publication, Fiori Foundation role generation. Apply with SNOTE before running rapid activation. |
+| [2902673](https://me.sap.com/notes/2902673) | Rapid Activation for SAP Fiori in SAP S/4HANA — Overview | Master index of release-specific rapid activation composite notes (1709 through 2025 FPS01). Entry point for finding the correct composite note for your S/4HANA release. Covers embedded deployment requirement — standalone hub requires separate setup. |
+| [2686456](https://me.sap.com/notes/2686456) | Fiori Setup: Content Activation for SAP Business Roles (SAP_FIORI_CONTENT_ACTIVATION) | Changelog and updates for task list SAP_FIORI_CONTENT_ACTIVATION. Automates OData/ICF service determination and activation for selected SAP Business Roles (SAP_BR* scheme). Includes V4 service group publication, role assignment to users, recording support for ChaRM. Apply with SNOTE. |
+| [2881803](https://me.sap.com/notes/2881803) | Single Fiori App Performance Troubleshooting | Collective KBA for diagnosing individual Fiori app performance. Covers SAPUI5 app types (Fiori elements, OVP, Smart Business, Design Studio), trace tools (ST12, HANA Performance Trace, HAR file), and app-specific performance restrictions by S/4HANA release. |
+| [2603238](https://me.sap.com/notes/2603238) | Analysis Tool For FIORI Configuration: Various Errors | Bug fixes and enhancements for report `/SDF/FIORI_ANALYSIS` (SAP Fiori Configuration Analysis Tool). Use to identify activated but unused ICF services, OData V2/V4 activation status, app namespace, reuse components. Key for ICF cleanup in PCE systems. |
+| [2916959](https://me.sap.com/notes/2916959) | Fiori Performance Troubleshooting | Comprehensive performance troubleshooting guide covering: FLP startup (tile count, UI2 cache), FLP Search (limit search connectors ≤10), single app performance, SAP GUI for HTML limitations, SAPUI5 resource (CDN, cache buster), network (latency, bandwidth). Iterative elimination process guide. |
+| [2240690](https://me.sap.com/notes/2240690) | Front-end Network Bandwidth Sizing for SAP Fiori Apps and SAP S/4HANA | Network sizing guidance for Fiori in S/4HANA. Recommends 10–25 KB/user interaction step for initial sizing; 15 KB/step for mixed Fiori+WebDynpro+SAPGUI for HTML landscapes. Use ST03 on Frontend Server (Expert Mode) for expert sizing. |
+| [3493254](https://me.sap.com/notes/3493254) | SAP FIORI FOR SAP S/4HANA 2025: Release Information Note | Release information note for SAP Fiori for S/4HANA 2025 (embedded deployment on SAP_UI 8.16 / SAPUI5 1.136). Lists supported FES, browser matrix, key notes, FPS dependencies. New: UIAPFI70 and UIS4HOP1 merged into UIS4H component. |
+| [3574267](https://me.sap.com/notes/3574267) | SAP Fiori front-end server 2025 for SAP S/4HANA | Technical details of FES 2025 add-on product: SAP_UI 8.16 (SAPUI5 1.136, supported until 2032), deployment variants (embedded/hub on S/4HANA 2025 or S/4HANA Cloud PCE 2025 or S/4HANA Foundation 2025). UI for Basis Applications retrofitted to ABAP Platform — no longer part of FES PV. |
+
+### AI & Joule Integration
+
+> Notes for activating AI features in S/4HANA PCE via SAP AI Core, ISLM, ABAP AI SDK, and Joule. Requires BTP connectivity and AI Unit entitlement.
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3248365](https://me.sap.com/notes/3248365) | Central SAP Note for SAP AI Core | Central reference for SAP AI Core — BTP service that provides the AI runtime for Joule and embedded AI use cases. Links to What's New documentation and Help Portal. Entry point for SAP AI Core support and feature tracking. |
+| [3437766](https://me.sap.com/notes/3437766) | Availability of Generative AI Models | Reference list of generative AI models available via SAP AI Core Generative AI Hub (e.g., GPT-4, Claude, Gemini). Models are versioned and region-specific. Relevant when enabling Joule or ABAP AI SDK for PCE AI use cases. |
+| [3486932](https://me.sap.com/notes/3486932) | ABAP AI SDK powered by ISLM | Introduces ABAP AI SDK integration with ISLM (Intelligent Scenario Lifecycle Management) for building GenAI use cases in S/4HANA. Enables pre-built and custom AI use cases via SAP Generative AI Hub in all S/4HANA editions and BTP ABAP Environment. |
+| [3513374](https://me.sap.com/notes/3513374) | Generative AI SDK for On-Premise and Private Cloud release | TCI note delivering the ABAP AI SDK (LLM/completion API) for S/4HANA On-Premise and PCE. Prerequisite: ISLM note 3490653 must be applied first. Enables ABAP developers to call LLM models from ABAP code in PCE systems. |
+| [3490653](https://me.sap.com/notes/3490653) | ISLM support for custom Gen AI scenario | ISLM downport enabling custom GenAI use case creation on earlier S/4HANA releases. Capabilities: custom/pre-built AI scenario lifecycle management, Generative AI Hub connectivity, prompt template management, auto-enablement (Turnkey) of AI use cases. Prerequisite for Note 3513374. |
+| [3535359](https://me.sap.com/notes/3535359) | Availability of AI Functionality | Status note listing AI use cases with provisioning/commercialization issues: AI-assisted sales order monitoring, goods receipt, journal upload, maintenance orders, MDG, contract accounting. Consult before go-live to check AI unit billing status and provisioning readiness. |
+| [3519499](https://me.sap.com/notes/3519499) | Enhanced Joule Data Center Consumption | Documents the Joule data center selection strategy: customers can now choose their Joule DC, enabling multi-DC and cross-region integration with SAP business applications. Provides DC mapping examples (AWS/Azure/GCP by region). Note data residency requirements for KSA/UAE/China. |
+| [3521354](https://me.sap.com/notes/3521354) | FAQ: Business AI card does not display AI entitlements in SAP for Me | Troubleshooting guide for missing AI units in SAP for Me Business AI card. Root causes: missing S-user authorization (`Display Order Information`), AI units purchased Oct 2023–Aug 2024 not displayed (must be renewed), wrong SKU. |
+| [3567445](https://me.sap.com/notes/3567445) | Unable to Access SAP Business AI-Assisted Features Due to Missing Business Catalogs | Resolution for AI-assisted feature access errors caused by missing Business Catalogs in the system. Required catalogs must be assigned via Business Roles before AI use cases can be launched from the Fiori Launchpad. |
+| [3413498](https://me.sap.com/notes/3413498) | Master Data Governance Framework AI functionalities (AI-generated Summary/AI-assisted changes) | Overview of MDG AI use cases: AI-generated summary of MDG change requests and AI-assisted change creation. Covers setup prerequisites, required ISLM configuration, and authorization notes for developer access (see Note 3561334). |
+
+---
+
+**Last Updated**: 2026-03-17
 **Sources verified**: 2026-03-16 (note titles from RISE BTP Toolbox community blog)

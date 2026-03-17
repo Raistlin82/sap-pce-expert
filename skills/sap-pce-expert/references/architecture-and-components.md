@@ -284,5 +284,24 @@ The **Service Description Guide (SDG)** is the contractual document defining exa
 
 ---
 
-**Last Updated**: 2026-03-16
-**Sources verified**: 2026-03-16 (enriched with real SAP Note content via sap_note_get)
+### SAP Analytics Cloud & SAP Business Data Cloud
+
+> Notes covering SAP Analytics Cloud (SAC) connectivity, the SAC/Datasphere Data Provisioning Agent, and the new SAP Business Data Cloud (BDC) platform — all relevant to analytics integration from S/4HANA PCE.
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [2358097](https://me.sap.com/notes/2358097) | SAP Analytics Cloud connecting to on-premise data (Import Data Connection) *** Collective KBA *** | Master collective KBA for SAC on-premise Import Data Connections. Covers SAC Cloud Agent installation/configuration, firewall requirements, supported source systems (S/4HANA, BW, HANA), and troubleshooting. Entry point for all SAC-to-PCE connectivity issues. |
+| [2511489](https://me.sap.com/notes/2511489) | Troubleshooting performance issues in SAP Analytics Cloud (Collective KBA) | Collective troubleshooting note for SAC performance: slow story loading, query timeout, model refresh latency. Covers SAC backend optimization, imported vs. live data model selection, and query design best practices for S/4HANA live connections. |
+| [2551072](https://me.sap.com/notes/2551072) | Where can you download the SAP Analytics Cloud Agent for SAC? | Download location and version matrix for the SAC Cloud Agent (Data Provisioning Agent variant for SAC). Required for Import Data Connections from on-premise S/4HANA PCE to SAC. Agent is customer-installed and -managed. |
+| [2890171](https://me.sap.com/notes/2890171) | SAP Datasphere / SAP Intelligence — ABAP Integration | Master note for ABAP Integration between SAP Datasphere and S/4HANA (ABAP RFC/ODP extraction). Covers ABAP SDK for SAP Datasphere, CDS-based replication, ODP/SLT prerequisites. Key for setting up S/4HANA PCE as a data source for Datasphere in BDC scenarios. |
+| [3275211](https://me.sap.com/notes/3275211) | High Availability DP Agent for SAP Datasphere | Configure Data Provisioning Agent (DP Agent) in High Availability mode for Datasphere. Two-agent setup with automatic failover. Recommended for production SAC/Datasphere connections from PCE to avoid single point of failure in data replication. |
+| [3456052](https://me.sap.com/notes/3456052) | FAQ: About IP Addresses used in SAP Datasphere | Lists outbound IP addresses used by SAP Datasphere (by data center region). Required for configuring firewall allowlists on the PCE side to permit Datasphere-initiated connections. Check before allowing Datasphere to connect to on-premise S/4HANA. |
+| [3483433](https://me.sap.com/notes/3483433) | Guideline for Troubleshooting DP Agent related issues in SAP Datasphere | Step-by-step troubleshooting guide for DP Agent connectivity issues in Datasphere: agent registration failures, connection drops, certificate errors, log collection. Reference for diagnosing Datasphere-to-PCE data integration problems. |
+| [3509202](https://me.sap.com/notes/3509202) | SAP Datasphere — What is supported and what is consulting? | Scope note defining what SAP Support covers for Datasphere vs. what requires consulting engagement. Prevents misrouted incidents. Key for BDC project teams to understand support boundaries for S/4HANA PCE integration scenarios. |
+| [3568907](https://me.sap.com/notes/3568907) | How to create a Support User for SAP Business Data Cloud Systems | Procedure for creating a SAP Support user in BDC tenant systems (BDC Cockpit, Datasphere, SAC within BDC). Required when opening SAP support cases for BDC components — enables SAP support engineers to access the BDC environment. |
+| [3605796](https://me.sap.com/notes/3605796) | Provisioning of SAP Analytics Cloud (SAC) tenant within the Business Data Cloud (BDC) setup in SAP for Me | How to provision and manage the SAC tenant as part of a BDC setup through SAP for Me. Documents the BDC-integrated SAC provisioning flow — relevant when migrating or setting up SAC in the context of BDC for PCE customers adopting the new data platform. |
+
+---
+
+**Last Updated**: 2026-03-17
+**Sources verified**: 2026-03-17 (enriched with real SAP Note content via sap_note_get)

@@ -263,4 +263,22 @@ DR region: Secondary region within the same hyperscaler geography. Separate outb
 
 ---
 
-**SAP Notes Reference Last Updated**: 2026-03-15
+### SAP HANA Database Administration
+
+> Key notes for HANA performance analysis, auditing, and data management in SAP-managed PCE environments. Most operational tasks are ECS-owned; customers interact primarily via DBACOCKPIT and Service Requests.
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [1969700](https://me.sap.com/notes/1969700) | SQL Statement Collection for SAP HANA | Master toolbox of SQL scripts for HANA analysis and monitoring (memory, CPU, disk, sessions, alerts, traces, blocking, locks). Use via DBACOCKPIT SQL console. Reference for ECS to diagnose performance issues in PCE. Scripts regularly updated — apply latest version. |
+| [2222220](https://me.sap.com/notes/2222220) | FAQ: SAP HANA DBACOCKPIT | Comprehensive FAQ for DBACOCKPIT (transaction DBACOCKPIT) in S/4HANA. Covers connection setup, authorization requirements, HANA-specific monitoring panels (memory, disk, alerts, SQL cache), and known issues. Primary HANA admin UI available to customers in PCE. |
+| [2453269](https://me.sap.com/notes/2453269) | DB Size History for SAP HANA in DBACOCKPIT | How to view HANA database size history via DBACOCKPIT. Important for storage capacity planning and identifying growth trends in PCE. ECS provisions storage per FUE contract sizing — request additional storage via Service Request. |
+| [2689405](https://me.sap.com/notes/2689405) | FAQ: SAP S/4HANA Performance Best Practices — Collective Note | Collective note for S/4HANA on HANA performance best practices. Covers table partitioning, statistics, missing indexes, buffer pool, and SQL plan cache optimization. Apply proactively in PCE to stay within ECS SLA performance baselines. |
+| [3205281](https://me.sap.com/notes/3205281) | How to maintain HANA database audit log by retention period | Configure audit log retention period in HANA Tenant Database. In PCE, HANA audit logs are ECS-managed; customer can request retention changes via Service Request. Relevant for GDPR and ISO 27001 audit trail requirements. |
+| [3348393](https://me.sap.com/notes/3348393) | Overview of the data management process in the context of SAP HANA | Overview of HANA data management lifecycle: memory management, persistence, backup, archiving, and tiering strategies. Foundational reference for understanding PCE storage architecture and ECS responsibilities. |
+| [3384248](https://me.sap.com/notes/3384248) | How to configure HANA audit log to SYSLOG in the Tenant Database | Configure HANA audit trail output to OS SYSLOG for forwarding to external SIEM. In PCE, coordinate SIEM integration requirements with ECS via Service Request. |
+| [3421606](https://me.sap.com/notes/3421606) | FAQ: SAP HANA Auditing Activity | FAQ for HANA database audit policy configuration: what can be audited, audit trail targets (CSV/SYSLOG/table), and performance impact. Customer is responsible for defining audit scope; ECS manages HANA system configuration. |
+| [3582156](https://me.sap.com/notes/3582156) | Archiving / Archive Strategies for table(s) from the perspective of SAP HANA | HANA-level archiving and data tiering strategies for managing table growth (ILM archiving, dynamic tiering, near-line storage). Relevant for PCE customers approaching storage limits defined in FUE-based contracts. |
+
+---
+
+**SAP Notes Reference Last Updated**: 2026-03-17

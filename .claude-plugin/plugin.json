@@ -1,6 +1,6 @@
 {
   "name": "sap-pce-expert",
-  "description": "SAP Private Cloud ERP (RISE with SAP) expert: architecture, migration, operations, security, extensibility, integration, and licensing for S/4HANA Cloud Private Edition.",
+  "description": "SAP Private Cloud ERP (RISE with SAP) expert",
   "version": "1.4.0",
   "author": {
     "name": "gabriele.rendina"

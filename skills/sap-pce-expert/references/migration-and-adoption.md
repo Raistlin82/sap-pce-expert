@@ -51,7 +51,24 @@ SAP published a 5-part series documenting the methodology:
 
 ---
 
-## Migration Paths to S/4HANA PCE
+| [2983860](https://me.sap.com/notes/2983860) | How to check 'Activation History'? | Use T-code /n/SMB/BBI (Implementation Assistant) to monitor detailed logs and timestamps of Best Practice activation steps in PCE. |
+| [2819010](https://me.sap.com/notes/2819010) | How to check if scope item is activated in the system? | Verify solution scope via 'Manage Your Solution' or CBC to confirm which localized Best Practices are active in the S/4HANA environment. |
+| [2692715](https://me.sap.com/notes/2692715) | Migration Cockpit: How to correctly fill data into XML template | Technical guide to avoid common errors (mandatory fields, data types) when using XML templates for PCE data migration. |
+| [2733253](https://me.sap.com/notes/2733253) | FAQ for Migration Cockpit - Transfer Data from Staging Tables | Comprehensive reference for the staging approach in PCE, including DB support and naming conventions. |
+| [2886747](https://me.sap.com/notes/2886747) | How to find Migration Cockpit logs | Accessing backend logs via SLG1 (Object DMC) to troubleshoot migration object errors. |
+| [2971632](https://me.sap.com/notes/2971632) | Switch remains active after business function deactivation | Technical explanation of SFW5 behavior regarding active switches after deactivating reversible BFs. |
+| [1734333](https://me.sap.com/notes/1734333) | BW Pre and Post Upgrade and Migration Tasks | Use automated task lists (STC01) for BW-specific upgrade steps in PCE. |
+| [2960272](https://me.sap.com/notes/2960272) | Recommendations on DS agent migration | Best practices for moving Data Services agents to new machines during PCE transition without connectivity loss. |
+| [1555208](https://me.sap.com/notes/1555208) | ICF services become inactive after upgrade | Secure-by-default behavior: use RS_ICF_SERV_MASS_PROCESSING to reactivate services post-upgrade. |
+| [3405369](https://me.sap.com/notes/3405369) | Information required for CI-DS Agent migration to RISE | Mandatory info (Tenant URL, Org Name, Credentials) required for ECS delivery to migrate CI-DS agents. |
+| [3544232](https://me.sap.com/notes/3544232) | HANA System Replication RISE migration | Confirms HSR feasibility for lift-and-shift to PCE; details port requirements and SSFS key sync. |
+| [3637337](https://me.sap.com/notes/3637337) | HANA NSE setting migration in RISE with SAP | Guide to retaining Native Storage Extension (warm data) settings during PCE migration. |
+| [2907976](https://me.sap.com/notes/2907976) | Silent Data Migration (SDMI) FAQ | Critical for release upgrades: SDMI allows data migration during system uptime, reducing the maintenance window in PCE. |
+| [1803986](https://me.sap.com/notes/1803986) | Rules for SUM vs SPAM/SAINT | When to use SUM (Software Update Manager) for complex SP stacks vs SPAM for small updates in PCE. |
+| [1970888](https://me.sap.com/notes/1970888) | SPDD/SPAU handling during Update | Best practices for modification adjustments during PCE technical upgrades. |
+| [1641394](https://me.sap.com/notes/1641394) | SFW5: How-to activate Business Function | Procedure for activating BF in PCE; highlights irreversible activations. |
+
+### Migration Paths to S/4HANA PCE
 
 ### Overview
 

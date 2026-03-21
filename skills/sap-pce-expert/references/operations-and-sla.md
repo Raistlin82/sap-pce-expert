@@ -289,6 +289,25 @@ The Customer Dashboard is the primary self-service portal for RISE with SAP cust
 | [3613154](https://me.sap.com/notes/3613154) | Cannot send EWA via email from RISE with SAP system | Known restriction: EWA email sending from PCE systems |
 | [2947886](https://me.sap.com/notes/2947886) | Getting started with Custom Code Analytics based on EWA | Using EWA data for custom code analytics in ATC |
 
+| [3002279](https://me.sap.com/notes/3002279) | How to check the SAP HANA Database backup status? | Use monitoring views M_BACKUP_CATALOG and M_BACKUP_PROGRESS (via DBACOCKPIT or DB02) to verify full/log backup status and progress in PCE. |
+| [3006773](https://me.sap.com/notes/3006773) | How to check DB SIZE HISTORY | Use DBACOCKPIT or SQL collection (Note 1969700) to monitor HANA disk and memory usage trends over time. |
+| [3398620](https://me.sap.com/notes/3398620) | System alias configuration for taskprocessing service | Verification of SPRO settings for TASKPROCESSING (OData V2) essential for Fiori "My Inbox" in PCE. |
+| [3556427](https://me.sap.com/notes/3556427) | Check apps assigned to specific users in FLP | Use /UI2/FLIA (Launchpad Intent Analysis) to troubleshoot app visibility and role assignments in PCE. |
+| [3712902](https://me.sap.com/notes/3712902) | Check when BTCTRNS1 / BTCTRNS2 were run | Monitoring system suspension/release times for background jobs during PCE maintenance windows. |
+| [3640031](https://me.sap.com/notes/3640031) | External Debugging in SAP-RISE systems | Configuration guide for ABAP external debugging (HTTP/RFC) considering PCE network restrictions and debug user setup. |
+
+| [3192420](https://me.sap.com/notes/3192420) | SAP ECS Operations Guide for Customers | The definitive guide for PCE customers: covers support processes, maintenance windows, and standard service catalog. |
+| [3302322](https://me.sap.com/notes/3302322) | SAP ECS Shared Responsibility Model | Clarifies the boundary between SAP (Infra/DB/OS) and Customer (App/Data/Users) management. |
+| [3239384](https://me.sap.com/notes/3239384) | Using Service Requests application | Instructions for requesting standard ECS tasks (refreshes, parameter changes) via SAP for Me. |
+| [3158023](https://me.sap.com/notes/3158023) | How to request a kernel upgrade in ECS | Process for customer-triggered kernel updates via service requests. |
+| [3262621](https://me.sap.com/notes/3262621) | ECS Patching Policy | Guidelines on the delivery and application of security patches and Support Packages in PCE. |
+| [3218503](https://me.sap.com/notes/3218503) | How to request a system copy in ECS | Procedure for system refreshes (e.g., PRD to QAS) within the PCE managed environment. |
+| [3139361](https://me.sap.com/notes/3139361) | ECS Backup Strategy and Retention | Standard backup frequencies and 30-day retention policies for production systems. |
+| [1843002](https://me.sap.com/notes/1843002) | Gaps and jumps in number range assignment | Explains technically why gaps occur (buffering) and why they are not signs of data loss in PCE. |
+| [2230754](https://me.sap.com/notes/2230754) | Critical Number Ranges in RZ20 | Guide to setting up CCMS alerts for number range exhaustion. |
+| [2520319](https://me.sap.com/notes/2520319) | How to access the SAP EarlyWatch Alert apps in SAP for Me | Requirements for accessing health reports provided by SAP ECS. |
+| [2731999](https://me.sap.com/notes/2731999) | Custom step user for Technical Job Repository (SJOBREPO) | Managing background job scheduling via the modern V2 repository in PCE. |
+
 ### SGEN (System Generation)
 
 > **Key rule**: Run SGEN immediately after systems are delivered and before GoLives.
@@ -432,8 +451,17 @@ The Customer Dashboard is the primary self-service portal for RISE with SAP cust
 | [3372505](https://me.sap.com/notes/3372505) | ICF — How to transport SICF services | Procedure to transport ICF service configurations (activation status, logon procedures, handlers) across landscapes using change request transport. Critical for propagating ICF hardening from DEV → QAS → PRD in PCE. |
 | [2941068](https://me.sap.com/notes/2941068) | SM59/Callback allowlist input validation missing | Security note: SM59 RFC callback allowlist (positive list) input validation fix. In PCE, configure RFC callback positive lists in SM59 to restrict which systems can register RFC server programs — relevant for RFC server security hardening. |
 | [2203325](https://me.sap.com/notes/2203325) | Configuration of e-mail using SMTP (inbound) | Step-by-step configuration for SMTP inbound mail processing in AS ABAP (SAPconnect, SCOT). In PCE, outbound SMTP relay is ECS-managed; inbound SMTP configuration (SAPconnect routing, SOST) is customer responsibility. |
+| [1640509](https://me.sap.com/notes/1640509) | FAQ about the setup of SCM Optimizer | FAQ covering the SCM Optimizer component's system landscape integration, HA/failover behavior, sizing methodology, multi-core parallelism, and update procedures without downtime; relevant to SCM/TM workloads on PCE and optimization server operations. |
+| [2366252](https://me.sap.com/notes/2366252) | Transaction SWU3 explained | Explains every step of SAP Business Workflow automatic customizing via SWU3, covering RFC destinations, background jobs, and the SAP_WFRT system user introduced in S/4HANA 1709; in PCE environments, workflow must be configured per client after system copies and refreshes, and background jobs are managed via Technical Job Repository (SJOBREPO). |
+| [2392606](https://me.sap.com/notes/2392606) | Initialization of Web Service Configuration | Provides report SRT_WSP_INITIALIZE_WS_CFG to reset all Web Service configurations (logical ports, endpoints, service registries) after a system copy when PCA tool is not used; directly relevant to post-system-copy cleanup procedures in PCE managed operations. |
+| [2980634](https://me.sap.com/notes/2980634) | Release strategy and Maintenance Information for the ABAP add-on UIDP | Covers installation, support package, and upgrade planning for the UIDP 100 add-on (S/4HANA UI Masking + UI Logging) across S4CORE 104–109 / SAP_BASIS 754–816; relevant for PCE customers using data masking or UI logging capabilities and planning upgrades via SUM. |
+| [3230401](https://me.sap.com/notes/3230401) | Restrictions and Implementation Recommendations for Production Planning and Detailed Scheduling in SAP S/4HANA 2022 | Consolidates all restriction and implementation recommendation notes for PP/DS embedded in SAP S/4HANA 2022; relevant to PCE customers running S/4HANA 2022 with embedded PP/DS who need to understand scope limitations before go-live. |
+| [3348799](https://me.sap.com/notes/3348799) | Print Queues in On Premise Systems | Explains how to enable print queues (access method Q) in S/4HANA Private Cloud and on-premise systems, particularly relevant where standard SPAD printer access methods do not work in PCE environments; requires a specific kernel fix and ABAP correction from note 3420465. |
+| [3355416](https://me.sap.com/notes/3355416) | Can a service request be deleted in SAP for Me? | Clarifies lifecycle management of service requests in the SAP for Me Private Cloud Workspace, including cancellation rules, auto-confirmation timelines, and escalation behavior; directly relevant to PCE operational workflows for requesting managed services from SAP Technical Operations. |
+| [3358694](https://me.sap.com/notes/3358694) | Integration between SAP Cloud ALM Deployment and SAP Cloud Transport Management service | Describes how to connect SAP Cloud ALM deployment features with the Cloud Transport Management service (cTMS) for cross-account transports, including BTP destination configuration; relevant for PCE customers using Cloud ALM and cTMS as their change transport orchestration layer. |
+| [3456190](https://me.sap.com/notes/3456190) | Change application job owner / user | Covers changing job owner or step user of application jobs in on-premise S/4HANA systems using report APJ_CHANGE_JOB_USER or the "Maintain Job Users" Fiori app, available from BASIS 7.57 SP04; relevant for PCE operators managing scheduled job ownership and the new authorization concept for application jobs. |
 
 ---
 
-**Last Updated**: 2026-03-17
-**Sources verified**: 2026-03-16 (note titles from RISE BTP Toolbox community blog)
+**Last Updated**: 2026-03-21
+**Sources verified**: 2026-03-21 (enriched with real SAP Note content via sap_note_get)

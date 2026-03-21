@@ -186,6 +186,17 @@ DR region: Secondary region within the same hyperscaler geography. Separate outb
 
 ## SAP Notes Reference
 
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3345151](https://me.sap.com/notes/3345151) | How to Request a Load balancer in SAP ECS | Procedural guide for internal/external Load Balancer requests. In PCE, customers use Service Request templates (e.g., "Create Hyperscaler LB for INBOUND traffic") and must specify FQDN naming (vh<CID><SID>lb). |
+| [2965278](https://me.sap.com/notes/2965278) | How to check real time heap memory usage of SAP Cloud Connector (SCC) | Monitoring SCC memory via SCC WebUI (Hardware Metrics Monitor) or SAP JVM Profiler to prevent OutOfMemory issues in hybrid PCE connectivity. |
+| [2849542](https://me.sap.com/notes/2849542) | ABAP Connection Check fails for Data Intelligence / Datasphere | Troubleshooting guide for RFC/WebSocket connection failures between BTP (Datasphere) and PCE ABAP backend, covering Pipeline Engine and certificate errors. |
+| [3375774](https://me.sap.com/notes/3375774) | How to verify the version of the CI-DS Agent | Verification of the on-premise agent version to ensure compatibility with the PCE cloud tenant before upgrades. |
+| [3420557](https://me.sap.com/notes/3420557) | Check host name and IP address of the DB server from SAPGUI | Use DBACOCKPIT or DB02 (Configuration -> Database Nodes) to identify network details of the HANA server in PCE. |
+| [3492346](https://me.sap.com/notes/3492346) | CDI connection hangs for CDI connection when using DPAgent hosted by ECS | Troubleshooting CDI (Cloud Data Integration) connectivity issues between Datasphere and ECS-hosted S/4HANA via DP Agent. |
+| [2469354](https://me.sap.com/notes/2469354) | Key Monitoring Metrics for SAP on IaaS Infrastructure | Defines mandatory performance metrics (CPU, RAM, I/O) for systems running on Azure/AWS/GCP in PCE. |
+| [2377425](https://me.sap.com/notes/2377425) | Cloud Connector: Ports and IP Address | Networking requirements for SCC: Outbound 443 to BTP, internal 8443 for UI, and HA ports for shadow sync. |
+
 > Notes extracted from SAP Community blog "The SAP S/4HANA RISE & SAP BTP - Toolbox" (ba-p/13944069). Links: `https://me.sap.com/notes/XXXXXXX`
 
 ### SAP HANA Database Administration
@@ -293,7 +304,10 @@ DR region: Secondary region within the same hyperscaler geography. Separate outb
 | [3634338](https://me.sap.com/notes/3634338) | Pre-Requisite Notes for Compatibility with SAP S/4HANA 2025 | Collective list of prerequisite correction notes that must be implemented before or during upgrade to S/4HANA 2025 — review prior to any 2025 upgrade project kickoff |
 | [3558794](https://me.sap.com/notes/3558794) | AI Functionality in S/4HANA Cloud Private Edition | Overview of all AI-powered features available in S/4HANA Cloud PCE — activation prerequisites, SAP AI Core region requirements, and list of business use cases per release |
 | [3523238](https://me.sap.com/notes/3523238) | Navigational and Transactional Capabilities with Joule in S/4HANA PCE | Describes Joule's embedded navigation and transactional use cases in PCE (e.g., guided task navigation, transaction shortcut, context-aware help) — scope of Joule capabilities that require AI Core connectivity |
+| [1010990](https://me.sap.com/notes/1010990) | Configuring a Standalone Gateway in an HA ASCS instance | Describes how to add a standalone RFC gateway (gwrd) to the ABAP Central Services (ASCS) instance in a high-availability failover cluster; relevant to PCE HA topology where the ASCS runs clustered but application servers do not. |
+| [1040325](https://me.sap.com/notes/1040325) | HTTP load balancing: Message server or SAP Web Dispatcher? | Recommends SAP Web Dispatcher (not the message server) for HTTP load balancing of web applications; directly relevant to PCE network topology and front-end access layer design. |
+| [2971940](https://me.sap.com/notes/2971940) | How to Find the Endpoint of a HANA Cloud / HANA Service Instance in the SAP BTP Cockpit | Step-by-step instructions to locate the SQL endpoint for a SAP HANA Cloud or HANA Service instance in the BTP Cockpit; useful for PCE customers configuring connectivity from BTP-side extensions or tools to their HANA Cloud instance. |
 
 ---
 
-**SAP Notes Reference Last Updated**: 2026-03-17
+**SAP Notes Reference Last Updated**: 2026-03-21

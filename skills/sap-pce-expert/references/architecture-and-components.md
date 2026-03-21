@@ -15,6 +15,11 @@
 | RISE with SAP S/4HANA Cloud PCE Service Description Guide (SDG) | https://www.sap.com/docs/download/agreements/product-use-and-support-terms/service-description-guides/rise-with-sap-s4hana-cloud-private-edition-service-description-guide-english-v11-2023.pdf | SAP Trust Center |
 | RISE with SAP Roles and Responsibilities | https://www.sap.com/sea/about/agreements/policies/hec-services.html | SAP Agreements |
 
+| [2282103](https://me.sap.com/notes/2282103) | How to check the version of SAPUI5 installed | Multiple methods: CTRL+ALT+SHIFT+P in browser, checking /resources/sap-ui-version.json, or via SE80/SPAM soft. component SAP_UI. Essential for Fiori compatibility in PCE. |
+| [2353589](https://me.sap.com/notes/2353589) | Consistency Check for Soamanager | Critical tool in SOAMANAGER (Tools -> Configuration Consistency Check) to repair Web Service inconsistencies after system copy or refresh in PCE. |
+| [3489432](https://me.sap.com/notes/3489432) | Question regarding SAP Forms service by Adobe usage for RISE | Clarifies ADS entitlement (200k forms/month) and the transition to customer-owned BTP subaccounts for ADS after July 2024. |
+| [3572475](https://me.sap.com/notes/3572475) | Component version for Datasphere Replication Flow | Specifies minimum SP levels (SAP_GWFND, SAP_ABA) required in PCE for Datasphere Replication Flows. |
+
 ---
 
 ## RISE with SAP: What Is It?
@@ -300,8 +305,10 @@ The **Service Description Guide (SDG)** is the contractual document defining exa
 | [3509202](https://me.sap.com/notes/3509202) | SAP Datasphere — What is supported and what is consulting? | Scope note defining what SAP Support covers for Datasphere vs. what requires consulting engagement. Prevents misrouted incidents. Key for BDC project teams to understand support boundaries for S/4HANA PCE integration scenarios. |
 | [3568907](https://me.sap.com/notes/3568907) | How to create a Support User for SAP Business Data Cloud Systems | Procedure for creating a SAP Support user in BDC tenant systems (BDC Cockpit, Datasphere, SAC within BDC). Required when opening SAP support cases for BDC components — enables SAP support engineers to access the BDC environment. |
 | [3605796](https://me.sap.com/notes/3605796) | Provisioning of SAP Analytics Cloud (SAC) tenant within the Business Data Cloud (BDC) setup in SAP for Me | How to provision and manage the SAC tenant as part of a BDC setup through SAP for Me. Documents the BDC-integrated SAC provisioning flow — relevant when migrating or setting up SAC in the context of BDC for PCE customers adopting the new data platform. |
+| [3346909](https://me.sap.com/notes/3346909) | Implementation of SAP Best Practices of SAP S/4HANA Cloud, Private Edition 2023 - Activation in a Merged Client | Provides step-by-step guidance for activating SAP Best Practices content in a merged client in S/4HANA Cloud Private Edition 2023, including how to prevent and resolve activation errors; relevant for greenfield/new PCE implementations using merged client setup. |
+| [3571857](https://me.sap.com/notes/3571857) | Additional license required for SAP Joule for Developers, ABAP AI capabilities in SAP BTP ABAP Environment | Clarifies that SAP Joule for Developers ABAP AI capabilities requires a separately purchased promotional license; explicitly covers activation steps for S/4HANA Cloud Private Edition 2025, BTP ABAP Environment, and Public Edition. |
 
 ---
 
-**Last Updated**: 2026-03-17
-**Sources verified**: 2026-03-17 (enriched with real SAP Note content via sap_note_get)
+**Last Updated**: 2026-03-21
+**Sources verified**: 2026-03-21 (enriched with real SAP Note content via sap_note_get)

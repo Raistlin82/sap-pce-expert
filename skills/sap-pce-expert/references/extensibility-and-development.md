@@ -222,6 +222,12 @@ Describes the classification of frameworks, technologies, and development patter
 
 ## SAP Notes Reference
 
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [2436688](https://me.sap.com/notes/2436688) | Recommended SAP Notes for S/4HANA Custom Code Checks in ATC | Master note for setting up ATC (ABAP Test Cockpit) to perform readiness checks and Clean Core compliance in PCE. |
+| [2807979](https://me.sap.com/notes/2807979) | Setup Adaptation Transport Organizer (ATO) via S_ATO_SETUP | Mandatory setup for Key User Extensibility (In-App) to enable transport of Fiori-based extensions in PCE. |
+| [2948977](https://me.sap.com/notes/2948977) | How to Register OData V4 Service in SAP Gateway System | Procedural guide for transaction /IWFND/V4_ADMIN; essential for deploying modern Fiori apps in S/4HANA PCE. |
+
 > Key SAP Notes for Extensibility and Development. Full master list: see `sap-notes-master-list.md` in workspace root.
 
 ### Clean Core Extensibility Framework
@@ -351,8 +357,14 @@ Describes the classification of frameworks, technologies, and development patter
 | [3521354](https://me.sap.com/notes/3521354) | FAQ: Business AI card does not display AI entitlements in SAP for Me | Troubleshooting guide for missing AI units in SAP for Me Business AI card. Root causes: missing S-user authorization (`Display Order Information`), AI units purchased Oct 2023–Aug 2024 not displayed (must be renewed), wrong SKU. |
 | [3567445](https://me.sap.com/notes/3567445) | Unable to Access SAP Business AI-Assisted Features Due to Missing Business Catalogs | Resolution for AI-assisted feature access errors caused by missing Business Catalogs in the system. Required catalogs must be assigned via Business Roles before AI use cases can be launched from the Fiori Launchpad. |
 | [3413498](https://me.sap.com/notes/3413498) | Master Data Governance Framework AI functionalities (AI-generated Summary/AI-assisted changes) | Overview of MDG AI use cases: AI-generated summary of MDG change requests and AI-assisted change creation. Covers setup prerequisites, required ISLM configuration, and authorization notes for developer access (see Note 3561334). |
+| [1088717](https://me.sap.com/notes/1088717) | Active services for Web Dynpro ABAP in transaction SICF | Lists all ICF services that must be activated for Web Dynpro ABAP to function, including production vs. development-only restrictions; relevant for PCE systems where ICF service activation is a hardening step post-installation. |
+| [2385767](https://me.sap.com/notes/2385767) | How to run the generation tools in common use for ABAP programs | Documents ABAP load generation tools (SGEN, TOUCHSRC, TOUCHTAB, TOUCHINC, TOUCHALL) used to regenerate program loads after structure changes or upgrades; relevant to PCE post-upgrade or post-transport steps where ABAP load inconsistencies must be resolved during system maintenance windows. |
+| [2672408](https://me.sap.com/notes/2672408) | Error: "The server took too long to respond" when opening transaction or Web Dynpro apps – Fiori Launchpad | Covers troubleshooting of Fiori Launchpad app launch failures caused by incorrect SM59 HTTP/HTTPS destination configuration (wrong host, port, or SSL setting for alias-based routing); relevant to PCE Fiori Launchpad setup where back-end system aliases and SM59 destinations must be correctly configured. |
+| [3571036](https://me.sap.com/notes/3571036) | Setup Guide for AI-Assisted Goods Receipt Analysis in Transportation Management | Step-by-step guide to enabling the AI-Assisted Goods Receipt Analysis feature in TM (S/4HANA on-premise/PCE), integrating the BTP Document Information Extraction service via ISLM, including ISLM connection setup, scenario activation, and TM customizing for attachment types. |
+| [3574007](https://me.sap.com/notes/3574007) | AI-generated summary in Master Data Governance, Central Governance for S/4HANA Cloud Private Edition | Describes how to implement and configure the AI-generated change-request summary feature in MDG Central Governance for S/4HANA Cloud Private Edition (as of 2023 FPS02), using the USMD_AI_SUMMARY intelligent scenario via ISLM and BTP. |
+| [3577311](https://me.sap.com/notes/3577311) | AI/ML based predictive labor demand planning in S/4HANA Cloud for EWM Private Edition | Setup and availability guide for the AI/ML predictive labor demand planning feature in EWM for S/4HANA Cloud Private Edition (RISE customers only), covering feature scope across 2023 FPS03 through 2025 FPS01 and BTP provisioning prerequisites. |
 
 ---
 
-**Last Updated**: 2026-03-17
-**Sources verified**: 2026-03-16 (note titles from RISE BTP Toolbox community blog)
+**Last Updated**: 2026-03-21
+**Sources verified**: 2026-03-21 (enriched with real SAP Note content via sap_note_get)

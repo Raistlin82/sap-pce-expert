@@ -199,6 +199,15 @@ SAP PI/PO (Process Integration / Process Orchestration) is a **legacy on-premise
 
 ## SAP Notes Reference
 
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3318666](https://me.sap.com/notes/3318666) | Increase JMS queues / Activate Enterprise Messaging in Cloud Integration | Guide to increasing JMS queue quota in Integration Suite (self-service up to 100, ticket beyond). Critical for high-volume hybrid PCE integration scenarios. |
+| [3339668](https://me.sap.com/notes/3339668) | SAP Extended Enterprise Content Management by OpenText - Troubleshooting | Use diagnostic reports in SPRO to check connectivity and SSO for xECM partner solutions integrated with PCE. |
+| [3642913](https://me.sap.com/notes/3642913) | Guidelines on opening Integration Suite Cases related to RISE | Correct component mapping (XX-HST-OPR vs BC-MID-SCC) for faster connectivity resolution in PCE. |
+| [3444358](https://me.sap.com/notes/3444358) | SOA Documentation for Maintain Generic Transportation Order | Technical MDT details for inbound asynchronous TM services in S/4HANA PCE. |
+| [2561390](https://me.sap.com/notes/2561390) | Invalid directory specified in datastore type - CI-DS | Common error in CI-DS agent configuration; directories must be explicitly allowlisted and declared via UNC notation (not mapped drives) for PCE file-based integration. |
+| [2563103](https://me.sap.com/notes/2563103) | How to check the Data Provisioning Agent version - SDI | Monitoring SDI agent versions via versions.txt or M_AGENTS view to ensure compatibility with HANA PCE. |
+
 > Notes extracted from SAP Community blog "The SAP S/4HANA RISE & SAP BTP - Toolbox" (ba-p/13944069). Links: `https://me.sap.com/notes/XXXXXXX`
 
 ### Principal Propagation and OAuth
@@ -327,7 +336,16 @@ SAP PI/PO (Process Integration / Process Orchestration) is a **legacy on-premise
 |------|-------|-----------|
 | [2906072](https://me.sap.com/notes/2906072) | SAP Integration Suite — Trading Partner Management Configuration | B2B trading partner onboarding and agreement management in IS-TPM |
 | [3192847](https://me.sap.com/notes/3192847) | EDI IDOC Processing via Cloud Integration | IDOC-to-EDI mapping and processing in SAP Cloud Integration for S/4HANA |
+| [1177315](https://me.sap.com/notes/1177315) | ADS RFC destination test return 403 / 404 / 405 / 500 code | Explains that HTTP error codes returned during ADS (Adobe Document Services) RFC connection tests via SM59 are expected and can be ignored; use report FP_PDF_TEST_00 instead to validate the integration from PCE ABAP to the ADS Java service. |
+| [1262709](https://me.sap.com/notes/1262709) | RCCF: Information about reserving slots and destinations | Documents the Remote Control and Communication Framework (RCCF) slot/destination reservation logic and priority rules used by SCM Optimizer and parallel processing scenarios; relevant to integration and RFC-based connectivity in PCE landscapes. |
+| [1616303](https://me.sap.com/notes/1616303) | No further processing of bgRFC units | Troubleshooting guide for bgRFC scheduler stalls (prerequisite SM12 locks, watchdog timers, work process counts); relevant to asynchronous integration patterns (PI/PO, B2B, event-based processing) in PCE systems. |
+| [2411639](https://me.sap.com/notes/2411639) | Where to find CI-DS Agent logs | Identifies log file locations for the SAP Cloud Integration for Data Services (CI-DS) on-premise agent on Windows and Linux; relevant to hybrid integration scenarios in PCE where a CI-DS agent bridges cloud integration to on-premise data sources. |
+| [2424200](https://me.sap.com/notes/2424200) | Required Information for troubleshooting SAP Cloud Integration for Data Services | Details the diagnostic information and log packages required when raising a support case for SAP Cloud Integration for Data Services (CI-DS); relevant to PCE hybrid integration setups using the CI-DS agent for data movement between cloud and on-premise systems. |
+| [2651907](https://me.sap.com/notes/2651907) | Content transport between tenants in SAP Cloud Integration | Explains the four available methods to transport integration content between SAP Cloud Integration tenants (Manual Export/Import, CTS+, MTAR Download, SAP Cloud Transport Management Service), including prerequisites for each; relevant to PCE environments where SAP Integration Suite lifecycle management across landscapes is required. |
+| [2658433](https://me.sap.com/notes/2658433) | How to Mass activate ICF Nodes of transported OData services? | Describes how to mass-activate ICF nodes for OData services after a system transport using task list SAP_BASIS_ACTIVATE_ICF_NODES or report RS_ICF_SERV_MASS_PROCESSING; relevant to S/4HANA PCE system copies, landscape refreshes, and post-transport activation steps — from S/4HANA 2023 onward OData services no longer use ICF nodes. |
+| [2962714](https://me.sap.com/notes/2962714) | Concur Certificate expiring - (CTE) | Explains that the individual `*.concursolutions.com` SSL certificate no longer needs to be maintained in STRUST for S/4HANA–Concur integration; only the DigiCert root certificates (G2 and G3) are required, simplifying certificate lifecycle management in PCE environments. |
+| [3468878](https://me.sap.com/notes/3468878) | How to connect an on-premise SAP ECC or S/4HANA ABAP system to SAP HANA Cloud through a proxy server | Explains how to configure a DBCO logical database connection from an on-premise S/4HANA (including ECS/HEC-managed RISE systems) to SAP HANA Cloud when a proxy server is in place, covering proxy connection parameters, SSL/TLS requirements, and IP allowlisting; directly relevant to PCE hybrid connectivity scenarios. |
 
 ---
 
-**SAP Notes Reference Last Updated**: 2026-03-16
+**SAP Notes Reference Last Updated**: 2026-03-21

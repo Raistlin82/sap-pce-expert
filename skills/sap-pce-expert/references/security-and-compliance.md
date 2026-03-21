@@ -342,6 +342,13 @@ SOC attestation reports available on request via Trust Center (subject to NDA).
 
 ## SAP Notes Reference
 
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [2217548](https://me.sap.com/notes/2217548) | FAQ related to GRC Access Control Installation, Upgrade | Reference for GRC component compatibility and installation prerequisites in PCE landscapes. |
+| [2542518](https://me.sap.com/notes/2542518) | GRC FAQ | Comprehensive technical troubleshooting guide for GRC implementations in RISE. |
+| [2648777](https://me.sap.com/notes/2648777) | FAQ: Access Control 12.0 Upgrade | Critical considerations for transitioning to GRC 12.0 in a private cloud environment. |
+| [3470873](https://me.sap.com/notes/3470873) | SAP Access Control 12.0 - Rise/PCE migration queries | Guidance on technical steps for migrating GRC environments to S/4HANA PCE. |
+
 > Key SAP Notes for Security and Compliance. Full master list: see `sap-notes-master-list.md` in workspace root.
 
 ### Penetration Testing / VAPT
@@ -480,8 +487,19 @@ SOC attestation reports available on request via Trust Center (subject to NDA).
 | [2333305](https://me.sap.com/notes/2333305) | Tutorial: Restore Emergency User SAP* [VIDEO] | Procedure for recovering emergency access to an S/4HANA system when all admin users are locked — requires setting profile parameter `login/no_automatic_user_sapstar=0` and restarting the instance. Critical break-glass procedure for PCE; coordinate with ECS for parameter change in managed systems |
 | [1928533](https://me.sap.com/notes/1928533) | SAP Applications on Microsoft Azure: Supported Products and Azure VM Types | Supported SAP product/VM type combinations on Azure — reference for verifying PCE infrastructure compatibility when Microsoft Azure is the chosen hyperscaler. Also used for sizing validation and ISV add-on support scoping |
 | [2219598](https://me.sap.com/notes/2219598) | SAP Business Technology Platform Forms Service by Adobe | Activation and configuration of Adobe Document Services (ADS) on BTP — covers certificate-based RFC connection from S/4HANA PCE to BTP ADS, trust configuration, and output management integration |
+| [1580877](https://me.sap.com/notes/1580877) | Best practices in storage management for Access Control Risk Analysis jobs | Provides GRC Access Control storage and performance best practices for SoD risk analysis batch and ad-hoc jobs, including database vs. file-system trade-offs and violation table cleanup; relevant to PCE security and audit operations. |
+| [2405410](https://me.sap.com/notes/2405410) | How to avoid redirecting Fiori Launchpad from HTTP to HTTPS | Explains how to configure SICF service to prevent automatic HTTP-to-HTTPS protocol switching in Fiori Launchpad; SAP recommends against disabling HTTPS enforcement as it results in credentials being transmitted in plain text. |
+| [2407161](https://me.sap.com/notes/2407161) | Launchpad or application fails to load with "Our service is not available at the moment" | Covers Web Dispatcher SSL handshake failures (SSSLERR_PEER_CERT_UNTRUSTED) and permfile authorization mismatches as causes for Fiori/WebGUI unavailability in HEC/PCE environments; troubleshooting guidance specific to SAP HANA Enterprise Cloud (PCO-OPS component). |
+| [2667053](https://me.sap.com/notes/2667053) | CX_HTTP_WHITELIST was raised | Explains the HTTP allowlist (UCON HTTP Allowlist / HTTP_WHITELIST table) security mechanism that blocks URLs for clickjacking protection, SSO redirects, and other entry types; provides resolution via UCON_CHW transaction; relevant to PCE security hardening and UCON configuration. |
+| [2681625](https://me.sap.com/notes/2681625) | How to Get SOC1, SOC2 or ISO 27001 Reports for Audits in SAP Business ByDesign | Explains how to request SOC 1, SOC 2, and ISO 27001 audit certification reports via the SAP Cloud Trust Center; the process and report types are applicable to RISE with SAP compliance requests by customers needing audit evidence. |
+| [2692908](https://me.sap.com/notes/2692908) | Considerations Note – UI Data Protection Masking for SAP S/4HANA | Describes the technical constraints and scope of UI Data Protection Masking (UISM) for SAP S/4HANA on-premise and Private Cloud Edition; the product is explicitly not available in S/4HANA Public Cloud, making it specifically relevant to PCE data privacy and UI masking configurations. |
+| [2984760](https://me.sap.com/notes/2984760) | WDA: Web Dynpro Exception: URL for redirect does not exist in HTTP white list / allow list | Explains the `UNCAUGHT_EXCEPTION / CX_WD_GENERAL` error caused by missing entries in the HTTP allowlist when Web Dynpro ABAP performs cross-domain redirects; relevant to hardening SAP S/4HANA PCE systems against open-redirect attacks. |
+| [2985997](https://me.sap.com/notes/2985997) | Explanation of components below BC-SEC | Reference guide for all BC-SEC sub-components (SAL, AUT, SSF, SSL, LGN, SNC, RAL, etc.) to route ABAP security-layer support cases; useful in PCE operations for correctly categorising security incidents and support tickets. |
+| [3220866](https://me.sap.com/notes/3220866) | RFC Server fails with "Initialization of destination XXX failed: Name or password is incorrect (repeat logon)" after enabling SNC - SAP Data Services | Covers misconfiguration of SNC in SAP Data Services RFC Server connections to BW systems, specifically the missing SNC name in SU01 for the BW user account; relevant to PCE environments using SAP Data Services with SNC-secured RFC connections. |
+| [3342217](https://me.sap.com/notes/3342217) | How To Import A Root CA Certificate Into a Local Windows Workstation | Explains the procedure to import a Root CA certificate into the Windows Trusted Root Certification Authorities store, applicable for establishing trust with SAP system certificates in PCE landscapes; also covers the `sapgenpse` command-line approach as an alternative to STRUST. |
+| [3362505](https://me.sap.com/notes/3362505) | Intermediate DigiCert certificate will be updated - SAP Cloud Integration for data services | Covers the 2023 DigiCert intermediate certificate rotation for SAP Cloud Integration for data services, including actions required for agents and datastores; relevant to PCE customers who use integration agents and must ensure TLS/SSL trust chains remain valid. |
 
 ---
 
-**Last Updated**: 2026-03-17
-**Sources verified**: 2026-03-17
+**Last Updated**: 2026-03-21
+**Sources verified**: 2026-03-21

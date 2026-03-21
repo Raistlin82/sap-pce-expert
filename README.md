@@ -94,6 +94,7 @@ sap-pce-expert/
 
 | Version | Highlights |
 |---------|------------|
+| 1.5.0 | Massive addition of SAP Notes tracking for Private Cloud architectures. Fixed ENAMETOOLONG installation bug by making marketplace source path relative. |
 | 1.4.0 | Added SAP Notes reference sections for IAS/BTP SSO diagnostics, S/4HANA 2025 release compatibility, and HTTP security & certificate management |
 | 1.3.0 | Added SAP Notes reference sections for Fiori & UI, AI & Joule, HANA Database, Basis Administration, SAC/BDC, GRC & Access Control |
 | 1.2.0 | Enriched all reference files with real SAP Note content; added IAS/SAML2/BTP identity notes; CLAUDE.md |

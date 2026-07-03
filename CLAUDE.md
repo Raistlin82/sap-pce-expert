@@ -54,6 +54,19 @@ Use the Content Routing Guide in `SKILL.md` to determine where documentation bel
 
 For content spanning multiple topics: place the full content in the **owning** file, add `> See also:` cross-references in secondary files. For truly cross-cutting content with no single owner, use `references/cross-cutting/`.
 
+## Retrieval at Answer Time
+
+`SKILL.md` defines a two-stage **Retrieval Protocol**. Stage 1 (locate): Claude expands the
+user's question into English SAP terms, greps `references/` for them, and reads only the
+matching rows/sections (cross-file), falling back to the Content Routing Guide if grep finds
+nothing. Stage 2 (augment, optional): if the hosted `sap-docs` MCP is configured, it enriches
+the answer with current Help/Community content; if absent, the curated content answers alone.
+SAP Note text always comes from the curated `.md`. The **Keyword Index** in `SKILL.md` maps
+topic areas to grep terms and their fallback file. When adding content, keep SAP Notes as
+`| Note ID | Title | Relevance |` rows (greppable) and, for a new topic area, add a Keyword
+Index row. Validation queries live in `skills/sap-pce-expert/retrieval-tests.md` (kept outside
+`references/` so the protocol's grep never matches the test scaffolding).
+
 ## SAP Notes Enrichment Workflow
 
 Recent releases (1.3.0–1.5.0) enrich the reference files with curated SAP Notes. Four tracking files live at the repo **root** (outside the plugin/skill dirs — they are working artifacts, not shipped content):

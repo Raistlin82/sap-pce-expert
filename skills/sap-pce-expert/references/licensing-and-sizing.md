@@ -185,6 +185,15 @@ Included in Premium and Premium Plus tiers:
 - **FUE reallocation** is possible during the term — use it to optimize as usage patterns change
 - **CPEA credit consumption** should be tracked monthly — avoid surprise overages
 
+
+### Additional Notes (2026 Enrichment)
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [2498151](https://me.sap.com/notes/2498151) | Migrating solutions from one Global Account to another | Moving BTP entitlements between Global Accounts requires a SAP Replacement Order via the Account Manager; transfers entitlements only, not data/tenants/services — relevant to RISE BTP contract restructuring. |
+| [3066901](https://me.sap.com/notes/3066901) | How to Start Provisioning for a cloud product - SAP for Me | SAP for Me > Systems & Provisioning triggers cloud-product provisioning from Cloud Installation Numbers and entitlements/contracts; S-user needs Edit Cloud Data authorization — the RISE entitlement-to-tenant provisioning workflow. |
+| [3571857](https://me.sap.com/notes/3571857) | Additional license required for SAP Joule for Developers, ABAP AI capabilities in SAP BTP ABAP Environment | Joule for Developers ABAP AI capabilities need a dedicated license (promo sunset 1 Jun 2026, new AI-units model in Note 3740750); released for PCE 2025 on 8 Oct 2025 — licensing/activation for ABAP AI in PCE. |
+
 ---
 
 **Last Updated**: 2026-03-10

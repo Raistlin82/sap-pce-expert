@@ -179,6 +179,13 @@ For short-lived X.509 certificates for SAP GUI:
 - Supports: SAP Identity Authentication Service (IAS), Azure AD, Okta, and other corporate IdPs
 - Reference: [SAP Secure Login Service for SAP GUI](https://help.sap.com/docs/SAP%20SECURE%20LOGIN%20SERVICE/c35917ca71e941c5a97a11d2c55dcacd/28d654c4459d4693bbf34e5103867f97.html)
 
+
+### Additional Notes (2026 Enrichment)
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [2005856](https://me.sap.com/notes/2005856) | DBCON entry for SSO connection to SAP HANA | DBCO entry to open an SSO HANA DB connection for an ABAP user (Connection info @SSO;HOST=...;DBNAME=..., blank user, dummy password) as of Kernel 7.42 PL23; relevant for SSO to HANA in PCE. |
+
 ---
 
 **Last Updated**: 2026-03-16
@@ -298,6 +305,23 @@ For short-lived X.509 certificates for SAP GUI:
 | [3080900](https://me.sap.com/notes/3080900) | Using a 3rd-Party / Corporate IdP with IAS for Enterprise SSO | Configuration guide for IAS in proxy mode: setting up a corporate IdP (ADFS, Okta, PingFederate) as the upstream identity provider while IAS acts as proxy SP — standard pattern for RISE PCE customers with existing corporate SSO |
 | [2945035](https://me.sap.com/notes/2945035) | Connect Microsoft Entra ID (Azure Active Directory) to IAS | Step-by-step configuration of Microsoft Entra ID as a corporate IdP in IAS proxy mode — covers app registration in Entra, SAML federation trust with IAS, and attribute mapping for S/4HANA and BTP applications |
 | [3507340](https://me.sap.com/notes/3507340) | Test Entra ID → IAS Proxy for IdP-Initiated SSO | Testing procedure for IdP-initiated SSO via Microsoft Entra ID using IAS as a SAML2 proxy — validates the full trust chain before production go-live |
+| [2616249](https://me.sap.com/notes/2616249) | How to achieve SSO while opening Fiori Launchpad using t-code /UI2/FLP | Enable SSO into Fiori Launchpad from /UI2/FLP by using SAML/SPNEGO/X.509, or logon tickets (RZ11: login/accept_sso2_ticket=1, login/create_sso2_ticket=2, FLP_START_WITH_SSO=true in /UI2/FLP_CUS_CONF, activate myssocntl in SICF); core FES SSO config for PCE end users. |
+| [2616732](https://me.sap.com/notes/2616732) | How to add a user as a Space member in the Cloud Foundry environment | Add users as Cloud Foundry Space members (as Org/Space Manager via BTP cockpit) to grant access for side-by-side extensions; basic BTP access-governance step for PCE clean-core extensibility. |
+| [2945880](https://me.sap.com/notes/2945880) | How to by-pass SAML or SPNEGO Single Sign On | Bypass SSO via URL params saml2=disabled / spnego=disabled to isolate auth issues or log on non-federated users - key troubleshooting trick for IAS/SAML SSO on PCE ABAP/ICF apps. |
+| [3033295](https://me.sap.com/notes/3033295) | SAML2.0: Error "No RelayState mapping found....." when logging from specific client machine | SAML 2.0 SSO to the ABAP stack failing with 'No RelayState mapping found' from one client is caused by that PC's wrong clock setting; relevant to IAS/SAML SSO logon troubleshooting on PCE. |
+| [3105625](https://me.sap.com/notes/3105625) | Cannot display information. You are not an org member | BTP Cloud Foundry "not an org member" error: assign the Org Manager role for CF space access, relevant when running side-by-side extensions alongside PCE. |
+| [3147472](https://me.sap.com/notes/3147472) | SAML2 with Multiple URLs or Domains | Fix SAML2 'No RelayState' when a system is reached via multiple domains/WebDispatcher by setting ACS URL (note 2848757) and adding one Assertion Consumer Service endpoint per domain on the IdP (Azure/Okta) — SSO enablement for PCE behind proxies. |
+| [3209281](https://me.sap.com/notes/3209281) | How to obtain the private/signing key of signing certificate for SAML requests in Cloud Foundry Environment | BTP Cloud Foundry XSUAA default SAML signing key cannot be exported; upload own cert/key and rotate signing keys per BTP docs, relevant to SSO/SAML trust setup for RISE BTP extensions. |
+| [3240819](https://me.sap.com/notes/3240819) | How to change the Org Manager in SAP Business Technology Platform | Add/change a Cloud Foundry Org Manager in the BTP cockpit (CF Org Members > Add Members) to resolve 'instances not shown' permission gaps - relevant for administering BTP side-by-side extensions in RISE. |
+| [3249765](https://me.sap.com/notes/3249765) | How to add an Org Manager to a Cloud Foundry org | BTP Cockpit subaccount admin recovers a lost Cloud Foundry Org Manager by updating the CF Runtime environment instance with usersToAdd/usersToRemove JSON (origin from Trust Configuration) — role-recovery path for RISE-included BTP orgs. |
+| [3281010](https://me.sap.com/notes/3281010) | Not able to add Space Members in Cloud Foundry (CF) subaccount | Adding CF space members requires Org Manager role; use cf CLI (cf org-users) or BTP Cockpit — relevant for administering BTP side-by-side extension environments alongside PCE. |
+| [3303172](https://me.sap.com/notes/3303172) | Activating a Super-User SAP* | Emergency SAP* recovery when all privileged credentials lost: dpmon virtual super-user with one-time password (kernel 790+, logged in SAL) or login/no_automatic_user_sapstar=0 plus USR02 delete/restart - OS/dpmon steps are SAP ECS-managed in PCE. |
+| [3357750](https://me.sap.com/notes/3357750) | Calling Web-based Transaction Code Using SAML2 SSO Redirects to WEBGUI Home | Fixes SAML2 SSO on ABAP redirecting to WEBGUI instead of target tcode (e.g. SOAMANAGER) by clearing the Default Application Path in SAML2 config and IdP relay state. |
+| [3431504](https://me.sap.com/notes/3431504) | SAML2 - 403 Forbidden page after trying to download metadata | SAML2 metadata download returns 403 until ICF services /sap/public/bc/sec/saml2 and cdc_ext_service are activated in SICF - SSO/IAS onboarding step on PCE S/4HANA. |
+| [3433084](https://me.sap.com/notes/3433084) | How to disable SPNEGO SSO for specific service | Disable SPNEGO/Kerberos SSO per service via SICF > Logon Data > Alternative Logon Procedure - fine-grained SSO tuning for Fiori/WebGUI services in PCE. |
+| [3584314](https://me.sap.com/notes/3584314) | SAP Enable Now - SSO SAML Attribute Configuration | IAS SSO SAML attribute mapping (given_name/family_name/email/Groups) across federated, IAS-proxy Enriched Token Claims, and direct-IdP scenarios; reusable IAS identity pattern for RISE SSO troubleshooting. |
+| [3611144](https://me.sap.com/notes/3611144) | Action required for notification email "ACTION REQUIRED: Expiring certificate in Identity Authentication Service" | IAS admin console cert-renewal actions by type (service-provider, trusted/corporate IdP, SAML signing, API SSLC, X.509 auth provider) when receiving expiring-certificate emails; critical for RISE SSO continuity, use component XX-S4C-OPR-INC for S/4HANA Cloud SP certs. |
+| [3644822](https://me.sap.com/notes/3644822) | IAG - Does IAG Standalone support PAM functionality for S/4HANA private cloud / RISE? | Confirms SAP Cloud Identity Access Governance (IAG) Standalone supports Privileged Access Management (PAM/firefighter) for S/4HANA Private Cloud / RISE, following the on-premise sections of the PAM guide. |
 
 ---
 

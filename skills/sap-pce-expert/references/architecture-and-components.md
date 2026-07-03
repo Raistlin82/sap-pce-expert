@@ -186,6 +186,13 @@ The **Service Description Guide (SDG)** is the contractual document defining exa
 
 **Trust Center**: [SAP Trust Center – Agreements](https://www.sap.com/sea/about/agreements/policies/hec-services.html)
 
+
+### Additional Notes (2026 Enrichment)
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [2339256](https://me.sap.com/notes/2339256) | SAP Invoice Management by OpenText support for SAP products | VIM (OpenText Vendor Invoice Management) version-to-S/4HANA compatibility matrix; note explicitly states VIM is released for SAP-ECS/HEC private cloud deployments but not for Public Edition, guiding add-on planning on PCE. |
+
 ---
 
 **Last Updated**: 2026-03-10
@@ -307,6 +314,8 @@ The **Service Description Guide (SDG)** is the contractual document defining exa
 | [3605796](https://me.sap.com/notes/3605796) | Provisioning of SAP Analytics Cloud (SAC) tenant within the Business Data Cloud (BDC) setup in SAP for Me | How to provision and manage the SAC tenant as part of a BDC setup through SAP for Me. Documents the BDC-integrated SAC provisioning flow — relevant when migrating or setting up SAC in the context of BDC for PCE customers adopting the new data platform. |
 | [3346909](https://me.sap.com/notes/3346909) | Implementation of SAP Best Practices of SAP S/4HANA Cloud, Private Edition 2023 - Activation in a Merged Client | Provides step-by-step guidance for activating SAP Best Practices content in a merged client in S/4HANA Cloud Private Edition 2023, including how to prevent and resolve activation errors; relevant for greenfield/new PCE implementations using merged client setup. |
 | [3571857](https://me.sap.com/notes/3571857) | Additional license required for SAP Joule for Developers, ABAP AI capabilities in SAP BTP ABAP Environment | Clarifies that SAP Joule for Developers ABAP AI capabilities requires a separately purchased promotional license; explicitly covers activation steps for S/4HANA Cloud Private Edition 2025, BTP ABAP Environment, and Public Edition. |
+| [3019620](https://me.sap.com/notes/3019620) | ISLM Model version Check | CL_ISLM2_PREDICTIVESCENARIO active-model-version check must receive the client via a parameter when called inside CDS table functions; fixes embedded ISLM predictive-scenario AMDP errors on S/4HANA PCE. |
+| [3220119](https://me.sap.com/notes/3220119) | Business applications in SAP S/4HANA that have adopted Harmonized Document Management (HDM) | Reference list of S/4HANA apps that adopted Harmonized Document Management (HDM / Advanced Attachment Service, OData V4) - use when assessing attachment/document-management behavior and object types in a PCE landscape. |
 
 ---
 

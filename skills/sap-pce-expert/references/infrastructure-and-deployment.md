@@ -177,6 +177,16 @@ DR region: Secondary region within the same hyperscaler geography. Separate outb
 
 > Contact Cloud Architect Advisory (CAA) for DR design and pricing.
 
+
+### Additional Notes (2026 Enrichment)
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [1686826](https://me.sap.com/notes/1686826) | Help for importing an SCM optimizer version | SCM Optimizer 14.0 install/patch and default RFC destinations (RCC_CUST, SM59, RFC gateway secinfo) for S/4HANA embedded PP/DS and TM optimization, relevant when provisioning the optimizer engine in a PCE landscape. |
+| [1983389](https://me.sap.com/notes/1983389) | DBCON entry for SAP HANA | Syntax for logical HANA DB connections in transaction DBCO/DBCON (HDB, host:3xx15, schema, HA host lists, key-value CON_PARAM like ENCRYPT); relevant for secondary DB connections in PCE. |
+| [2007212](https://me.sap.com/notes/2007212) | Tuning SAP Web Dispatcher and ICM for high load | Tune SAP Web Dispatcher/ICM via icm/max_conn (and derived thread/MPI params) to size concurrent connections for high user load; relevant when sizing Fiori/HTTP access tiers in a PCE landscape. |
+| [2407589](https://me.sap.com/notes/2407589) | Manual installation of liveCache for SAP S/4HANA | Manual LCAPPS plugin install and /SAPAPO/OM_LIVECACHE_SETUP_S4H config for PP/DS on S/4HANA, incl. DBACOCKPIT LCA/LDA/LEA connections, HANA grants, and periodic /SAPAPO/OM_* jobs to schedule in a PCE system. |
+
 ---
 
 **Last Updated**: 2026-03-10
@@ -307,6 +317,16 @@ DR region: Secondary region within the same hyperscaler geography. Separate outb
 | [1010990](https://me.sap.com/notes/1010990) | Configuring a Standalone Gateway in an HA ASCS instance | Describes how to add a standalone RFC gateway (gwrd) to the ABAP Central Services (ASCS) instance in a high-availability failover cluster; relevant to PCE HA topology where the ASCS runs clustered but application servers do not. |
 | [1040325](https://me.sap.com/notes/1040325) | HTTP load balancing: Message server or SAP Web Dispatcher? | Recommends SAP Web Dispatcher (not the message server) for HTTP load balancing of web applications; directly relevant to PCE network topology and front-end access layer design. |
 | [2971940](https://me.sap.com/notes/2971940) | How to Find the Endpoint of a HANA Cloud / HANA Service Instance in the SAP BTP Cockpit | Step-by-step instructions to locate the SQL endpoint for a SAP HANA Cloud or HANA Service instance in the BTP Cockpit; useful for PCE customers configuring connectivity from BTP-side extensions or tools to their HANA Cloud instance. |
+| [2593571](https://me.sap.com/notes/2593571) | FAQ: SAP HANA Integrated liveCache | FAQ on HANA-integrated liveCache (used by S/4HANA PP/DS and Advanced ATP): sizing via Quick Sizer, monitoring via /SAPAPO/OM13, DBACOCKPIT and M_LIVECACHE_* views, HA via HANA system replication, and backup treated as normal HANA persistence; relevant to PCE landscapes running PP/DS. |
+| [2701016](https://me.sap.com/notes/2701016) | SAP Custom Domain Service - Guided Answers | SAP BTP Custom Domain Service on Cloud Foundry: guided-answers tree for requesting/uploading SSL certificate chains, CA bundles, quotas and common errors when exposing BTP apps under custom domains - applicable to PCE side-by-side BTP extensions. |
+| [2740052](https://me.sap.com/notes/2740052) | Which paths are necessary to configure Web Dispatcher for Fiori Launchpad scenarios? | Reference list of reverse-proxy/Web Dispatcher paths (/sap/opu, /sap/bc/ui2, /sap/bc/ui5_ui5, /sap/saml2, WebGUI, WDA, notifications) to route Fiori Launchpad traffic correctly to the S/4HANA PCE backend. |
+| [2780619](https://me.sap.com/notes/2780619) | Maintenance view for HTTPURLLOC table | Enables SM30/HTTPURLLOC maintenance to configure external host/port URL generation behind a reverse proxy; relevant to correct external URL rewriting for PCE systems fronted by Web Dispatcher (secure with auth group BURL). |
+| [2786364](https://me.sap.com/notes/2786364) | SAP Content Server and Cache Server 7.5 (and higher) | Install/upgrade standalone SAP Content Server/Cache Server 7.5 (SWPM, own SID, CSADMIN, sizing) for KPRO/DMS attachment storage; relevant to PCE landscapes needing content repositories alongside S/4HANA. |
+| [3288477](https://me.sap.com/notes/3288477) | How to maintain table HTTPURLLOC | Maintain table HTTPURLLOC (via SE16 or transaction HTTPURLLOC) to generate public host/port URLs instead of technical ones; essential when PCE systems sit behind a web dispatcher/load balancer for Fiori/WebGUI. |
+| [3346909](https://me.sap.com/notes/3346909) | Implementation of SAP Best Practices of SAP S/4HANA Cloud, Private Edition 2023 - Activation in a Merged Client | Guides SAP Best Practices content activation in a merged client (full client 000 copy) for S/4HANA PCE 2023, preventing/resolving activation errors from pre-existing client 000 IMG entries. |
+| [3421144](https://me.sap.com/notes/3421144) | SQL Statement Collection: "HANA_Tables_DataCollector" report for SAP HANA | HANA_Tables_DataCollector SQL script (from Note 1969700 collection) for deep per-table diagnostics (size, partitions, indexes, loads/unloads) - HANA DB admin/performance troubleshooting on PCE. |
+| [3468878](https://me.sap.com/notes/3468878) | How to connect an on-premise SAP ECC or S/4 HANA ABAP system to SAP HANA Cloud through a proxy server | For ECS/HEC-managed ABAP systems behind a proxy, create the HANA Cloud connection via DBCO/DBCON using CON_PARAM proxyHttp/proxyHostname/proxyPort over SQL port 443 (Cloud Connector not needed for on-prem-to-HANA-Cloud direction). |
+| [3562635](https://me.sap.com/notes/3562635) | How to Find HANA SQL Port | Find HANA SQL_PORT of nameserver/tenant DB via M_SERVICES (sys_databases.M_SERVICES), HANA Studio Landscape tab, or HANA Cockpit Manage Services; needed for DB connectivity in PCE HANA admin. |
 
 ---
 

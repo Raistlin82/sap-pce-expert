@@ -54,11 +54,25 @@ Use the Content Routing Guide in `SKILL.md` to determine where documentation bel
 
 For content spanning multiple topics: place the full content in the **owning** file, add `> See also:` cross-references in secondary files. For truly cross-cutting content with no single owner, use `references/cross-cutting/`.
 
+## SAP Notes Enrichment Workflow
+
+Recent releases (1.3.0–1.5.0) enrich the reference files with curated SAP Notes. Four tracking files live at the repo **root** (outside the plugin/skill dirs — they are working artifacts, not shipped content):
+
+- `sap-notes-master-list.md` — master reference: ~891 notes classified by category, each row mapping a note ID to its owning skill reference file. **Gitignored** (not committed), so it won't appear in `git status`; treat it as the source of truth for what to integrate.
+- `all_master_notes.txt` — every note ID in the master list (the full set).
+- `analyzed_notes.txt` — note IDs already integrated into the reference files.
+- `missing_notes_total.txt` — note IDs still to integrate.
+
+To add notes to a reference file: find the note's target file in `sap-notes-master-list.md`, add it there (as a linked `[ID](https://me.sap.com/notes/ID) | Title | file` row and in the relevant reference file's SAP Notes section), then move its ID from `missing_notes_total.txt` to `analyzed_notes.txt`.
+
 ## Versioning and Release
 
-Version is tracked in two places — keep them in sync:
+Version is tracked in **three** places — keep them in sync on every release:
 - `.claude-plugin/plugin.json` → `"version"` field
+- `.claude-plugin/marketplace.json` → `plugins[0].version` field
 - `skills/sap-pce-expert/SKILL.md` → `metadata.version` in frontmatter
+
+Also bump the dated fields in `SKILL.md` when content changes: `metadata.last_verified`, and the `**Last Updated**` / `**Next Review**` lines at the bottom (review cadence is quarterly). Add a row to the version table in `README.md`.
 
 Release process:
 ```bash
@@ -77,4 +91,6 @@ git push origin v<version>
 /plugin uninstall sap-pce-expert@sap-pce-expert  # when done
 ```
 
-The `marketplace.json` points to the GitHub HTTPS URL for production installs.
+Production installs use the GitHub shorthand (`/plugin marketplace add Raistlin82/sap-pce-expert`), per `README.md`.
+
+**Do not change `marketplace.json` `source` to an absolute/HTTPS URL.** It is deliberately set to the relative path `"./"` — an absolute path caused an `ENAMETOOLONG` cache-recursion error (see commits `7dde1f4`, `c3d1cd6`). Keep `plugin.json` `description` short for the same reason.

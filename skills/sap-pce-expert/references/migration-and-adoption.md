@@ -270,6 +270,13 @@ From experienced RISE practitioners:
 - Club releases and upgrades together where possible.
 - Run **SGEN** immediately after systems are delivered and before go-lives.
 
+
+### Additional Notes (2026 Enrichment)
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [1648480](https://me.sap.com/notes/1648480) | Maintenance for SAP Business Suite 7 Software including SAP NetWeaver | Business Suite 7 / ECC / NetWeaver maintenance end dates (mainstream 2027, extended 2030) anchor the migration timeline driving customers from ECC to S/4HANA Cloud Private Edition. |
+
 ---
 
 **Last Updated**: 2026-03-09
@@ -394,6 +401,24 @@ From experienced RISE practitioners:
 | Note ID | Title | Relevance |
 |---------|-------|-----------|
 | [3310175](https://me.sap.com/notes/3310175) | FAQ - SAP ECC, SAP S/4HANA Upgrade Best Practices / Common Errors Collective Note | Collective KBA with upgrade error corrections by component. Key error categories: (1) BC-DB-HDB-PFW: SHDB Parallelization Framework timeout (DELTA_MERGE_CONTROL=NO_CONTROL) → Note 3059463; (2) BC-UPG-NA: SPDD data loss during exchange upgrade (new DDIC objects) → Note 2535651; (3) BC-UPG-NZ-DT: NZDT Mass Transfer ID issues → Notes 3305842, 3271693; (4) BC-UPG-OCS-SPA: UNRESOLVED_CONFLICTS_FOUND in CONFLICT_CHECK → Note 2944943; (5) BC-UPG-TLS-TLA: ACT_UPG GLO_S_ASSET_KEY activation error → Note 2938948; shadow import EOF errors → Note 3018699; SHADOW_IMPORT EU_CLONE_MIG_VIEW_CREATE → Note 2742444. Guide: "Upgrading SAP S/4HANA" PDF (sap.com/documents/2020/06/94ca0995). |
+| [2574084](https://me.sap.com/notes/2574084) | Transaction '/SMB/BBI' does not exist | Solution Builder transaction /n/SMB/BBI for SAP Best Practices scope-item activation requires the Best Practices ABAP add-ons (note 1301301) — relevant to greenfield S/4HANA content activation. |
+| [2681413](https://me.sap.com/notes/2681413) | FAQ for SAP S/4HANA Data Migration Status App | Data Migration Status app (F3280) to check migration project/object status after loading via the S/4HANA Migration Cockpit ("Migrate Your Data"); needs roles SAP_CA_DMCC_APPS/SAP_CA_DMCC_AUDIT on-prem/PCE, with a list of migration objects lacking navigation links. |
+| [2839315](https://me.sap.com/notes/2839315) | Implementation of SAP S/4HANA SAP Best Practices 1909 (on premise) - Activation in a merged client | Guidance to resolve S/4HANA Best Practices activation errors when activating in a merged client (full client-000 copy); relevant to PCE greenfield guided configuration. |
+| [2988742](https://me.sap.com/notes/2988742) | Transport BP activation transport request into different clients | Best Practices (Guided Configuration) activation captures only IMG-table changes in transports; scope-item activation status is not carried to target clients, so manual rework is needed - relevant to S/4HANA content activation across PCE clients. |
+| [3122653](https://me.sap.com/notes/3122653) | Every migration job cannot finish validation with job "/LTB/JOB_DISPATCHER" canceled | Migration Cockpit (LTMC / Migrate Your Data) stalls when /LTB/JOB_DISPATCHER dumps DBSQL_STMNT_TOO_LARGE from oversized /LTB/JOB_ERRORS; fixed via SAP Note 3102851, relevant for PCE data migration. |
+| [3210687](https://me.sap.com/notes/3210687) | Additional Information about Transferring Data from CSV Template Files to Staging Tables for the Migration Cockpit | S/4HANA Migration Cockpit 'Migrate Your Data' app: CSV-to-staging-tables upload (download templates, 100MB limit, auto-mapping, validate/transfer); relevant to PCE greenfield/data loads (see PCE note 3296020). |
+| [3298888](https://me.sap.com/notes/3298888) | PAi/ISLM Migration - SAP S/4HANA On Premise Conversion | Post-conversion/upgrade, program RSANA_UMM_XPRA_ISLM_MIG throws DB error 17240 in SM21 (SUM phase XPRAS_AIMMRG) migrating deprecated PAi to ISLM; implement ISLM prerequisites and rerun manually, or ignore if ML/ISLM unused - relevant to PCE brownfield conversion post-processing. |
+| [3321893](https://me.sap.com/notes/3321893) | How to know the Best practice version installed on the client | Check the activated SAP Best Practices content version per client via transaction /n/smb/bbi (BP solution naming convention) - relevant to greenfield/new-implementation S/4HANA configuration in PCE. |
+| [3354870](https://me.sap.com/notes/3354870) | The explanation of BC Set | Business Configuration Sets (SCPR20/SCPR3) bundle and transport Customizing for structured group rollout in PCE implementations; activation logged in SCPRACT* tables. |
+| [3382539](https://me.sap.com/notes/3382539) | System not visible in maintenance planner after uploading the data using system info XML file | Maintenance Planner fix when uploaded system not visible under Explore Systems due to INITIAL installation number; check SLICENSE and regenerate sysinfo.xml, key to PCE upgrade/conversion planning. |
+| [3383657](https://me.sap.com/notes/3383657) | Release Information SLT - SAP S/4HANA On-Premise Edition 2025 | SLT (Landscape Transformation Replication Server) release/DMIS-equivalence and required corrections for S/4HANA 2025, used for CFIN and Migration Cockpit/Datasphere replication in PCE. |
+| [3393515](https://me.sap.com/notes/3393515) | Compatibility of SAP S/4HANA 2023 and Archiving and Document Access 22.4 or Extended ECM 22.4 | OpenText add-ons OTEXBASB/OTBCBAS/OTBCWUI are barred on S/4HANA 2023; PCE conversions/upgrades must uninstall or upgrade to ECM/Invoice Management 23.4 as part of the conversion - an add-on compatibility gate. |
+| [3393679](https://me.sap.com/notes/3393679) | Jump Start Your SAP S/4HANA 2023 Implementation by Activating SAP Best Practices | Greenfield PCE 2023 activation playbook: Best Practices scope items (411) via Solution Builder, greenfield-only/no deactivation, decide group currency and languages upfront, client-copy alternatives, and transport/manual-rework strategy to QAS/PRD. |
+| [3446020](https://me.sap.com/notes/3446020) | Delivery Unit HANA_UMML is added automatically during conversion/upgrade in maintenance planer | Maintenance Planner auto-adds HANA_UMML (Predictive Integrator DU) in Download Files during S/4HANA conversion/upgrade; deselect the 'SAP Predictive Integrator' product instance in Define Change if unwanted. |
+| [3564532](https://me.sap.com/notes/3564532) | FAQ: Data migration of condition records | Migration Cockpit (LTMC) migration objects for pricing condition records (staging-table vs Direct Transfer CA-DT-MIG-S4); note condition indexes need manual rebuild via V/I2 and calc type G/supplementary/tax conditions supported only from S/4HANA 2023. |
+| [3570521](https://me.sap.com/notes/3570521) | SAP S/4HANA Best Practices - Transaction /SMB/BBI empty in Test and Prod system | Best Practices content must be activated only in DEV via /SMB/BBI then transported; the Solution Builder tree view is by design absent in TEST/PROD where only BP transports were imported — expected PCE landscape behavior. |
+| [3671414](https://me.sap.com/notes/3671414) | SAP Invoice Management by OpenText 25.4 | Installing/upgrading SAP Invoice Management by OpenText (VIM) 25.4 add-on on S/4HANA via Maintenance Planner (Install/Maintain Add-on, stack XML) — relevant when planning add-on handling during S/4HANA conversion/upgrade on PCE. |
+| [3713978](https://me.sap.com/notes/3713978) | Job step user configuration in load jobs in Migrate your data Fiori app | Migration Cockpit 'Migrate Your Data' Fiori app: load-job steps (/LTB/MC_LOAD_PREPARE, DMC_MT_STARTER_BATCH) always run under the initiating dialog user, not SJOBREPO_STEPUSER, by design; in PCE run migration with a dedicated business user holding the correct migration authorizations. |
 
 ---
 

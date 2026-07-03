@@ -1,0 +1,11 @@
+# SAP Notes che esistono ma il cui contenuto non e' recuperabile (accesso ristretto / superate / interne)
+# Tentate piu' volte: il server restituisce 'No content available'.
+2310362	No content available
+3152253	No content available
+3326347	No content available
+3371672	No content available
+3403424	No content available
+3420091	No content available
+3560010	No content available
+3599198	No content available
+3694128	No content available

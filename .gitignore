@@ -4,3 +4,6 @@ docs/plans/
 token-cache.json
 debug-auth-page.png
 sap-notes-master-list.md
+
+# packaged skill bundle (build artifact)
+*.skill

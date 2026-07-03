@@ -22,6 +22,38 @@ metadata:
 
 ---
 
+## Retrieval Protocol
+
+Follow this BEFORE composing an answer. It keeps context small and covers content that spans
+multiple files.
+
+1. **Expand the query into English SAP terminology.** The reference content is English; the
+   user may ask in any language (often Italian). List the key concepts plus SAP synonyms and
+   transaction codes. Use the Keyword Index below to help.
+   - "come gestisco i backup?" → backup, restore, retention, RPO, RTO, HSR
+   - "autenticazione SSO" → authentication, SSO, SAML, IAS, IPS, SNC, SPNEGO
+2. **Grep the reference files (Stage 1 — locate).** Search this skill's `references/`
+   directory (the folder next to this SKILL.md), case-insensitive, with context, for the
+   expanded terms. Search ALL files — do not pre-limit to one topic.
+3. **Read only the matching rows/sections.** Do not load whole files. When a match is in a
+   SAP Notes table (`| Note ID | Title | Relevance |`), read the whole row (all three
+   columns — the explanation is in Relevance). Collect matches across files: a topic often
+   spans files (e.g. backup touches operations, security, and infrastructure). You now have
+   the pinpointed topic and SAP Note IDs.
+4. **Augment with live content (Stage 2 — optional, graceful).** If the `sap-docs` MCP is
+   available, use the pinpointed terms/topic to fetch current SAP Help/Community content and
+   enrich the answer. If `sap-docs` is not configured or errors, skip this step silently and
+   answer from the curated rows. **SAP Note text always comes from the curated `.md`** — do
+   not attempt live note-by-ID fetch here. Indicate when content is curated vs. live.
+5. **Fallback.** If grep (step 2) yields nothing useful, use the Content Routing Guide below
+   to open the owning file — the prior behavior.
+6. **Answer, citing the SAP Note IDs** you used.
+
+Prefer specific terms first; widen only if needed. Stage 2 is a bonus layer — the skill must
+answer fully from the curated content when no live MCP is present.
+
+---
+
 ## Content Routing Guide
 
 When source documentation spans multiple topics, route content using this table:
@@ -39,6 +71,30 @@ When source documentation spans multiple topics, route content using this table:
 | Clean core (spans migration + extensibility + ops) | — | `cross-cutting/clean-core-strategy.md` |
 | IAM (spans security + BTP + ops) | — | `cross-cutting/identity-and-access.md` |
 | Hyperscaler agreements (spans licensing + infra + security) | — | `cross-cutting/hyperscaler-contracts.md` |
+
+---
+
+## Keyword Index
+
+Use this to form Grep queries (expand the user's question into these English SAP terms) and to
+know the fallback file. One row per topic area; not an exhaustive tcode list.
+
+| Area | Terms / tcodes to grep | File |
+|---|---|---|
+| RISE bundle / S/4HANA overview | RISE, bundle, S/4HANA, Signavio, Business Network, SAPUI5, SOAMANAGER | architecture-and-components.md |
+| Hyperscaler / network / data center | hyperscaler, AWS, Azure, GCP, Alibaba, VPC, VNET, Direct Connect, ExpressRoute, data center | infrastructure-and-deployment.md |
+| Disaster Recovery infrastructure | DR, disaster recovery, RPO, RTO, replication | infrastructure-and-deployment.md |
+| Migration / conversion tools | migration, brownfield, greenfield, bluefield, SUM, DMLT, Readiness Check, selective data transition | migration-and-adoption.md |
+| Operations / SLA / patching | SLA, patching, SPS, SP, EWA, SGEN, service request, ECS, number range | operations-and-sla.md |
+| Backup / restore | backup, restore, retention, HSR, 3572444 | operations-and-sla.md |
+| bgRFC / async processing | bgRFC, SBGRFCMON, SRT_MONI, qRFC | operations-and-sla.md |
+| Security / compliance | ISO 27001, SOC, GDPR, encryption, penetration test, vulnerability, RSBDCOS0, HTTP_WHITELIST, UCON | security-and-compliance.md |
+| Extensibility / ABAP Cloud / BTP | ABAP Cloud, clean core, key user, RAP, BAdI, SICF, Web Dynpro, ATO, S_ATO_SETUP | extensibility-and-development.md |
+| Integration | Integration Suite, Cloud Connector, iFlow, API, SDI, DP Agent, RFC, IDoc | integration.md |
+| Licensing / sizing | licensing, FUE, HUoM, SAPS, subscription, contract, Global Account | licensing-and-sizing.md |
+| Clean core strategy | clean core, maturity model, tiers, KPIs | cross-cutting/clean-core-strategy.md |
+| Identity / SSO / access | SSO, SAML, IAS, IPS, SNC, SPNEGO, XSUAA, STRUST | cross-cutting/identity-and-access.md |
+| Hyperscaler contracts | hyperscaler agreement, BYOL, contract, region | cross-cutting/hyperscaler-contracts.md |
 
 ---
 

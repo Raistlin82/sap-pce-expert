@@ -274,6 +274,25 @@ Included in Premium and Premium Plus tiers:
 | [3188761](https://me.sap.com/notes/3188761) | BTP CPEA — Service Consumption Monitoring and Alerts | How to monitor BTP service consumption against CPEA credits to avoid overages |
 | [3344917](https://me.sap.com/notes/3344917) | CPEA Credits — Included Services vs. Metered Services | Clarification of which BTP services consume CPEA credits vs. included quota |
 
+
+### Additional Notes (RISE & BTP Toolbox, 2026-07)
+
+> Curated from the community "SAP S/4HANA RISE & SAP BTP Toolbox" (post 13944069), verified as not already covered.
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3406430](https://me.sap.com/notes/3406430) | Sizing-relevant information for using SAP HANA NSE in SAP S/4HANA and SAP S/4HANA Cloud, private edition | Explains HANA NSE data-tiering memory savings and buffer-cache sizing (about 25% of page-loadable data) for PCE - a key HANA sizing lever. |
+| [3307794](https://me.sap.com/notes/3307794) | How to judge if the available memory is sufficient for the current system | HANA memory-adequacy rules (points to FAQ 1999997): memory should be >= 2x row+column store - validates whether a PCE HANA instance is sized correctly. |
+| [3464083](https://me.sap.com/notes/3464083) | Quick check for whether HANA memory is sufficient | Quick HANA memory check via the HANA_Memory_Overview script (note 1969700); memory should be >= 2x row+column store - a fast PCE rightsizing test. |
+| [2943225](https://me.sap.com/notes/2943225) | Scalability and throughput of S/4HANA in large customer installations | S/4HANA scalability evidence (5-10M line items/hr; ~300k SAPS Quick Sizer threshold, 500M-line analytics limit) - grounds SAPS sizing for large PCE installs. |
+| [3004348](https://me.sap.com/notes/3004348) | What is counted as digital access? | Defines digital-access counting: only document-item creation across nine document types counts (some weighted 5:1); reads/updates/deletes excluded - core RISE indirect-access rule. |
+| [2738406](https://me.sap.com/notes/2738406) | Digital Access: Central Technical Guidelines | Technical prerequisites (SP levels, header-field forwarding, RSUVM_DAC monitoring) to enable Digital Access measurement in PCE S/4HANA - foundational for indirect-access compliance. |
+| [3521432](https://me.sap.com/notes/3521432) | What is the AI Unit Estimator & how to use it in SAP for Me? | SAP for Me questionnaire-based tool estimating the AI Units needed for SAP Business AI capabilities (with quote request) - relevant to RISE/PCE AI-consumption sizing. |
+
+**Curated resources & practices (RISE & BTP Toolbox):**
+- Practice: Size S/4HANA for inbound OData/API load using the **S/4HANA Cloud QuickSizer's API category** (the base PCE QuickSizer has none): treat each calling system as a user and each API as a transaction, factoring call frequency, business-logic complexity and payload volume.
+
 ---
 
 **SAP Notes Reference Last Updated**: 2026-03-16
+**Toolbox enrichment**: 2026-07-22 (SAP Community post 13944069; SAP Note content verified via SAP Notes MCP)

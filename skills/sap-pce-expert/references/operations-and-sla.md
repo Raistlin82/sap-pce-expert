@@ -543,7 +543,37 @@ The Customer Dashboard is the primary self-service portal for RISE with SAP cust
 | [3629081](https://me.sap.com/notes/3629081) | Shared Memory Area of CMIS Client | Fixes a program error where the first connection attempt from S/4HANA (CMIS/SAP Document Integration client) to BTP Document Management Service fails before auto-recovering; apply the correction in PCE systems using DMS document integration. |
 | [3658409](https://me.sap.com/notes/3658409) | Issues related to SAP Rise | RISE/PCE support routing: S/4HANA Cloud Private Edition (HEC-managed) issues go via CAA/CDM/TSM roles, else open a ticket under component ECSCTOCH — not standard SAP support. |
 
+
+### Additional Notes (RISE & BTP Toolbox, 2026-07)
+
+> Curated from the community "SAP S/4HANA RISE & SAP BTP Toolbox" (post 13944069), verified as not already covered.
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3169613](https://me.sap.com/notes/3169613) | Accessing SAP HANA Database of SAP S/4HANA Cloud, private edition | PCE is SaaS with an embedded HANA Runtime and no direct DB rights: Migration Cockpit / DS / SLT staging loads and SDI-via-app are allowed; direct DB artifact creation is not. |
+| [2925766](https://me.sap.com/notes/2925766) | How to troubleshoot OData performance issues with Gateway Performance Trace? | Troubleshoot OData/Fiori slowness via the Gateway Performance Trace (/IWFND/STATS, /IWFND/TRACES, sap-statistics) on the SAP_GWFND stack present in every PCE Fiori front-end. |
+| [3205486](https://me.sap.com/notes/3205486) | How to contact your HEC/ECS/RISE hosting partner | Maps which support component (PCO-OPS, PCO-PSD-*) to use for Private Cloud technical changes routed to the RISE/ECS hosting partner. |
+| [3319026](https://me.sap.com/notes/3319026) | Delivery of Maintenance Readiness Checks (MRC) | TCI-delivered, read-only Maintenance Readiness Checks that collect system data to prepare ECS-run upgrades/updates; relevant to PCE maintenance planning. |
+| [2534288](https://me.sap.com/notes/2534288) | Homogeneous System Copy - Additional Information (FAQ) | FAQ for the ECS Homogeneous System Copy / System Refresh service (component XX-HST-OPR): PCA task lists, technical qualification and customer responsibilities. |
+| [3533005](https://me.sap.com/notes/3533005) | What's the default retention period for SAP Cloud Logging? | SAP Cloud Logging default retention is 7 days (configurable 1-90 via retention_period); observability detail for RISE-attached BTP extensions. |
+| [3557260](https://me.sap.com/notes/3557260) | Information about the deprecation of SAP Application Logging Service | SAP Application Logging Service is deprecated (removed from eligible services 30 Jul 2025); migrate to SAP Cloud Logging. |
+| [3398745](https://me.sap.com/notes/3398745) | Can custom Events be defined for missing metrics in the various SAP Cloud ALM Use Cases? | Cloud ALM Health Monitoring events are hard-coded - no custom events until Q1 2026, and Intelligent Event Processing must not be used for them. |
+| [3436616](https://me.sap.com/notes/3436616) | How to configure SAP Cloud ALM Health Monitoring metric thresholds, alerts, and e-mail notifications? | How-to for metric thresholds and alert/e-mail configuration in SAP Cloud ALM Health Monitoring (component SV-CLM-OP-HM), the PCE operations monitoring tool. |
+| [2346367](https://me.sap.com/notes/2346367) | How to upgrade the SAPUI5 library in ABAP | Procedure for upgrading the SAPUI5 library on an ABAP stack (component CA-UI5-DLV); app-layer patching the customer still owns on the S/4HANA/Fiori front-end. |
+
+**Curated resources & practices (RISE & BTP Toolbox):**
+- [SAP ECS Workspace — Private Cloud self-service portal](https://me.sap.com/servicessupport/ecsworkspace) — central ECS self-service workspace for RISE customers.
+- [HEC/ECS Landscape app](https://me.sap.com/app/heclandscape) — view your ECS-managed system landscape, hostnames and ports.
+- [RISE PCE operations runbook library (logon-gated)](https://help.sap.com/docs/RISE_WITH_SAP_PRIVATE_CLOUD_EDITION) — authoritative ECS runbooks (Customer Runbook, Backups, Business Continuity, DR Testing, Network Concept).
+- [SAP Cloud Application Services (CAS) — service descriptions & RACIs](https://assets.cdn.sap.com/agreements/product-policy/hec/service-description/sap-cloud-application-services---advanced-security-and-compliance-english-v8-2024a.pdf) — optional chargeable managed-service portfolio (Advanced Security & Compliance, Application Operations, DVO, etc.) layered on base RISE; scope explicitly during contracting.
+- Practice: SAP does **not** quality-control Service Requests — apply "right first time" discipline and learn the ECS request templates before submitting.
+- Practice: Redesign Project-Basis and Operations-Basis teams around segregation of duties with the ECS team ("Basis as a factory"); DVM/capacity management and performance tuning/housekeeping remain **customer** responsibilities.
+- Practice: Understand what the 99.7% vs 99.9% availability SLA implies for Availability Zones vs Regions before committing.
+- Practice: Before a SolMan → SAP Cloud ALM transition, run the SolMan↔CALM feature-scope comparison — CALM is not a 1:1 replacement (SolMan mainstream maintenance ends 2027).
+- Practice: ECS app-server liveness can be checked via the health endpoint relative path `/ping/publicicp/show_init_statepub.icp`.
+
 ---
 
 **Last Updated**: 2026-03-21
 **Sources verified**: 2026-03-21 (enriched with real SAP Note content via sap_note_get)
+**Toolbox enrichment**: 2026-07-22 (SAP Community post 13944069; SAP Note content verified via SAP Notes MCP)

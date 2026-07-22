@@ -2,10 +2,13 @@
 # Tentate piu' volte: il server restituisce 'No content available'.
 2310362	No content available
 3152253	No content available
+3194163	Access-gated; title/content unverifiable via MCP (RISE&BTP Toolbox cites it as PCE reset-password). 2026-07
 3326347	No content available
 3371672	No content available
+3390805	Access-gated; title/content unverifiable via MCP (manage /usr/sap/trans during brownfield migration). 2026-07
 3403424	No content available
 3420091	No content available
+3420371	Access-gated; title/content unverifiable via MCP (BTP audit-log retention >90 days). 2026-07
 3560010	No content available
 3599198	No content available
 3694128	No content available

@@ -551,7 +551,34 @@ SOC attestation reports available on request via Trust Center (subject to NDA).
 | [3603624](https://me.sap.com/notes/3603624) | Web Dispatcher: New warnings related to security sensitive configurations | Kernel patch adds KERNELCOR -checkconfig warnings when SAP Web Dispatcher detects security-sensitive config; apply latest SP Stack Kernel/hotfix to surface risky settings in RISE-managed dispatcher tiers. |
 | [3639967](https://me.sap.com/notes/3639967) | Usage of icm/HTTPS/client_certificate_header_name | Guides safe use of profile parameter icm/HTTPS/client_certificate_header_name (with icm/trusted_reverse_proxy) for X.509 client-cert forwarding via Web Dispatcher/ICM; must match across Web Dispatcher and all back-ends to avoid a spoofing risk in RISE reverse-proxy setups. |
 
+
+### Additional Notes (RISE & BTP Toolbox, 2026-07)
+
+> Curated from the community "SAP S/4HANA RISE & SAP BTP Toolbox" (post 13944069), verified as not already covered.
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3250501](https://me.sap.com/notes/3250501) | Information on mandatory Security Parameters & Hardening requirements for ABAP systems in SAP Enterprise Cloud Services (ECS) | ECS/RISE-mandated ABAP hardening for every PCE ABAP system: password/SNC/gateway-ACL/ICF parameters, Security Audit Log config and standard-user lockdown - the SAP-managed baseline. |
+| [3480723](https://me.sap.com/notes/3480723) | Information on mandatory Security Parameters & Hardening requirements for SAP HANA databases in SAP Global Cloud Operations (GCO) | SAP-managed HANA hardening for PCE: password policy, SYSLOG audit trail, AES-256 data-at-rest/redo-log encryption, TLS 1.2+ minimums (title reads GCO, formerly ECS). |
+| [3381209](https://me.sap.com/notes/3381209) | Information on mandatory Security Parameters & Hardening requirements for JAVA systems in SAP Enterprise Cloud Services | ECS-mandated AS Java hardening for PCE Java stacks: gateway ACLs, TLS ciphersuites, invoker servlet disabled, UME password policy (min length 30), secure/HttpOnly logon-ticket cookies. |
+| [2253549](https://me.sap.com/notes/2253549) | The SAP Security Baseline Template | The generic SAP Security Baseline Template (v2.6) plus Configuration Validation / Focused Run policies for customer-run compliance monitoring; underpins the recommendations behind ECS hardening. |
+| [2637286](https://me.sap.com/notes/2637286) | How to collect Audit Logs for SAP BTP | Retrieving BTP audit logs (subaccount and global account) via the Audit Log Retrieval API; 90-day default retention (premium edition extends it) - governs RISE BTP-extension compliance. |
+| [3320764](https://me.sap.com/notes/3320764) | How a customer can obtain detailed SAP BTP audit logs | Points customers to KBA 2637286 for obtaining detailed BTP audit logs (e.g. who/when deleted a subaccount) via the Audit Log Retrieval API. |
+| [3473519](https://me.sap.com/notes/3473519) | How the encryption for SAP BTP Audit Logs works? | BTP audit-log encryption: the customer may supply the key via SAP Central Key Management (BYOK) or SAP auto-generates it; keys are per-tenant distinct. |
+
+**Curated resources & practices (RISE & BTP Toolbox):**
+- [Securing RISE with SAP S/4HANA Cloud, private edition (deck)](https://assets.dm.ux.sap.com/sap-user-groups/pdfs/240816_securing_rise_with_sap_s4hana_cloud_private_edition.pdf) — primary public reference on RISE/ECS security and shared responsibilities.
+- [RISE with SAP: Comparing the Security of S/4HANA Cloud private edition vs public edition](https://community.sap.com/t5/technology-blogs-by-sap/rise-with-sap-comparing-the-security-of-sap-s-4hana-cloud-private-edition/ba-p/13568823) — side-by-side of PCE vs public-edition security responsibilities.
+- [RISE with SAP: Multi-layer Defense in Depth Architecture of S/4HANA Cloud, Private Edition](https://community.sap.com/t5/financial-management-blogs-by-sap/rise-with-sap-multi-layer-defense-in-depth-architecture-of-sap-s-4hana/ba-p/13517826) — canonical defense-in-depth model for PCE.
+- [RISE with SAP: Adopting Zero Trust Architecture Principles with SAP Cloud Services](https://community.sap.com/t5/technology-blogs-by-sap/rise-with-sap-adopting-to-zero-trust-architecture-principles-with-sap-cloud/ba-p/13544003) — zero-trust principles applied across managed cloud services.
+- [Recommended Security Configurations for SAP Cloud Products](https://www.sap.com/documents/2022/12/7616adbb-547e-0010-bca6-c68f7e60039b.html) — SAP's recommended secure-config baseline for cloud products.
+- [SAP Security White Papers (index)](https://support.sap.com/en/security-whitepapers.html) — durable landing page indexing all SAP security whitepapers.
+- Practice: When rotating keys/TLS certificates in S/4HANA, propagate the new certs to **all** dependent systems that hold the S/4HANA certificate (e.g., Multi-Bank Connectivity).
+- Practice: Specify all security requirements **up front** so they are included in installation and post-installation setup.
+- Practice: Structure PCE landscape-security assessments around the SAP Secure Operations Map domains rather than ad-hoc checks.
+
 ---
 
 **Last Updated**: 2026-03-21
 **Sources verified**: 2026-03-21
+**Toolbox enrichment**: 2026-07-22 (SAP Community post 13944069; SAP Note content verified via SAP Notes MCP)

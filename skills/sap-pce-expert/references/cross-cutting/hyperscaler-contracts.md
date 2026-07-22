@@ -240,6 +240,16 @@ Hyperscaler (IaaS layer)
 | [2978218](https://me.sap.com/notes/2978218) | RISE PCE — Data Residency and Sovereignty Configuration | Data residency options per hyperscaler region and contractual commitments under RISE |
 | [3341087](https://me.sap.com/notes/3341087) | RISE PCE — Hyperscaler Audit Reports and Compliance Evidence | How customers can request hyperscaler and SAP ECS audit reports (ISO 27001, SOC 2) for compliance purposes |
 
+
+### Additional Notes (RISE & BTP Toolbox, 2026-07)
+
+> Curated from the community "SAP S/4HANA RISE & SAP BTP Toolbox" (post 13944069), verified as not already covered.
+
+| Note | Title | Relevance |
+|------|-------|-----------|
+| [3444865](https://me.sap.com/notes/3444865) | Managed Service Provider - MSP (Previously known as PMC) Responsibilities – RISE with SAP Private Cloud Edition | Defines Managed Service Provider (MSP, formerly Partner Managed Cloud / PMC) responsibilities under RISE PCE (component PCO-OPS) - the partner-operated delivery model vs SAP-operated ECS. |
+
 ---
 
 **SAP Notes Reference Last Updated**: 2026-03-15
+**Toolbox enrichment**: 2026-07-22 (SAP Community post 13944069; SAP Note content verified via SAP Notes MCP)

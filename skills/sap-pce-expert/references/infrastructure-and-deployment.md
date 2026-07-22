@@ -328,6 +328,23 @@ DR region: Secondary region within the same hyperscaler geography. Separate outb
 | [3468878](https://me.sap.com/notes/3468878) | How to connect an on-premise SAP ECC or S/4 HANA ABAP system to SAP HANA Cloud through a proxy server | For ECS/HEC-managed ABAP systems behind a proxy, create the HANA Cloud connection via DBCO/DBCON using CON_PARAM proxyHttp/proxyHostname/proxyPort over SQL port 443 (Cloud Connector not needed for on-prem-to-HANA-Cloud direction). |
 | [3562635](https://me.sap.com/notes/3562635) | How to Find HANA SQL Port | Find HANA SQL_PORT of nameserver/tenant DB via M_SERVICES (sys_databases.M_SERVICES), HANA Studio Landscape tab, or HANA Cockpit Manage Services; needed for DB connectivity in PCE HANA admin. |
 
+
+### Additional Notes (RISE & BTP Toolbox, 2026-07)
+
+> Curated from the community "SAP S/4HANA RISE & SAP BTP Toolbox" (post 13944069), verified as not already covered.
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3336611](https://me.sap.com/notes/3336611) | Information of standard service ports in SAP Enterprise Cloud Services (ECS) | ECS-published standard service-port list per system (delivered as a downloadable attachment) for RISE PCE firewall and onboarding planning. |
+| [3385632](https://me.sap.com/notes/3385632) | Information about CGS Server and IEM Server (SAP Enterprise Cloud Services) | SAP-managed CGS gateway (saprouter, proxy, DNS, LDAP, NTP) and IEM/Introscope (Wily, SLD) servers in ECS PCE landscapes - customer-consumed but not directly accessible. |
+
+**Curated resources & practices (RISE & BTP Toolbox):**
+- [Provisioning Guide for RISE with SAP](https://d.dam.sap.com/a/s2DMe2P/Provisioning%20Guide%20for%20RISE%20with%20SAP.pdf?rc=10&inline=true) — the RISE provisioning process / handover after contract signing.
+- [RISE with SAP on AWS (connectivity, security, reliability, extensions)](https://docs.aws.amazon.com/sap/latest/general/rise.html) — hyperscaler-published authoritative RISE PCE guidance.
+- [RISE with SAP — Customer Data Center option](https://www.sap.com/products/erp/rise/customer-data-center.html) — distinct PCE deployment variant (run in the customer's own DC).
+- Practice: RISE technical architecture is **not** the same as on-premise — a RISE load balancer / application gateway may behave differently. Obtain SAP's RISE "Customer Setup" architecture views, onboard a SAP RISE Architect from project start, and treat SAP Technical Architects as part of the new Basis team.
+
 ---
 
 **SAP Notes Reference Last Updated**: 2026-03-21
+**Toolbox enrichment**: 2026-07-22 (SAP Community post 13944069; SAP Note content verified via SAP Notes MCP)

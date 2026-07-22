@@ -67,14 +67,20 @@ topic areas to grep terms and their fallback file. When adding content, keep SAP
 Index row. Validation queries live in `skills/sap-pce-expert/retrieval-tests.md` (kept outside
 `references/` so the protocol's grep never matches the test scaffolding).
 
+The design rationale for this protocol is captured in `docs/superpowers/specs/` and
+`docs/superpowers/plans/` (the `2026-07-03-grep-retrieval*` spec and plan). Note: `.gitignore`
+excludes `docs/plans/`, a different path — these `docs/superpowers/**` docs are tracked.
+
 ## SAP Notes Enrichment Workflow
 
-Recent releases (1.3.0–1.5.0) enrich the reference files with curated SAP Notes. Four tracking files live at the repo **root** (outside the plugin/skill dirs — they are working artifacts, not shipped content):
+Releases 1.3.0–1.6.0 enriched the reference files with curated SAP Notes (~930 integrated as of 1.6.0). Working artifacts live at the repo **root** (outside the plugin/skill dirs — they are not shipped content):
 
-- `sap-notes-master-list.md` — master reference: ~891 notes classified by category, each row mapping a note ID to its owning skill reference file. **Gitignored** (not committed), so it won't appear in `git status`; treat it as the source of truth for what to integrate.
+- `sap-notes-master-list.md` — master reference: notes classified by category, each row mapping a note ID to its owning skill reference file. Listed in `.gitignore` **but already committed**, so it is tracked and edits to it *do* appear in `git status` (`.gitignore` only suppresses *untracked* files). Treat it as the source of truth for what to integrate.
 - `all_master_notes.txt` — every note ID in the master list (the full set).
 - `analyzed_notes.txt` — note IDs already integrated into the reference files.
-- `missing_notes_total.txt` — note IDs still to integrate.
+- `missing_notes_total.txt` — note IDs still to integrate. **Currently empty** — backlog cleared; a non-empty file signals outstanding work.
+- `skipped_notes.txt` — off-scope notes deliberately excluded (e.g. EH&S, GRC, APO/SCM Optimizer, Data Services), each with the reason logged.
+- `unretrievable_notes.txt` — note IDs whose content could not be fetched from SAP for Me ("No content available" — restricted, superseded, or internal).
 
 To add notes to a reference file: find the note's target file in `sap-notes-master-list.md`, add it there (as a linked `[ID](https://me.sap.com/notes/ID) | Title | file` row and in the relevant reference file's SAP Notes section), then move its ID from `missing_notes_total.txt` to `analyzed_notes.txt`.
 
@@ -107,3 +113,20 @@ git push origin v<version>
 Production installs use the GitHub shorthand (`/plugin marketplace add Raistlin82/sap-pce-expert`), per `README.md`.
 
 **Do not change `marketplace.json` `source` to an absolute/HTTPS URL.** It is deliberately set to the relative path `"./"` — an absolute path caused an `ENAMETOOLONG` cache-recursion error (see commits `7dde1f4`, `c3d1cd6`). Keep `plugin.json` `description` short for the same reason.
+
+**Keep the `SKILL.md` frontmatter `description` ≤ 1024 characters.** The trigger sentence plus keyword list must stay under 1024 chars or the skill fails to package as a valid `.skill` bundle for Claude Desktop / cowork (this was the v1.6.1 fix). Packaged `*.skill` bundles are build artifacts and are gitignored.
+
+## Two Distribution Forms
+
+The same skill ships in two forms — **keep both in sync on every content release**:
+
+1. **Claude Code plugin** — this repo, installed via the marketplace (`/plugin`). Source of truth for content.
+2. **Claude cowork / desktop `.skill` bundle** — a zip whose top-level folder is the skill name (`sap-pce-expert/`) containing **only** `SKILL.md` + `references/` (README and `retrieval-tests.md` are deliberately excluded — the latter would otherwise pollute the retrieval-protocol grep).
+
+Build the bundle with the repeatable script (never hand-zip):
+
+```bash
+./build-skill.sh          # → dist/sap-pce-expert.skill
+```
+
+It fails fast if the three version fields disagree or if the `SKILL.md` description exceeds 1024 chars. `dist/` and `*.skill` are gitignored — the bundle is a build artifact, regenerated per release, not committed. After bumping the version and editing content, re-run it so the desktop/cowork bundle matches the plugin.

@@ -94,6 +94,7 @@ sap-pce-expert/
 
 | Version | Highlights |
 |---------|------------|
+| 1.7.0 | Enrichment from the community "SAP S/4HANA RISE & SAP BTP Toolbox" (post 13944069): **48 SAP Notes** (content verified via the SAP Notes MCP) plus curated resources and practical operating guidance added across 11 reference files (ECS hardening baselines, HANA DB access & sizing, digital access, BTP audit logs, Migration Cockpit/BTC, North Star & CCoE, provisioning/onboarding). 8 candidate notes excluded — 5 off-scope (e.g. Public-Edition-only) logged in `skipped_notes.txt`, 3 access-gated in `unretrievable_notes.txt`. Tracking files updated. |
 | 1.6.1 | Trimmed the `SKILL.md` description to ≤1024 characters so the skill packages as a valid `.skill` bundle for Claude Desktop / cowork (no loss of trigger coverage). |
 | 1.6.0 | Bulk enrichment: ~280 additional SAP Notes fetched from SAP for Me and integrated across all reference files (930 notes total), each with a PCE-specific relevance note. Off-scope notes (EH&S, GRC, APO/SCM Optimizer, Data Services) filtered out and logged. Plus a two-stage **Retrieval Protocol** and Keyword Index in `SKILL.md`: Claude greps the curated references to pinpoint exact notes (cross-file, low context), with optional live augmentation via the hosted `sap-docs` MCP and graceful fallback — zero setup for users. |
 | 1.5.0 | Massive addition of SAP Notes tracking for Private Cloud architectures. Fixed ENAMETOOLONG installation bug by making marketplace source path relative. |

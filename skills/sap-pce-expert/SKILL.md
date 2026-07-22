@@ -6,8 +6,8 @@ description: |
   Keywords: RISE with SAP, SAP Private Cloud ERP, S/4HANA Cloud Private Edition, PCE, 2025 FPS01, Agentic AI, Joule, brownfield, greenfield, bluefield, selective data transition, SUM, DMLT, HUoM, SAPS, SAP-managed operations, clean core, ABAP Cloud, key user extensibility, developer extensibility, BTP extensions, hyperscaler, Alibaba Cloud, RISE contract, SLA, patching cadence, backup restore, ISO 27001, SOC 2, GDPR, Foundational Success Plan
 license: GPL-3.0
 metadata:
-  version: "1.6.1"
-  last_verified: "2026-07-03"
+  version: "1.7.0"
+  last_verified: "2026-07-22"
 ---
 
 # SAP Private Cloud ERP Expert (RISE with SAP)
@@ -84,17 +84,17 @@ know the fallback file. One row per topic area; not an exhaustive tcode list.
 | RISE bundle / S/4HANA overview | RISE, bundle, S/4HANA, Signavio, Business Network, SAPUI5, SOAMANAGER | architecture-and-components.md |
 | Hyperscaler / network / data center | hyperscaler, AWS, Azure, GCP, Alibaba, VPC, VNET, Direct Connect, ExpressRoute, data center | infrastructure-and-deployment.md |
 | Disaster Recovery infrastructure | DR, disaster recovery, RPO, RTO, replication | infrastructure-and-deployment.md |
-| Migration / conversion tools | migration, brownfield, greenfield, bluefield, SUM, DMLT, Readiness Check, selective data transition | migration-and-adoption.md |
-| Operations / SLA / patching | SLA, patching, SPS, SP, EWA, SGEN, service request, ECS, number range | operations-and-sla.md |
+| Migration / conversion tools | migration, brownfield, greenfield, bluefield, SUM, DMLT, Readiness Check, selective data transition, Migration Cockpit, Business Transformation Center, BTC, LSMW, RDM, DVM, staging tables, North Star, CCoE, OCM | migration-and-adoption.md |
+| Operations / SLA / patching | SLA, patching, SPS, SP, EWA, SGEN, service request, ECS, number range, MRC, Cloud Logging, Cloud ALM, Health Monitoring, system copy, DBA Cockpit, HANA access, availability | operations-and-sla.md |
 | Backup / restore | backup, restore, retention, HSR, 3572444 | operations-and-sla.md |
 | bgRFC / async processing | bgRFC, SBGRFCMON, SRT_MONI, qRFC | operations-and-sla.md |
-| Security / compliance | ISO 27001, SOC, GDPR, encryption, penetration test, vulnerability, RSBDCOS0, HTTP_WHITELIST, UCON | security-and-compliance.md |
+| Security / compliance | ISO 27001, SOC, GDPR, encryption, penetration test, vulnerability, RSBDCOS0, HTTP_WHITELIST, UCON, hardening baseline, security baseline, BTP audit log, Secure Operations Map, TLS certificate rotation, zero trust | security-and-compliance.md |
 | Extensibility / ABAP Cloud / BTP | ABAP Cloud, clean core, key user, RAP, BAdI, SICF, Web Dynpro, ATO, S_ATO_SETUP | extensibility-and-development.md |
-| Integration | Integration Suite, Cloud Connector, iFlow, API, SDI, DP Agent, RFC, IDoc | integration.md |
-| Licensing / sizing | licensing, FUE, HUoM, SAPS, subscription, contract, Global Account | licensing-and-sizing.md |
+| Integration | Integration Suite, Cloud Connector, iFlow, API, SDI, DP Agent, RFC, IDoc, Work Zone, service plans, hybrid maintenance | integration.md |
+| Licensing / sizing | licensing, FUE, HUoM, SAPS, subscription, contract, Global Account, digital access, NSE, Native Storage Extension, HANA memory, AI Unit Estimator, QuickSizer | licensing-and-sizing.md |
 | Clean core strategy | clean core, maturity model, tiers, KPIs | cross-cutting/clean-core-strategy.md |
-| Identity / SSO / access | SSO, SAML, IAS, IPS, SNC, SPNEGO, XSUAA, STRUST | cross-cutting/identity-and-access.md |
-| Hyperscaler contracts | hyperscaler agreement, BYOL, contract, region | cross-cutting/hyperscaler-contracts.md |
+| Identity / SSO / access | SSO, SAML, IAS, IPS, SNC, SPNEGO, XSUAA, STRUST, support users, HEC users, identity lifecycle | cross-cutting/identity-and-access.md |
+| Hyperscaler contracts | hyperscaler agreement, BYOL, contract, region, PMC, Partner Managed Cloud | cross-cutting/hyperscaler-contracts.md |
 
 ---
 
@@ -203,5 +203,5 @@ See `references/licensing-and-sizing.md` and `references/cross-cutting/hyperscal
 
 ---
 
-**Last Updated**: 2026-07-03
-**Next Review**: 2026-10-03 (quarterly)
+**Last Updated**: 2026-07-22
+**Next Review**: 2026-10-22 (quarterly)

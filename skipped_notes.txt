@@ -29,19 +29,19 @@
 2265412	On-premise SAP Data Services 4.x (DSConfig.txt RFC trace); standalone EIM product, not part of RISE/PCE.
 2329554	License-key request process for OpenText/Micro Focus partner solutions (XX-PART-OPT); partner add-on, not part of RISE/PCE core scope.
 2338777	ICM-to-Web-Dispatcher redirect config (icm/HTTP/mod_XX modification handler); Web Dispatcher and ICM front-end are SAP-managed in RISE PCE/ECS, so customers do not configure this.
-2447201	Documentation index for SAP Global Trade Services, a separate add-on product, not part of core RISE/PCE S/4HANA.
-2452588	Generic Basis archive tool download/patch info; kernel and archive handling are SAP-managed in PCE, no meaningful PCE angle.
-2511548	GRC Access Control (AC 10.0/10.1/12.0) connector-scenario config is a separate GRC product, not part of the RISE/PCE S/4HANA bundle.
-2521522	CI-DS WebServicesUser setup for triggering jobs from IBP; concerns IBP and Cloud Integration for Data Services, not S/4HANA PCE.
-2530034	Generic SAP for Me support-portal notification preferences; not specific to RISE/PCE operations.
-2544982	SoapUI test procedure for CI-DS WebServicesUser; concerns Cloud Integration for Data Services, not S/4HANA PCE.
 2422344	Internal SAP unit test (class CL_SRT_TEST_IDOC_WS) correction with no PCE practitioner relevance.
 2424200	SAP Cloud Integration for Data Services (CI-DS/Data Services) troubleshooting - excluded Data Services scope.
 2434851	Embedded PPDS functional customizing (SPRO/CIF setup) - APO/SCM niche functional config, not a core PCE architect/basis/ops concern.
+2447201	Documentation index for SAP Global Trade Services, a separate add-on product, not part of core RISE/PCE S/4HANA.
+2452588	Generic Basis archive tool download/patch info; kernel and archive handling are SAP-managed in PCE, no meaningful PCE angle.
 2463636	GRC Access Control/Process Control/Risk Management add-on uninstallation - GRC is a separate product excluded from scope.
 2464252	SAP Cloud Integration for Data Services (CI-DS) SFTP source config - excluded Data Services scope.
 2468663	CI-DS (Data Services) + IBP datastore issue - both Data Services and IBP are outside PCE scope.
 2503438	Legacy NetWeaver 7.4/7.5 SAP_UI Maintenance Planner validation error on out-of-maintenance releases; no S/4HANA PCE bearing.
+2511548	GRC Access Control (AC 10.0/10.1/12.0) connector-scenario config is a separate GRC product, not part of the RISE/PCE S/4HANA bundle.
+2521522	CI-DS WebServicesUser setup for triggering jobs from IBP; concerns IBP and Cloud Integration for Data Services, not S/4HANA PCE.
+2530034	Generic SAP for Me support-portal notification preferences; not specific to RISE/PCE operations.
+2544982	SoapUI test procedure for CI-DS WebServicesUser; concerns Cloud Integration for Data Services, not S/4HANA PCE.
 2562814	Product Availability Matrix pointer for SAP Cloud Integration for Data Services (CI-DS/CPI-DS), a Data Services niche product outside PCE scope.
 2565696	ESH_COCKPIT 500 error for legacy NetWeaver Enterprise Search; niche non-core component with no PCE bearing.
 2569847	Link-farm help/enablement landing page for SAP Analytics Cloud, a separate cloud product; no PCE-specific technical content.
@@ -60,6 +60,7 @@
 2700934	Guided-answers pointer for legacy SAP Cloud Platform Portal (NEO) freestyle/launchpad site troubleshooting; NEO is obsolete and not relevant to S/4HANA PCE.
 2700990	Guided-answers pointer for SAP Cloud Platform NEO-environment extensibility of SuccessFactors; legacy NEO and non-PCE, no S/4HANA PCE bearing.
 2709145	SAP Data Services 4.x SFTP file-location public-key troubleshooting; Data Services is explicitly out of scope and has no S/4HANA PCE bearing.
+2711786	Digital Access 'Technical SAP Note' - narrow HR Time Management (DACH_D_TIMEDATA) SP-delivery enablement; no licensing/sizing content. [RISE&BTP Toolbox review 2026-07]
 2716655	Describes the Solution Manager DVM App being sunset/decommissioned by Dec 31 2025; no forward-looking PCE value.
 2721602	Connecting SAP Analytics Cloud to Integrated Business Planning; both are separate cloud products, not S/4HANA Cloud Private Edition.
 2735876	SuccessFactors-specific OData API best practices for a separate cloud HCM product, not S/4HANA PCE.
@@ -67,6 +68,7 @@
 2755505	GRC Access Control connection-type clarification; separate product excluded from scope.
 2757701	About IBP (Integrated Business Planning) datastores in CPI-DS for data services; SAP IBP is a separate cloud product, not S/4HANA PCE.
 2761408	Niche UI refresh of type-system (X12/EDIFACT) license status in Integration Content Advisor; no PCE/RISE operational bearing.
+2768127	SAP Data Services local/central repository host-migration (BODS admin); not RISE/PCE business-data transition. [RISE&BTP Toolbox review 2026-07]
 2771578	Manual Web Dispatcher embedded deployment into ASCS/SCS profiles; ASCS/WDP infrastructure is SAP-managed in PCE, not a customer activity (also superseded by note 3115889).
 2803139	Packaging contents of OpenText vendor-branded reselling products; separate third-party solution extension, no S/4HANA PCE operational relevance.
 2844001	SAP IBP (Integrated Business Planning) Sovereign Cloud release restrictions - IBP is a separate SaaS product, not S/4HANA Cloud Private Edition.
@@ -78,6 +80,7 @@
 2919094	IAG Privileged Access Management Reason Code maintenance view for SAP Cloud Identity Access Governance - separate GRC product, out of scope.
 2924469	Concur integration FAQ scoped explicitly to S/4HANA Cloud Public Edition capabilities/limitations, not Private Cloud Edition.
 2934667	BW/BW4HANA conversion tasklist (SAP_BW_SETUP_INITIAL_S4HANA in STC01) manual-activity confirmation - BW-specific, not core PCE ERP.
+2937069	SAP HANA Cloud Migration FAQ - migrating to standalone HANA Cloud DBaaS on BTP; not S/4HANA PCE system migration. [RISE&BTP Toolbox review 2026-07]
 2938870	DP Agent (SDI) to SAP Datasphere connectivity troubleshooting - Datasphere-side analytics integration, separate product with no direct PCE ERP bearing.
 2944116	IAG Privileged Access Management Reason Code enhancement (view SIAG_PAM_RCODE) for SAP Cloud Identity Access Governance - separate GRC product, out of scope.
 2960755	IAG (Identity Access Governance) to Ariba V1 provisioning behavior; GRC/IAG-specific and separate from PCE core operations.
@@ -132,6 +135,7 @@
 3381068	CI-DS/Data Services Windows agent install conflict; excluded Data Services component, desktop-only.
 3381145	SuccessFactors advanced encryption data-center list; separate HCM product, not PCE.
 3383874	Support-responsibility split for CI-DS tenant vs on-prem DS Agent; excluded Data Services product, RISE/ECS hosting angle only incidental.
+3391018	Journal Entry Post API performance - explicitly scoped to S/4HANA Cloud Public Edition (AC-INT-2CL), multi-tenant throttling; not PCE. [RISE&BTP Toolbox review 2026-07]
 3398892	Content is entirely S/4HANA Cloud Public Edition specific (half-yearly forced upgrades, 2SL/3SL landscapes, Public-edition maintenance schedules) - a separate product with different LCM from PCE; no meaningful Private Cloud bearing.
 3417201	CI-DS (Cloud Integration for Data Services) agent version recommendations fall under the Data Services family the task designates as out of scope; content is generic PAM/version-window guidance with no PCE-specific angle.
 3417263	GRC Access Control / Cloud Identity Access Governance web services - separate product, explicitly excluded.
@@ -162,6 +166,7 @@
 3535497	EH&S WWI report generation troubleshooting; EH&S/WWI is explicitly excluded scope.
 3539370	SAP Enable Now (training/enablement product) Neo-to-Kyma platform migration; not core S/4HANA Private Cloud Edition.
 3540144	SAP Data Services RFC/SNC issue; Data Services family is out of scope for PCE.
+3541023	Central/support-triage note for SAP Build Work Zone Navigation Service (BTP UI layer); tangential to PCE core. [RISE&BTP Toolbox review 2026-07]
 3553336	SAP SuccessFactors Talent Intelligence Hub feature; separate HCM SaaS product, not S/4HANA PCE.
 3554147	SAP Cloud Integration for Data Services (CI-DS) agent upgrade; Data Services family, niche data-integration tool out of PCE scope.
 3557634	S/4HANA Cloud Public Edition-specific gen-AI Review Booklet entitlement/authorization; not Private Cloud Edition.

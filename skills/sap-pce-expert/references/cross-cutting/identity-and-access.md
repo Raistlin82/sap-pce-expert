@@ -323,6 +323,22 @@ For short-lived X.509 certificates for SAP GUI:
 | [3611144](https://me.sap.com/notes/3611144) | Action required for notification email "ACTION REQUIRED: Expiring certificate in Identity Authentication Service" | IAS admin console cert-renewal actions by type (service-provider, trusted/corporate IdP, SAML signing, API SSLC, X.509 auth provider) when receiving expiring-certificate emails; critical for RISE SSO continuity, use component XX-S4C-OPR-INC for S/4HANA Cloud SP certs. |
 | [3644822](https://me.sap.com/notes/3644822) | IAG - Does IAG Standalone support PAM functionality for S/4HANA private cloud / RISE? | Confirms SAP Cloud Identity Access Governance (IAG) Standalone supports Privileged Access Management (PAM/firefighter) for S/4HANA Private Cloud / RISE, following the on-premise sections of the PAM guide. |
 
+
+### Additional Notes (RISE & BTP Toolbox, 2026-07)
+
+> Curated from the community "SAP S/4HANA RISE & SAP BTP Toolbox" (post 13944069), verified as not already covered.
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [2538563](https://me.sap.com/notes/2538563) | SAP/HEC users defined in Customer HANA Systems | Documents the SAP/HEC operational technical users defined in the customer HANA DB under HANA Enterprise Cloud operations (component XX-HST-OPR) - core PCE identity/shared-responsibility fact. |
+| [3543065](https://me.sap.com/notes/3543065) | Best practices when creating support users in BTP | Best-practice guidance for creating support users in SAP BTP (component BC-CP) - identity/access hygiene alongside PCE. |
+
+**Curated resources & practices (RISE & BTP Toolbox):**
+- [SAP Cloud Identity Services Best Practices](https://assets.dm.ux.sap.com/sap-user-groups/pdfs/240718_sap_security_july_best_practices_for_the_sap_cloud_identity_services.pdf) — best-practice IAS/IPS deployment (separate Dev/Test/Prod tenants) used as the identity hub in RISE.
+- [Identity Lifecycle in SAP Cloud Products](https://www.sap.com/documents/2018/05/38ce7d25-067d-0010-87a3-c30de2ffd8ff.html) — joiner/mover/leaver identity lifecycle across SAP cloud; complements IPS content.
+- [SAP Discovery Center — Security Reference Architectures](https://discovery-center.cloud.sap/refArchCatalog/?category=security) — curated reference architectures (authentication, identity lifecycle, authorizations) for SAP cloud security.
+
 ---
 
 **SAP Notes Reference Last Updated**: 2026-03-17
+**Toolbox enrichment**: 2026-07-22 (SAP Community post 13944069; SAP Note content verified via SAP Notes MCP)

@@ -317,7 +317,24 @@ The **Service Description Guide (SDG)** is the contractual document defining exa
 | [3019620](https://me.sap.com/notes/3019620) | ISLM Model version Check | CL_ISLM2_PREDICTIVESCENARIO active-model-version check must receive the client via a parameter when called inside CDS table functions; fixes embedded ISLM predictive-scenario AMDP errors on S/4HANA PCE. |
 | [3220119](https://me.sap.com/notes/3220119) | Business applications in SAP S/4HANA that have adopted Harmonized Document Management (HDM) | Reference list of S/4HANA apps that adopted Harmonized Document Management (HDM / Advanced Attachment Service, OData V4) - use when assessing attachment/document-management behavior and object types in a PCE landscape. |
 
+
+### Additional Notes (RISE & BTP Toolbox, 2026-07)
+
+> Curated from the community "SAP S/4HANA RISE & SAP BTP Toolbox" (post 13944069), verified as not already covered.
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3279787](https://me.sap.com/notes/3279787) | SAP S/4HANA Cloud, private edition : Partner Products compatible with S/4HANA 2022 | Lists VBR partner add-ons (msg, OpenText, Vistex, Prometheus, Magnitude) validated compatible with PCE on S/4HANA 2022; only ABAP components are hosted in PCE, the rest in the partner cloud. |
+
+**Curated resources & practices (RISE & BTP Toolbox):**
+- [SAP BTP Solution Architecture Diagrams + starter kits](https://sap.github.io/btp-solution-diagrams/) — curated, editable BTP reference-architecture diagrams for designing PCE + BTP landscapes.
+- [SAP BTP Reference Architecture Catalog (Discovery Center)](https://discovery-center.cloud.sap/refArchCatalog/) — official catalogue of BTP reference architectures for extending/integrating PCE.
+- [SAP Fiori Deployment Options and System Landscape Recommendations](https://www.sap.com/documents/2018/02/f0148939-f27c-0010-82c7-eda71af511fa.html) — embedded vs hub Fiori landscape recommendations for the PCE front-end layer.
+- [Applying the SAP Enterprise Architecture Framework (learning journey)](https://learning.sap.com/learning-journeys/applying-the-sap-enterprise-architecture-framework) — SAP's EA methodology for structuring target-architecture decisions on the RISE journey.
+- Practice: Design the **BTP account model** (directories / subaccounts / entitlements) up front — the highest-impact BTP foundation decision, costly to correct later.
+
 ---
 
 **Last Updated**: 2026-03-21
 **Sources verified**: 2026-03-21 (enriched with real SAP Note content via sap_note_get)
+**Toolbox enrichment**: 2026-07-22 (SAP Community post 13944069; SAP Note content verified via SAP Notes MCP)

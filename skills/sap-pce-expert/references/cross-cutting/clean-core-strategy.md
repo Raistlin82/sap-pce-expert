@@ -233,6 +233,15 @@ Clean core is not a one-time migration activity — it is an ongoing discipline:
 | [2523226](https://me.sap.com/notes/2523226) | Usage and Procedure Logging (UPL) — Setup and Activation | UPL activation for tracking actual runtime usage of custom code objects — input for clean core remediation prioritization |
 | [2188695](https://me.sap.com/notes/2188695) | Custom Code Lifecycle Management — Unused Object Detection | Identifying and decommissioning unused custom code objects as part of clean core hygiene |
 
+
+### Additional References (RISE & BTP Toolbox, 2026-07)
+
+> Curated from the community "SAP S/4HANA RISE & SAP BTP Toolbox" (post 13944069), verified as not already covered.
+
+- [S/4HANA Custom Code Migration — End-to-End Guide](https://help.sap.com/doc/9dcbc5e47ba54a5cbb509afaa49dd5a1/2023.002/en-US/CustomCodeMigration_EndToEnd.pdf) — end-to-end custom-code remediation process complementing the clean-core notes already tracked.
+- Practice: Perform data mappings/transformations **outside** S/4HANA (not inside the core) to protect the clean-core principle during data-transformation and integration work.
+
 ---
 
 **SAP Notes Reference Last Updated**: 2026-03-15
+**Toolbox enrichment**: 2026-07-22 (SAP Community post 13944069; SAP Note content verified via SAP Notes MCP)

@@ -420,7 +420,44 @@ From experienced RISE practitioners:
 | [3671414](https://me.sap.com/notes/3671414) | SAP Invoice Management by OpenText 25.4 | Installing/upgrading SAP Invoice Management by OpenText (VIM) 25.4 add-on on S/4HANA via Maintenance Planner (Install/Maintain Add-on, stack XML) — relevant when planning add-on handling during S/4HANA conversion/upgrade on PCE. |
 | [3713978](https://me.sap.com/notes/3713978) | Job step user configuration in load jobs in Migrate your data Fiori app | Migration Cockpit 'Migrate Your Data' Fiori app: load-job steps (/LTB/MC_LOAD_PREPARE, DMC_MT_STARTER_BATCH) always run under the initiating dialog user, not SJOBREPO_STEPUSER, by design; in PCE run migration with a dedicated business user holding the correct migration authorizations. |
 
+
+### Additional Notes (RISE & BTP Toolbox, 2026-07)
+
+> Curated from the community "SAP S/4HANA RISE & SAP BTP Toolbox" (post 13944069), verified as not already covered.
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [2881788](https://me.sap.com/notes/2881788) | End of SAP Business Suite 7 mainstream maintenance | SAP Business Suite 7 mainstream maintenance ends 31 Dec 2027 (optional extended maintenance to 2030 at extra fee) - the deadline driving migration to RISE/PCE S/4HANA. |
+| [2818267](https://me.sap.com/notes/2818267) | Data Volume Management for FI/CO during migration to SAP S/4HANA | FI/CO archiving before system conversion cuts conversion runtime and downtime (declustering, AM_ASSET, secondary indexes, *_BCK cleanup) in PCE brownfield. |
+| [3396021](https://me.sap.com/notes/3396021) | SAP RISE customer needs to limit data so as not to exceed the 50GB limit in Process Insights | RISE-specific: the Signavio Process Insights base package caps source data at 50 GB (no front-end reduction); the base package covers most customers for three years. |
+| [3113391](https://me.sap.com/notes/3113391) | Reasons why creation of a Development Namespace is not possible - SAP for Me | Development-namespace creation requires a contract-based development license; RISE/PCE contracts and RISE Developer Access include one, enabling custom-code namespaces. |
+| [2988692](https://me.sap.com/notes/2988692) | SAP S/4HANA Migration Cockpit – Information about different versions | Two Migration Cockpit versions: the deprecated LTMC/Web Dynpro app vs the current Fiori "Migrate Your Data" app - use the Fiori app for S/4HANA loads. |
+| [2726010](https://me.sap.com/notes/2726010) | Migration Cockpit: Support of custom fields (in-App extensibility / key-user extensibility) | Key-user/in-app custom fields auto-flow into Migration Cockpit templates when the migration API business context supports them - ties clean-core extensibility to data migration. |
+| [3245580](https://me.sap.com/notes/3245580) | How to find the required Authorization Object for each Migration Object - Migration Cockpit | Resolves Migration Cockpit "no authorization" errors by finding each object's required role (e.g. SAP_BR_CASH_MANAGER) - authorization design for the restricted PCE model. |
+| [2838747](https://me.sap.com/notes/2838747) | Migration Object dependencies | Explains Migration Cockpit "Validate Data" errors caused by unmet object dependencies; enforces the documented prerequisite sequence (dependent objects first) during PCE loads. |
+| [2878945](https://me.sap.com/notes/2878945) | SAP S/4HANA Migration Cockpit: Parallelization of XML/CSV file loads | How to parallelize Migration Cockpit loads (Max Data Transfer Jobs / Number of Jobs) - covers PCE batch limits and object-sequencing caveats for high-volume migrations. |
+| [3065607](https://me.sap.com/notes/3065607) | Performance tips & tricks for SAP S/4HANA Migration Cockpit: Migrate Data Using Staging Tables | Non-technical and technical levers (data cleansing, cut-over sequencing, job tuning, HANA settings) to accelerate staging-table migrations into PCE and reduce downtime. |
+| [3508867](https://me.sap.com/notes/3508867) | Legacy System Migration Workbench - FAQs | LSMW FAQ; confirms LSMW is not recommended for S/4HANA (per note 2287723) and fixes logical-file-path errors - a caveat when choosing PCE migration tooling. |
+| [2754615](https://me.sap.com/notes/2754615) | SAP S/4HANA Migration Cockpit: Information about Posting Date / Migration Key Date | The migration key date drives the posting date for FI open items/balances; set it via "Define Settings for Legacy Data Transfer" before transactional loads into PCE. |
+| [2483494](https://me.sap.com/notes/2483494) | How to open the Migration Cockpit in a SAP S/4HANA on-premise system | Access paths for the Migration Cockpit in on-premise/PCE S/4HANA: LTMC (role SAP_CA_DMC_MC_USER) or the "Migrate Your Data" Fiori app. |
+| [3328319](https://me.sap.com/notes/3328319) | FAQ: SAP Business Transformation Center | BTC FAQ for Selective Data Transition ECC to S/4HANA Cloud Private Edition: Digital Blueprint from Readiness Check, system scan, and shell-conversion target requirement. |
+
+**Curated resources & practices (RISE & BTP Toolbox):**
+- [Mapping your journey to SAP S/4HANA Cloud, private edition — practical guide for senior IT leadership](https://www.sap.com/documents/2019/05/44b3ebd5-4b7d-0010-87a3-c30de2ffd8ff.html) — named PCE journey/transition guide (also the "RISE Leadership Guide").
+- [RISE Onboarding Handbook](https://d.dam.sap.com/a/aW26pWQ/Onboarding%20Handbook%20.pdf?rc=10&inline=true) — publicly-available MUST-READ on post-contract onboarding, shared responsibilities and maintenance strategy.
+- [SAP S/4HANA Migration Cockpit — Cookbook, Private Edition](https://www.sap.com/documents/2023/11/162a7141-987e-0010-bca6-c68f7e60039b.html) — the definitive how-to for private-edition data loads.
+- [Data Migration Tools for the Move to S/4HANA](https://www.sap.com/documents/2021/03/d2e82fec-d27d-0010-87a3-c30de2ffd8ff.html) — maps the tool landscape (MC / RDM / LSMW).
+- [Best Practices — Data Volume Management during an S/4HANA Conversion (DMV_CONV)](https://help.sap.com/doc/195dd7408c7447388c1bb9e54a5f6a31/1.0/en-US/DMV_CONV.pdf) — official DVM-during-conversion best practices.
+- [FRE Best Practice Guide for RISE Transformation — Private Cloud](https://d.dam.sap.com/a/AGRpKe1/FRE%20Best%20Practice%20Guide%20for%20RISE%20Transformation_Private%20Cloud.pdf?rc=10) — recommended reference architectures per transition approach.
+- [SAP North Star Architecture Service (overview)](https://www.sap.com/documents/2023/11/c272ac9a-9b7e-0010-bca6-c68f7e60039b.html) — advisory service producing target architecture, roadmap and landscape-consolidation strategy for a RISE journey.
+- [SAP Customer CoE — Strategy, Governance & Organisation Framework](https://support.sap.com/content/dam/support/en_us/library/ssp/offerings-and-programs/customer-center-of-expertise/ccoe-document-store/ccoe_strategy_framework.pdf) — framework for redesigning the operating model (roles, SoD, governance) when moving to RISE.
+- [Discover Organizational Change Management for SAP Cloud Projects (learning journey)](https://learning.sap.com/learning-journeys/discover-organizational-change-management-for-sap-cloud-projects) — SAP's OCM framework for the people side of a PCE transformation.
+- Practice: Migration-tool glossary — **MC** = Migration Cockpit, **RDM** = Rapid Data Migration with SAP Data Services, **LSMW** = Legacy System Migration Workbench.
+- Practice: Run DVM/archiving **before** the PCE conversion to shrink migrated data (and, for RISE, stay within the 50 GB Process Insights limit).
+- Practice: Treat S/4HANA on RISE as an **organizational** transformation, not just an ERP one — budget for OCM and user adoption, establish/re-charter a Customer CoE (Primary → Advanced), engage the North Star service in Phase 0, and redesign roles/SoD across SAP / Customer / SI.
+
 ---
 
 **Last Updated**: 2026-03-16
 **Sources verified**: 2026-03-16 (enriched with real SAP Note content via sap_note_get)
+**Toolbox enrichment**: 2026-07-22 (SAP Community post 13944069; SAP Note content verified via SAP Notes MCP)

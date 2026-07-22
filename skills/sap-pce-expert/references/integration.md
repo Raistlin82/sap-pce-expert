@@ -434,6 +434,24 @@ SAP PI/PO (Process Integration / Process Orchestration) is a **legacy on-premise
 | [3640118](https://me.sap.com/notes/3640118) | Error "The port must be a number" when validate S/4HANA On-Premise connection in Datasphere | Datasphere remote-table federation to S/4HANA via ABAP SQL service fails when RFC instead of HTTPS Cloud Connector mapping is used; create two SCC system mappings (RFC for flows, HTTPS for remote tables) and enter the HTTPS virtual host/port explicitly. |
 | [3645653](https://me.sap.com/notes/3645653) | SAP S/4HANA 2025: Process Integration with SAP on-premise Solutions | Release-planning note listing SAP on-premise products (TM, EWM, GTS, MDG, CRM, SRM, BW/4HANA, ERP 6.0, etc.) with released process-integration scenarios and PAM links for S/4HANA 2025 / Cloud Private Edition 2025; reference for PCE 2025 sidecar landscape planning. |
 
+
+### Additional Notes (RISE & BTP Toolbox, 2026-07)
+
+> Curated from the community "SAP S/4HANA RISE & SAP BTP Toolbox" (post 13944069), verified as not already covered.
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [2903776](https://me.sap.com/notes/2903776) | SAP Integration Suite – Service Plans and Upgrade Paths | Defines Integration Suite service plans (Basic/Starter/Standard/Enhanced/Premium/Free/EIC) and their allowed upgrade paths - core to RISE integration architecture. |
+| [2722532](https://me.sap.com/notes/2722532) | Hybrid Cloud offerings with cloud driven maintenance of on-premise parts | Maintenance policy for on-premise integration apps auto-updated by the cloud service (one-year API backward compatibility) - informs RISE hybrid integration governance. |
+| [3292465](https://me.sap.com/notes/3292465) | Connection between SAP solutions operated in a Hyperscaler environment and an On-Premises Oracle Database | Conditions and restrictions (Instant Client, supported OS) for connecting hyperscaler-hosted SAP solutions to an on-premises Oracle DB - relevant to PCE hybrid DB connectivity. |
+
+**Curated resources & practices (RISE & BTP Toolbox):**
+- [SAP Cloud Integration Best Practices](https://assets.dm.ux.sap.com/gb-btp-csd-uki-oct/pdfs/cloud_integration_best_practices.pdf) — performance/security/config best practices for CPI iFlows used by PCE customers.
+- [SAP BTP Connectivity — Security Guidelines](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/security-guidelines) — hardening guidelines for the Cloud Connector / destination connectivity between PCE and BTP.
+- [Cloud Connector — Process Guidelines for Hybrid Scenarios](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/process-guidelines-for-hybrid-scenarios) — operational process for safely promoting new connectivity to production.
+- Practice: Work Zone "app published but not visible" fix — refresh the HTML5 Apps content channel in Work Zone Content Manager and/or enable automatic updates for the content provider.
+
 ---
 
 **SAP Notes Reference Last Updated**: 2026-03-21
+**Toolbox enrichment**: 2026-07-22 (SAP Community post 13944069; SAP Note content verified via SAP Notes MCP)

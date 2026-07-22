@@ -395,7 +395,21 @@ Describes the classification of frameworks, technologies, and development patter
 | [3592445](https://me.sap.com/notes/3592445) | Debugging an external session is not allowed (profile value: X) | External breakpoints blocked (msg 01543) when profile parameter abap/ext_debugging_possible is 1/2; check in RZ11 and set to 0 (RZ10) for dialog/service users to enable ABAP external debugging. |
 | [3604280](https://me.sap.com/notes/3604280) | SNOTE Error: Unable to search for Notes at SAP ONE Support Launchpad | Fixes 'Unable to search for Notes at SAP ONE Support Launchpad' error in SNOTE (Note Assistant) when searching valid notes per component; keeps note implementation working in PCE systems. |
 
+
+### Additional Notes (RISE & BTP Toolbox, 2026-07)
+
+> Curated from the community "SAP S/4HANA RISE & SAP BTP Toolbox" (post 13944069), verified as not already covered.
+
+| Note ID | Title | Relevance |
+|---------|-------|-----------|
+| [3470426](https://me.sap.com/notes/3470426) | Collection note: Release of dataelements for Clean Core developments in S/4HANA Cloud Private Edition | Releases SAP_ABA/S4CORE/S4FND/S4CEXT data elements for the 3-tier ABAP Cloud (clean-core) extensibility model in PCE; available from 2023 FPS2 and 2025 (not 2022). |
+
+**Curated resources & practices (RISE & BTP Toolbox):**
+- [ABAP Cloud — Technical Use Cases and Recommended Technologies](https://www.sap.com/documents/2023/05/74fc05e6-747e-0010-bca6-c68f7e60039b.html) — the "when to use what" decision guide for clean-core ABAP Cloud extensibility in PCE.
+- [Joule for SAP S/4HANA Cloud Private Edition — a Comprehensive Setup Guide](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-sap/joule-for-sap-s-4hana-cloud-private-edition-a-comprehensive-setup-guide/ba-p/13786453) — step-by-step, PCE-specific Joule activation walkthrough.
+
 ---
 
 **Last Updated**: 2026-03-21
 **Sources verified**: 2026-03-21 (enriched with real SAP Note content via sap_note_get)
+**Toolbox enrichment**: 2026-07-22 (SAP Community post 13944069; SAP Note content verified via SAP Notes MCP)

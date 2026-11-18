@@ -12,23 +12,28 @@
 | SAP Application Extension Methodology | https://help.sap.com/docs/sap-btp-guidance-framework/sap-application-extension-methodology/sap-application-extension-methodology-overview | SAP Help Portal |
 | Extension Architecture Guide | https://help.sap.com/docs/sap-btp-guidance-framework/extension-architecture-guide/what-is-extension-architecture-guide | SAP Help Portal |
 | ABAP Extensibility Guide – Clean Core (Aug 2025) | https://community.sap.com/t5/technology-blog-posts-by-sap/abap-extensibility-guide-clean-core-for-sap-s-4hana-cloud-august-2025/ba-p/14175399 | SAP Community Blog |
-| Clean Core Maturity Model – Four Tiers | https://community.sap.com/t5/technology-blog-posts-by-members/getting-to-a-clean-core-the-new-maturity-model-of-extensions-into-four/ba-p/14326982 | SAP Community Blog |
+| Getting to a clean core: the new maturity model of extensions (four levels A–D; exact title *da verificare* — page not readable on 2026-11-18) | https://community.sap.com/t5/technology-blog-posts-by-members/getting-to-a-clean-core-the-new-maturity-model-of-extensions-into-four/ba-p/14326982 | SAP Community Blog (member) |
+| SAP Cloud ALM – Extensibility (clean core level concept A–D; read 2026-11-18) | https://help.sap.com/docs/CloudALM/877c96cf971648b09ee0d0a64f7f4fef/eaa61d6ae6744ccdb0d18820fb8998c9.html | SAP Help Portal |
 | SAP Application Extension Methodology PDF | https://help.sap.com/doc/87e18fdb75fd42f8aee59e3c76de7cd7/Cloud/en-US/sap.application.extension.methodology.pdf | PDF |
 | Clean Core Extensibility White Paper | https://help.sap.com/docs/ERP_ITC/32b885380e024123a72d0bf4908c8fc9/0fc75306959649bdad89d06ed4f3127e.html | SAP Help Portal |
-| SAP Note 3578329 – Frameworks & Technologies in Clean Core | https://me.sap.com/notes/3578329 | SAP Note |
+| SAP Note 3578329 – Frameworks, Technologies and Development Patterns in Context of Clean Core Extensibility (title *da verificare*: SAP for Me needs login) | https://me.sap.com/notes/3578329 | SAP Note |
 
 ---
 
 ## Clean Core Extensibility Levels (A/B/C/D)
 
-The clean core approach for extensibility categorizes extensions into **four levels** based on architectural integrity, upgrade safety, and alignment with clean core principles.
+The clean core approach for extensibility categorizes extensions into **four levels** based on architectural integrity, upgrade safety, and alignment with clean core principles. This is the only classification this skill uses.
 
-| Level | Name | Description | Risk |
-|-------|------|-------------|------|
-| **A** | Cloud development + released APIs | Fully compliant. Uses only publicly released, stable APIs with formal stability contracts. Achieved via BTP side-by-side extensions, Key User Extensions, or ABAP Cloud development. | None |
-| **B** | Classic APIs | Classic SAP APIs and technologies. Well-defined, documented, and generally upgrade-stable. Acceptable but not gold standard. | Low |
-| **C** | Internal SAP objects | Conditionally compliant. Relies on SAP internal objects. SAP provides a changelog to identify incompatible changes early. | Medium |
-| **D** | Not recommended | Objects marked as "noAPI", modifications to SAP objects, direct write access to SAP tables, implicit enhancements. Highest risk and technical debt. | **High — fix first** |
+| Level | SAP classification | Name | Description | Risk |
+|-------|--------------------|------|-------------|------|
+| **A** | Clean Core | Cloud development + released APIs | Fully compliant. Uses only publicly released, stable APIs with formal stability contracts. Achieved via BTP side-by-side extensions, Key User Extensions, or ABAP Cloud development. | None |
+| **B** | Clean Core | Classic APIs | Classic SAP APIs and technologies. Well-defined, documented, and generally upgrade-stable. Acceptable but not gold standard. | Low |
+| **C** | Conditional Clean Core | Internal SAP objects | Conditionally clean when the changelog for SAP objects is applied. Relies on SAP internal objects. SAP provides a changelog to identify incompatible changes early. | Medium |
+| **D** | Not Clean Core | Not recommended | Objects marked as "noAPI", modifications to SAP objects, direct write access to SAP tables, implicit enhancements. Highest risk and technical debt. | **High — fix first** |
+
+Source: SAP Cloud ALM, *Extensibility* — Clean Core Level Overview table (Definition row: A *Clean Core*, B *Clean Core*, C *Conditional Clean Core*, D *Not Clean Core*; ATC behavior: A no finding, B priority 3, C priority 2, D priority 1) — https://help.sap.com/docs/CloudALM/877c96cf971648b09ee0d0a64f7f4fef/eaa61d6ae6744ccdb0d18820fb8998c9.html (read 2026-11-18). SAP Note 3578329 is the reference for classic APIs and extension technologies (cited by the same page).
+
+> **No tier model.** The earlier 3-tier extensibility model of the ABAP extensibility guide (2022) is not used in this skill: classify every extension by level A/B/C/D. That SAP has formally retired the 3-tier model is *da verificare* (no SAP statement found on 2026-11-18); SAP Cloud ALM and current SAP guidance classify by levels.
 
 **Gold standard**: Level A — extensions built in SAP BTP and ABAP Cloud.
 
@@ -38,7 +43,9 @@ The clean core approach for extensibility categorizes extensions into **four lev
 
 ## Extensibility Options Overview
 
-### Tier 1 — Key User Extensibility (no-code/low-code, in-app)
+Three extensibility options — they are **options, not levels**: each one can reach Level A when it uses only released APIs and extension points.
+
+### Key User Extensibility (on-stack, no-code/low-code)
 
 Available to business power users via SAP Fiori apps. No ABAP development required.
 
@@ -52,7 +59,7 @@ Available to business power users via SAP Fiori apps. No ABAP development requir
 
 > These are Level A by definition — they use released extension points.
 
-### Tier 2 — Developer Extensibility (ABAP Cloud, in-app)
+### Developer Extensibility (on-stack, ABAP Cloud)
 
 Available to ABAP developers. Uses the **ABAP Cloud development model** — a restricted ABAP language version that only allows consumption of released APIs.
 
@@ -71,7 +78,7 @@ ABAP Cloud restrictions:
 - Enforced by ABAP language version check in ATC
 ```
 
-### Tier 3 — Side-by-Side Extensions (SAP BTP)
+### Side-by-Side Extensibility (SAP BTP)
 
 Build extensions as separate applications on SAP BTP, consuming S/4HANA APIs.
 
@@ -136,9 +143,9 @@ Use the **Extension Technology Mapping** to select the right technology:
 | Severity | Clean Core Level | Action |
 |----------|-----------------|--------|
 | **Error** | Level D | Fix immediately — highest priority |
-| **Warning** | Level C | Assess using SAP changelog — fix as second priority |
-| **Info** | Level B | Classic APIs — stable but aim for Level A |
-| **No findings** | Level A | Clean core compliant |
+| **Warning** | Level C | Conditional Clean Core — assess using the SAP changelog; second priority |
+| **Info** | Level B | Clean Core (classic APIs) — upgrade-stable; aim for Level A where a released successor exists |
+| **No findings** | Level A | Clean Core (released APIs) |
 
 ### Integrate into Transport Process
 
@@ -223,8 +230,8 @@ Describes the classification of frameworks, technologies, and development patter
 
 ---
 
-**Last Updated**: 2026-03-09
-**Sources verified**: 2026-03-09
+**Last Updated**: 2026-11-18 (level naming, no tier model)
+**Sources verified**: 2026-03-09; SAP Cloud ALM *Extensibility* level table 2026-11-18
 
 ---
 

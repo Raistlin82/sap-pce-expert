@@ -8,7 +8,7 @@
 |---|---|---|---|
 | 1 | come gestisco i backup in RISE? | backup, restore, retention, RPO, RTO, HSR | operations-and-sla.md + security-and-compliance.md + infrastructure-and-deployment.md |
 | 2 | SSO con SAML | SSO, SAML, IAS, IPS, SNC, SPNEGO | cross-cutting/identity-and-access.md (+ security) |
-| 3 | clean core cosa significa | clean core, maturity model, tiers | cross-cutting/clean-core-strategy.md + extensibility-and-development.md |
+| 3 | clean core cosa significa | clean core, maturity model, Level A/B/C/D | cross-cutting/clean-core-strategy.md + extensibility-and-development.md |
 | 4 | bgRFC bloccati dopo system copy | bgRFC, SBGRFCMON, SRT_MONI | operations-and-sla.md (e.g. 1755745, 1839315) |
 | 5 | quanto costa / FUE | FUE, full use equivalent, licensing | licensing-and-sizing.md |
 | 6 | meteo | (no SAP mapping) | none → clean fallback to routing, no error |

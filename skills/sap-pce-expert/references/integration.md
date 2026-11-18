@@ -127,7 +127,7 @@ The **Edge Integration Cell** is SAP Integration Suite's next-generation hybrid 
 
 ## Modernizing Legacy Integrations (RFC/BAPI)
 
-Classic RFC and BAPI-based integrations are **Level C or D** in the clean core extensibility model and must be modernized:
+Classic RFC and BAPI-based integrations are classified per object by the clean core extensibility levels: a classic API listed in the Cloudification Repository is **Level B** (Clean Core), an internal SAP object **Level C** (Conditional Clean Core), a not-recommended object **Level D** (Not Clean Core) — SAP Cloud ALM, *Extensibility*, https://help.sap.com/docs/CloudALM/877c96cf971648b09ee0d0a64f7f4fef/eaa61d6ae6744ccdb0d18820fb8998c9.html (read 2026-11-18). Modernize toward released APIs (Level A), starting with Level D:
 
 ### Replacement Strategy
 

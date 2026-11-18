@@ -6,8 +6,8 @@ description: |
   Keywords: RISE with SAP, SAP Private Cloud ERP, S/4HANA Cloud Private Edition, PCE, 2025 FPS01, Agentic AI, Joule, brownfield, greenfield, bluefield, selective data transition, SUM, DMLT, HUoM, SAPS, SAP-managed operations, clean core, ABAP Cloud, key user extensibility, developer extensibility, BTP extensions, hyperscaler, Alibaba Cloud, RISE contract, SLA, patching cadence, backup restore, ISO 27001, SOC 2, GDPR, Foundational Success Plan
 license: GPL-3.0
 metadata:
-  version: "1.7.0"
-  last_verified: "2026-07-22"
+  version: "1.7.1"
+  last_verified: "2026-11-18"
 ---
 
 # SAP Private Cloud ERP Expert (RISE with SAP)
@@ -92,7 +92,7 @@ know the fallback file. One row per topic area; not an exhaustive tcode list.
 | Extensibility / ABAP Cloud / BTP | ABAP Cloud, clean core, key user, RAP, BAdI, SICF, Web Dynpro, ATO, S_ATO_SETUP | extensibility-and-development.md |
 | Integration | Integration Suite, Cloud Connector, iFlow, API, SDI, DP Agent, RFC, IDoc, Work Zone, service plans, hybrid maintenance | integration.md |
 | Licensing / sizing | licensing, FUE, HUoM, SAPS, subscription, contract, Global Account, digital access, NSE, Native Storage Extension, HANA memory, AI Unit Estimator, QuickSizer | licensing-and-sizing.md |
-| Clean core strategy | clean core, maturity model, tiers, KPIs | cross-cutting/clean-core-strategy.md |
+| Clean core strategy | clean core, maturity model, Level A, Level B, Level C, Level D, Conditional Clean Core, KPIs | cross-cutting/clean-core-strategy.md |
 | Identity / SSO / access | SSO, SAML, IAS, IPS, SNC, SPNEGO, XSUAA, STRUST, support users, HEC users, identity lifecycle | cross-cutting/identity-and-access.md |
 | Hyperscaler contracts | hyperscaler agreement, BYOL, contract, region, PMC, Partner Managed Cloud | cross-cutting/hyperscaler-contracts.md |
 
@@ -203,5 +203,5 @@ See `references/licensing-and-sizing.md` and `references/cross-cutting/hyperscal
 
 ---
 
-**Last Updated**: 2026-07-22
-**Next Review**: 2026-10-22 (quarterly)
+**Last Updated**: 2026-11-18
+**Next Review**: 2027-02-18 (quarterly)

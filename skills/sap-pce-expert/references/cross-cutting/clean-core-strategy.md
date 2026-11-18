@@ -11,7 +11,8 @@
 | Source | URL | Type |
 |--------|-----|------|
 | ABAP Extensibility Guide – Clean Core (Aug 2025) | https://community.sap.com/t5/technology-blog-posts-by-sap/abap-extensibility-guide-clean-core-for-sap-s-4hana-cloud-august-2025/ba-p/14175399 | SAP Community Blog |
-| Clean Core Maturity Model – Four Tiers | https://community.sap.com/t5/technology-blog-posts-by-members/getting-to-a-clean-core-the-new-maturity-model-of-extensions-into-four/ba-p/14326982 | SAP Community Blog |
+| Getting to a clean core: the new maturity model of extensions (four levels A–D; exact title *da verificare* — page not readable on 2026-11-18) | https://community.sap.com/t5/technology-blog-posts-by-members/getting-to-a-clean-core-the-new-maturity-model-of-extensions-into-four/ba-p/14326982 | SAP Community Blog (member) |
+| SAP Cloud ALM – Extensibility (clean core level concept A–D; read 2026-11-18) | https://help.sap.com/docs/CloudALM/877c96cf971648b09ee0d0a64f7f4fef/eaa61d6ae6744ccdb0d18820fb8998c9.html | SAP Help Portal |
 | RISE Methodology Dashboard in SAP Cloud ALM | https://community.sap.com/t5/technology-blog-posts-by-sap/comprehensive-overview-rise-with-sap-methodology-dashboard-quot-within-sap/ba-p/14184340 | SAP Community Blog |
 | Clean Core Extensibility White Paper | https://help.sap.com/docs/ERP_ITC/32b885380e024123a72d0bf4908c8fc9/0fc75306959649bdad89d06ed4f3127e.html | SAP Help Portal |
 | SAP Cloud ALM and RISE with SAP | https://help.sap.com/docs/cloud-alm/applicationhelp/rise-with-sap | SAP Help Portal |
@@ -44,7 +45,7 @@ Clean core is not only about code. SAP defines five dimensions that must all be 
 
 | Dimension | What it covers | Key Measure |
 |-----------|---------------|-------------|
-| **Extensibility** | Custom code, BAdIs, APIs used, ATC compliance level | % of objects at Level A/B vs C/D |
+| **Extensibility** | Custom code, BAdIs, APIs used, ATC compliance level | % of objects at Level A/B (Clean Core) vs Level C (Conditional Clean Core) and Level D (Not Clean Core) |
 | **Integrations** | Use of stable APIs vs internal interfaces, event-based vs point-to-point | API release state, use of SAP Integration Suite |
 | **Data** | Data quality, master data governance, data model compliance | Data health KPIs in SAP Cloud ALM |
 | **Business Processes** | Alignment to SAP Best Practices, deviation from standard flows | Process compliance score |
@@ -101,7 +102,7 @@ The RISE with SAP Dashboard in SAP Cloud ALM is the central tool for monitoring 
 Integrate ABAP Test Cockpit into the development lifecycle:
 
 ```
-Code written → ATC check → Level A/B: proceed | Level C/D: review board
+Code written → ATC check → Level A/B (Clean Core): proceed | Level C (Conditional) / D (Not Clean Core): review board
      ↓
 Transport released → ATC in transport release process → no Level D allowed
      ↓
@@ -153,19 +154,19 @@ Clean core is not a one-time migration activity — it is an ongoing discipline:
 
 ## Reference: Clean Core Extensibility Levels
 
-> See full detail in `../extensibility-and-development.md`
+> See full detail in `../extensibility-and-development.md`. SAP classification per SAP Cloud ALM, *Extensibility* — https://help.sap.com/docs/CloudALM/877c96cf971648b09ee0d0a64f7f4fef/eaa61d6ae6744ccdb0d18820fb8998c9.html (read 2026-11-18). No tier model: classify by level only.
 
-| Level | Definition | Action |
-|-------|-----------|--------|
-| A | Released APIs, ABAP Cloud, BTP side-by-side | Gold standard — target for all new development |
-| B | Classic SAP APIs | Acceptable — plan migration to A where feasible |
-| C | Internal SAP objects | Mitigate — use changelog, document risk |
-| D | Modifications, noAPI objects, direct table write | **Eliminate** — highest priority to fix |
+| Level | SAP classification | Definition | Action |
+|-------|--------------------|-----------|--------|
+| A | Clean Core | Released APIs, ABAP Cloud, BTP side-by-side | Gold standard — target for all new development |
+| B | Clean Core | Classic SAP APIs | Acceptable — plan migration to A where feasible |
+| C | Conditional Clean Core | Internal SAP objects (conditionally clean with the changelog for SAP objects) | Mitigate — use changelog, document risk |
+| D | Not Clean Core | Modifications, noAPI objects, direct table write | **Eliminate** — highest priority to fix |
 
 ---
 
-**Last Updated**: 2026-03-09
-**Sources verified**: 2026-03-09
+**Last Updated**: 2026-11-18 (level naming, no tier model)
+**Sources verified**: 2026-03-09; SAP Cloud ALM *Extensibility* level table 2026-11-18
 
 ---
 
@@ -177,8 +178,8 @@ Clean core is not a one-time migration activity — it is an ongoing discipline:
 
 | Note | Title | Relevance |
 |------|-------|-----------|
-| [3578329](https://me.sap.com/notes/3578329) | Clean Core — Framework and Guiding Principles for S/4HANA Extensions | Master reference for SAP's clean core strategy; defines the four extensibility levels (A/B/C/D) |
-| [3478579](https://me.sap.com/notes/3478579) | Clean Core — Custom Code Migration and Remediation Guide | Step-by-step guide to remediating C/D-level custom code to reach clean core compliance |
+| [3578329](https://me.sap.com/notes/3578329) | Frameworks, Technologies and Development Patterns in Context of Clean Core Extensibility (title *da verificare*: two titles were recorded in this skill; SAP for Me needs login) | Master reference for SAP's clean core strategy; defines the four extensibility levels (A/B/C/D) |
+| [3478579](https://me.sap.com/notes/3478579) | Clean Core — Custom Code Migration and Remediation Guide | Step-by-step guide to remediating Level D (Not Clean Core) code and reducing Level C (Conditional Clean Core) dependencies |
 | [3632977](https://me.sap.com/notes/3632977) | Clean Core KPIs in SAP Cloud ALM — System View and Operations View | How Cloud ALM System View and Operations View surface clean core metrics and compliance scores |
 | [3406389](https://me.sap.com/notes/3406389) | Clean Core Extensibility — Allowed API Objects and Release Contracts | How SAP publishes released APIs (C1 contract) and what constraints apply to ABAP Cloud usage |
 

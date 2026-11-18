@@ -14,6 +14,7 @@
 | ABAP Extensibility Guide – Clean Core (Aug 2025) | https://community.sap.com/t5/technology-blog-posts-by-sap/abap-extensibility-guide-clean-core-for-sap-s-4hana-cloud-august-2025/ba-p/14175399 | SAP Community Blog |
 | Getting to a clean core: the new maturity model of extensions (four levels A–D; exact title *da verificare* — page not readable on 2026-11-18) | https://community.sap.com/t5/technology-blog-posts-by-members/getting-to-a-clean-core-the-new-maturity-model-of-extensions-into-four/ba-p/14326982 | SAP Community Blog (member) |
 | SAP Cloud ALM – Extensibility (clean core level concept A–D; read 2026-11-18) | https://help.sap.com/docs/CloudALM/877c96cf971648b09ee0d0a64f7f4fef/eaa61d6ae6744ccdb0d18820fb8998c9.html | SAP Help Portal |
+| SAP Learning – Practicing Clean Core Extensibility for SAP S/4HANA Cloud, unit "Explaining Extensibility Model Best Practices" (3-tier model sunset, lowest-ranked technology rule, reclassification of Level C; read 2026-11-18) | https://learning.sap.com/courses/practicing-clean-core-extensibility-for-sap-s-4hana-cloud/explaining-extensibility-model-best-practices_e290f382-800e-40ef-a203-85a13115f487 | SAP Learning |
 | SAP Application Extension Methodology PDF | https://help.sap.com/doc/87e18fdb75fd42f8aee59e3c76de7cd7/Cloud/en-US/sap.application.extension.methodology.pdf | PDF |
 | Clean Core Extensibility White Paper | https://help.sap.com/docs/ERP_ITC/32b885380e024123a72d0bf4908c8fc9/0fc75306959649bdad89d06ed4f3127e.html | SAP Help Portal |
 | SAP Note 3578329 – Frameworks, Technologies and Development Patterns in Context of Clean Core Extensibility (title *da verificare*: SAP for Me needs login) | https://me.sap.com/notes/3578329 | SAP Note |
@@ -22,7 +23,7 @@
 
 ## Clean Core Extensibility Levels (A/B/C/D)
 
-The clean core approach for extensibility categorizes extensions into **four levels** based on architectural integrity, upgrade safety, and alignment with clean core principles. This is the only classification this skill uses.
+The clean core approach for extensibility categorizes extensions into **four levels** based on architectural integrity, upgrade safety, and alignment with clean core principles. This is the only classification this skill uses. An extension is rated by the lowest-ranked technology it uses, and SAP may reclassify an internal object (Level C) as a classic API (Level B) or as not recommended (Level D) (SAP Learning unit above).
 
 | Level | SAP classification | Name | Description | Risk |
 |-------|--------------------|------|-------------|------|
@@ -33,7 +34,7 @@ The clean core approach for extensibility categorizes extensions into **four lev
 
 Source: SAP Cloud ALM, *Extensibility* — Clean Core Level Overview table (Definition row: A *Clean Core*, B *Clean Core*, C *Conditional Clean Core*, D *Not Clean Core*; ATC behavior: A no finding, B priority 3, C priority 2, D priority 1) — https://help.sap.com/docs/CloudALM/877c96cf971648b09ee0d0a64f7f4fef/eaa61d6ae6744ccdb0d18820fb8998c9.html (read 2026-11-18). SAP Note 3578329 is the reference for classic APIs and extension technologies (cited by the same page).
 
-> **No tier model.** The earlier 3-tier extensibility model of the ABAP extensibility guide (2022) is not used in this skill: classify every extension by level A/B/C/D. That SAP has formally retired the 3-tier model is *da verificare* (no SAP statement found on 2026-11-18); SAP Cloud ALM and current SAP guidance classify by levels.
+> **No tier model.** SAP states that the original 3-tier extensibility model "is now sunset in favor of the new level based clean core concept", and that customer code designed under the 3-tier guidance (particularly tier 2 wrappers) "does not necessarily need to be migrated to the new level based approach" (SAP Learning unit above, read 2026-11-18). This skill classifies every extension by level A/B/C/D only.
 
 **Gold standard**: Level A — extensions built in SAP BTP and ABAP Cloud.
 
@@ -216,7 +217,7 @@ Describes the classification of frameworks, technologies, and development patter
 
 > **Always strive for the highest extensibility level available.** Classic APIs (Level B) are acceptable only when the use case cannot be achieved with released APIs.
 
-> **Keep S/4HANA standard.** Every modification or internal object usage creates upgrade debt. The goal is zero Level D findings.
+> **Keep S/4HANA standard.** Every modification (Level D, Not Clean Core) creates upgrade debt, and every use of an internal object (Level C, Conditional Clean Core) is a risk to future upgrades. The goal is zero Level D findings.
 
 > **Separate concerns.** On-stack extensions (ABAP Cloud) for S/4HANA-specific logic. Side-by-side (BTP) for standalone apps, cross-system processes, and UI.
 
@@ -231,7 +232,7 @@ Describes the classification of frameworks, technologies, and development patter
 ---
 
 **Last Updated**: 2026-11-18 (level naming, no tier model)
-**Sources verified**: 2026-03-09; SAP Cloud ALM *Extensibility* level table 2026-11-18
+**Sources verified**: 2026-03-09; SAP Cloud ALM *Extensibility* level table and SAP Learning unit *Explaining Extensibility Model Best Practices* 2026-11-18
 
 ---
 
@@ -409,7 +410,7 @@ Describes the classification of frameworks, technologies, and development patter
 
 | Note ID | Title | Relevance |
 |---------|-------|-----------|
-| [3470426](https://me.sap.com/notes/3470426) | Collection note: Release of dataelements for Clean Core developments in S/4HANA Cloud Private Edition | Releases SAP_ABA/S4CORE/S4FND/S4CEXT data elements for the 3-tier ABAP Cloud (clean-core) extensibility model in PCE; available from 2023 FPS2 and 2025 (not 2022). |
+| [3470426](https://me.sap.com/notes/3470426) | Collection note: Release of dataelements for Clean Core developments in S/4HANA Cloud Private Edition | Releases SAP_ABA/S4CORE/S4FND/S4CEXT data elements for ABAP Cloud (clean core, Level A) development in PCE; available from 2023 FPS2 and 2025 (not 2022). |
 
 **Curated resources & practices (RISE & BTP Toolbox):**
 - [ABAP Cloud — Technical Use Cases and Recommended Technologies](https://www.sap.com/documents/2023/05/74fc05e6-747e-0010-bca6-c68f7e60039b.html) — the "when to use what" decision guide for clean-core ABAP Cloud extensibility in PCE.

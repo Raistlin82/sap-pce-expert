@@ -6,7 +6,7 @@ description: |
   Keywords: RISE with SAP, SAP Private Cloud ERP, S/4HANA Cloud Private Edition, PCE, 2025 FPS01, Agentic AI, Joule, brownfield, greenfield, bluefield, selective data transition, SUM, DMLT, HUoM, SAPS, SAP-managed operations, clean core, ABAP Cloud, key user extensibility, developer extensibility, BTP extensions, hyperscaler, Alibaba Cloud, RISE contract, SLA, patching cadence, backup restore, ISO 27001, SOC 2, GDPR, Foundational Success Plan
 license: GPL-3.0
 metadata:
-  version: "1.7.1"
+  version: "1.7.2"
   last_verified: "2026-11-18"
 ---
 
@@ -90,7 +90,7 @@ know the fallback file. One row per topic area; not an exhaustive tcode list.
 | bgRFC / async processing | bgRFC, SBGRFCMON, SRT_MONI, qRFC | operations-and-sla.md |
 | Security / compliance | ISO 27001, SOC, GDPR, encryption, penetration test, vulnerability, RSBDCOS0, HTTP_WHITELIST, UCON, hardening baseline, security baseline, BTP audit log, Secure Operations Map, TLS certificate rotation, zero trust | security-and-compliance.md |
 | Extensibility / ABAP Cloud / BTP | ABAP Cloud, clean core, key user, RAP, BAdI, SICF, Web Dynpro, ATO, S_ATO_SETUP | extensibility-and-development.md |
-| Integration | Integration Suite, Cloud Connector, iFlow, API, SDI, DP Agent, RFC, IDoc, Work Zone, service plans, hybrid maintenance | integration.md |
+| Integration | Integration Suite, Cloud Connector, iFlow, API, SDI, DP Agent, RFC, IDoc, Work Zone, service plans, hybrid maintenance, outbound HTTP, communication target, APPLDEST, SM59 | integration.md |
 | Licensing / sizing | licensing, FUE, HUoM, SAPS, subscription, contract, Global Account, digital access, NSE, Native Storage Extension, HANA memory, AI Unit Estimator, QuickSizer | licensing-and-sizing.md |
 | Clean core strategy | clean core, maturity model, Level A, Level B, Level C, Level D, Conditional Clean Core, KPIs | cross-cutting/clean-core-strategy.md |
 | Identity / SSO / access | SSO, SAML, IAS, IPS, SNC, SPNEGO, XSUAA, STRUST, support users, HEC users, identity lifecycle | cross-cutting/identity-and-access.md |
@@ -174,6 +174,8 @@ See `references/extensibility-and-development.md` and `references/cross-cutting/
 See `references/integration.md` for complete detail.
 
 > Integration hub: SAP Integration Suite on BTP. Supports cloud-to-cloud, cloud-to-on-premise, and hybrid scenarios.
+
+> **Outbound HTTP on-stack (PCE, on-premise).** Communication scenario and outbound service are cloud objects (Public Edition, BTP ABAP environment): do not plan them on PCE or on-premise. From 2025, use a communication target and its generated class, `NEW <generated class>( )->create_web_http_client( )`, with an application destination in APPLDEST that points to an SM59 destination; on 2023, the classic SM59 destination. Details and sources: `references/integration.md`, section "Outbound HTTP from ABAP Cloud On-Stack".
 
 ---
 

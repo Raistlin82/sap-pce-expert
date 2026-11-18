@@ -210,11 +210,11 @@ Included in Premium and Premium Plus tiers:
 | Note | Title | Relevance |
 |------|-------|-----------|
 | [3016524](https://me.sap.com/notes/3016524) | SAP S/4HANA Cloud, Private Edition — Release and Maintenance Strategy | Defines the 2-year release cadence and 7-year maintenance window for PCE |
-| [3017596](https://me.sap.com/notes/3017596) | End of Mainstream Maintenance Dates for SAP S/4HANA Releases | Official EOM dates per release — essential for contract renewal and upgrade planning |
-| [3061124](https://me.sap.com/notes/3061124) | SAP S/4HANA — Long-Term Maintenance and Extended Maintenance Options | Extended maintenance options and associated costs beyond standard 7-year window |
-| [3493301](https://me.sap.com/notes/3493301) | SAP S/4HANA 2023 — Release Information and Availability | Release note for S/4HANA 2023 — current baseline for many RISE PCE contracts |
+| [3017596](https://me.sap.com/notes/3017596) | End of Mainstream Maintenance Dates for SAP S/4HANA Releases (**title to verify**: `architecture-and-components.md` cites it as "RISE with SAP S/4HANA, private cloud edition and SAP ERP, private cloud edition: Information about maintenance availability") | Official EOM dates per release — essential for contract renewal and upgrade planning |
+| [3061124](https://me.sap.com/notes/3061124) | SAP S/4HANA — Long-Term Maintenance and Extended Maintenance Options (**title to verify**: `architecture-and-components.md` and `infrastructure-and-deployment.md` cite it as the SAP S/4HANA Cloud Private Edition release information note) | Extended maintenance options and associated costs beyond standard 7-year window |
+| [3493301](https://me.sap.com/notes/3493301) | SAP S/4HANA 2025: Release Information Note | Central release information note for SAP S/4HANA 2025 (title verified in the SAP S/4HANA 2025 upgrade guide); the release information of 2023 is in a different note |
 | [2900388](https://me.sap.com/notes/2900388) | SAP S/4HANA Maintenance Commitment Until 2040 | SAP commits to maintaining the S/4HANA product line until 2040. Not every release maintained until 2040 — customers may need to upgrade to a newer release. Individual release EOM dates in Product Availability Matrix (PAM). Details in SAP Release Brochure |
-| [3641453](https://me.sap.com/notes/3641453) | SAP S/4HANA 2024 — Release Information Note | Release note for S/4HANA 2024 — latest available release for new RISE implementations |
+| [3641453](https://me.sap.com/notes/3641453) | **Title to verify** (cited elsewhere in this skill as "SAP S/4HANA 2023: Support Package Stack — Additional Release Information") | There is no SAP S/4HANA 2024 release (the releases are 2023 and 2025), so the earlier title "SAP S/4HANA 2024 — Release Information Note" was wrong. Check the note in SAP for Me before citing it |
 
 ### FUE (Flex User Equivalents) and User Classification
 
@@ -252,7 +252,10 @@ Included in Premium and Premium Plus tiers:
 | [3089798](https://me.sap.com/notes/3089798) | RISE with SAP — ECS Service Scope and Responsibilities | Definitive reference for what SAP ECS delivers vs. customer responsibilities under RISE contract |
 | [3409764](https://me.sap.com/notes/3409764) | RISE PCE — SLA Definitions and Measurement Methodology | SLA tiers, measurement windows, and exclusions (planned maintenance, customer-caused incidents) |
 | [3463291](https://me.sap.com/notes/3463291) | RISE with SAP — Contract Renewal and SKU Changes | Guidance on SKU changes, contract expansions, and RISE renewal procedures |
-| [3568504](https://me.sap.com/notes/3568504) | RISE PCE — Add-On and Partner Product Licensing Rules | Licensing rules for partner ISV add-ons co-deployed on RISE PCE infrastructure |
+
+> **Correction (2026-11-02; re-checked 2026-11-18 in `UPGR_OP2025.pdf`, document version 3.0 of 2026-10-07, https://help.sap.com/doc/760ce610a2af4174a329d2d8315378e2/2025/en-US/UPGR_OP2025.pdf).** Note 3568504 was listed here as "RISE PCE — Add-On and Partner Product Licensing Rules". It is the *SAP S/4HANA Foundation 2025: Release Information Note* (listed as such in the SAP S/4HANA 2025 upgrade guide, `UPGR_OP2025.pdf`, help.sap.com) and says nothing about partner licensing, so the row was removed. No SAP note on partner add-on licensing in RISE has been verified for this skill: take the rules from the partner contract (SAP PartnerEdge) and the SAP Store listing, not from a note number.
+>
+> The titles of 3409764 and 3089798 above conflict with other files of this skill (3409764 is cited as the GTP checks central note in `architecture-and-components.md` and `migration-and-adoption.md`; 3089798 as "ECS Brownfield setup pro-active checks" in `migration-and-adoption.md`). Their real titles could not be checked without an S-user (me.sap.com needs a login): **to verify** before citing either of them.
 
 ### Usage and Compliance Metering (UCM Add-On)
 

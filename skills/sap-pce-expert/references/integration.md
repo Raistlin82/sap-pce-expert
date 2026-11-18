@@ -142,6 +142,27 @@ Classic RFC and BAPI-based integrations are classified per object by the clean c
 
 ---
 
+## Outbound HTTP from ABAP Cloud On-Stack (PCE and On-Premise)
+
+**Rule.** On SAP S/4HANA Cloud Private Edition and on-premise, do not design outbound HTTP with a *communication scenario*, an *outbound service* and a *communication arrangement*: that is the configuration model of SAP S/4HANA Cloud Public Edition and of the SAP BTP ABAP environment. On-stack, the call goes through a **communication target** and an **application destination** that points to an **SM59** destination.
+
+| Release of the target | Outbound HTTP from ABAP for Cloud Development | Configuration |
+|---|---|---|
+| 2025 and later (PCE 2025, ABAP Platform 2025) | Communication target (COTA, created in ADT). Its generated class with the same name gives the client: `NEW <generated class>( )->create_web_http_client( )`; with several application destinations, `NEW <generated class>( application_destination = '...' )`. Errors: `CX_COMMUNICATION_TARGET_ERROR`, `CX_WEB_HTTP_CLIENT_ERROR` | Application destination in **APPLDEST** (or APPLDESTCS / APPLDESTCC), based on the communication target, referencing an **SM59** destination (host, TLS, authentication, OAuth client) |
+| 2023 | No communication target. There is no released API to read an SM59 destination from ABAP for Cloud Development (`CL_HTTP_DESTINATION_PROVIDER` is in the Public Cloud list only). Use the classic destination: `CL_HTTP_CLIENT=>CREATE_BY_DESTINATION` (classic API, Clean Core Level B) in a class with language version Standard ABAP, behind a wrapper that the ABAP Cloud code calls | **SM59** destination |
+
+A solution that must run on both releases needs two code lines (or a wrapper behind an interface) for the outbound call. Do not chain `get_communication_target_by_name` and `get_http_destination`: that sequence is not documented by SAP; the documented model is the generated class above.
+
+Sources (read 2026-11-02; the *Communication Target* page re-read 2026-11-18):
+- SAP Help, ABAP Cloud (cross-product): *Communication Target* (f122d1e4026d4925b71319fcc514aab3): "In on-premise systems and SAP S/4HANA Cloud Private Edition, you can create an application destination based on the communication target in the APPLDEST, APPLDESTCS, or APPLDESTCC transaction"; the class with the same name is generated with the communication target.
+- SAP Help, ABAP Cloud: *Calling the HTTP Service* (ca07fe42d83a4dbcb04bdadca9fca65e): the sample `NEW zct_example( )->create_web_http_client( )` and the variant with `application_destination`.
+- SAP Help, ABAP Platform 2025 FPS02: *Application Destinations* (4067936321b64086b0322b632d364dd5): APPLDEST, APPLDESTCS, APPLDESTCC.
+- Cloudification Repository (github.com/SAP/abap-atc-cr-cv-s4hc at d9ce316b, 2026-11-02): `CL_COMMUNICATION_TARGET_ROOT`, `CL_COMMUNICATION_TARGET_LV5`, `CX_COMMUNICATION_TARGET_ERROR`, `IF_APPDESTINATION_HTTP_LV5` are released in `objectReleaseInfo_PCE2025_0.json` and absent from `objectReleaseInfo_PCE2023_0.json`; `CL_HTTP_DESTINATION_PROVIDER` is released only in `objectReleaseInfoLatest.json` (Public Cloud); `CL_HTTP_CLIENT` is `classicAPI` in `objectClassifications_SAP.json`.
+
+Not verified: that ADT on a PCE/on-premise system refuses to create communication scenario and outbound service objects (the documentation describes them only with communication arrangements, which the on-stack configuration does not use); the exact FPS from which communication targets are available on-premise (the documentation read is 2025 FPS02, the Cloudification Repository has them from PCE2025_0).
+
+---
+
 ## SAP Business Network Integration
 
 SAP Business Network (Ariba Network, Logistics Business Network) connects buyers and suppliers:
